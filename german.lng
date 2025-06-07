@@ -1,10 +1,10 @@
 ﻿#The _main_ section should be located at the beginning of the file (not below the 20th line)
 [_main_]
 name=Deutsch (DE)
-langid=1031
-version=3.0.9.967-26
-#font=Courier New
-#font=Ms Sans Serif
+credits=Costas Stergiou (support@thewordbooks.com)
+langid=1033
+version=7.0.0.1555-407
+#font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
 [TfrmStrongMorphAdvanced]
@@ -15,7 +15,9 @@ lblTip.Caption='Leere Werte bedeuten, dass Standard-Wörterbücher der Bibel-Ans
 lblTop.Caption='Für die Verwendung von Strong Nummern und morphologischem Code können spezielle Wörterbücher für eine oder mehrere Bibel(n) gewählt werden.'
 vt.Header.Columns.(0).Text='Bibel Modul'
 vt.Header.Columns.(1).Text='Strong Wörterbuch'
-vt.Header.Columns.(2).Text='Morphologisches Wörterbuch'
+vt.Header.Columns.(2).Text='Strong griech. Wörterbuch'
+vt.Header.Columns.(3).Text='Morphologisches Wörterbuch'
+SaveConfigBut.Caption='Konfiguration manuell speichern'
 
 #Help->Unlock modules.
 [TfrmUnlockModules]
@@ -64,6 +66,8 @@ pnl.lblRegisteredOwner.Caption='Registrierter Eigentümer:'
 pnl.txtEmail.Hint='Hier die E-Mail eingeben, die auch bei der Registrierung des Moduls verwendet wurde'
 pnl.lblFilename.Caption='Dateiname:'
 pnl.lblPath.Hint='Dies ist der Dateiname des Moduls.'
+pnl.chkNameOddCharacters.Caption='If you see odd letters/characters in your name for this module please check this.'
+pnl.chkNameOddCharacters.Hint='This can happen when older data was brought into a newer version of theWord. This function attempts to fix this.'
 
 #popup dialog that displays verse texts and topics (e.g. when you move your mose over search results)
 [TTips2]
@@ -74,6 +78,10 @@ actZoomin.Caption='Vergrößern (Strg+Mausrad hoch)'
 actZoomout.Caption='Verkleinern (Strg+Mausrad runter)'
 lblBottom.Caption='Zum Fokussieren SHIFT drücken und die Maus über das Popup bewegen.'
 lblBottomDrag.Caption='Ziehen um das Fenster zu verschieben; Rechtsklick für Optionen'
+mnuAlwaysOn.Caption='Always On (Shift to Update)'
+mnuAlwaysOn.Hint='If you desire the popup to stay always on, with your size and position. (Requires "Shift press" to update information.)'
+mnuPasteUserEditor.Caption='Paste All to User Editor'
+mnuPasteUserEditor.Hint='Paste all the content to the active user editor'
 
 
 #dialog when updating the subject of a user dictionary
@@ -158,7 +166,7 @@ cmbLang.Hint='Sprache, in welcher der Inhalt dieses Moduls vorliegt (undefiniert
 lblTypes.Caption='Allgemeines Buch, Wörterbuch, Kommentar, Karte/Media'
 lblVersion.Caption='Version:'
 lblVersionHelp.Caption='(Haupt - Nebenversion)'
-lblCheckForUpdate.Caption='Nach Updates des Moduls suchen'
+butCheckForUpdate.Caption='Nach Updates des Moduls suchen'
 lblEncrypted.Caption='Verschlüsselung:'
 txtEncrypted.Hint='Ist dieses Modul verschlüsselt?'#13'Verschlüsselte Module können nicht geändert werden.'
 edtVersionMinor.Text='0'
@@ -166,8 +174,10 @@ tabSettings.Caption='Einstellungen/Aktionen'
 groupGeneral.Caption='Allgemein'
 chkUser.Caption='Eigenes Modul (kann editiert werden)'
 chkUser.Hint='Ein ''Eigenes Modul'' ist ein Modul, dessen Inhalt verändert werden kann. Diese Option abwählen, um zu verhindern, dass der Inhalt versehentlich geändert werden kann. Verschlüsselte Module können niemals ''Eigene Module'' sein.'
-chkStrongs.Caption='Enthält Strong-Definitionen'
-chkMorph.Caption='Enthält griechischen morphologischen Schlüssel'
+chkAutosizeImages.Caption='Allow auto-resizing of images'
+chkAutosizeImages.Hint='Check this option if the module contains images that are large. This allows the end-user to check the ''auto-resize'' button on the book view which auto-sizes images to fit the available space in the viewer.'#13#13'Notice, that this option can also be set on a per-image level. The per-image option overrides this one, which actually applies for all images that do NOT have the specific option set.'#13#13'This option is available only for non-user modules.'
+chkStrongs.Caption='Contains Strong''s definitions'
+chkMorph.Caption='Contains morphological codes'
 chkVRefs.Caption='Für angezeigte Themen automatisch die Versreferenzen detektieren'
 chkVRefs.Hint='Option wählen wenn die Versreferenzen automatisch erkannt werden sollen sobald ein Thema angezeigt wird.'#13'Bitte beachten, dass diese Einstellung die Geschwindigkeit reduziert! Es ist besser, die Versreferenzen manuell zu erfassen und die Änderungen zu speichern, als diese Automatik-Option zu verwenden. Mit einem Rechtsklick auf den Anzeigebereich eines Themas und der Auswahl der entsprechenden Option im Kontextmenü können die Referenzen automatisch gesucht werden.'
 chkCompressed.Caption='Modul ist komprimiert, um Plattenplatz zu sparen'
@@ -178,45 +188,68 @@ chkR2L.Caption='Modul verwendet rechts-nach-links Ausrichtung'
 chkR2L.Hint='Option wählen, wenn das Modul von rechts nach links ausgerichtet sein soll. Für gemischte Modul (die sowohl rechts-nach-links als auch links-nach-recht enthalten) kann eine Einstellung per Thema sinnvoller sein. Diese Option nur wählen, wenn für den Text selbst keine bi-direktionale Einstellung gewählt wurde.'
 chkShowHiddenTopics.Caption='Versteckte Themen anzeigen'
 chkShowHiddenTopics.Hint='Hierbei handelt es sich um eine erweiterte Option, die nur für Module mit versteckten Themen anwendbar ist. Versteckte Themen können nur durch manuelles Anpassen der Moduldateien (.twm) erzeugt werden.'
-groupFonts.Caption='Schriftart (Standardschrift wird nur auf nicht benutzerdefinierte Module angewendet)'
+chkGlossH.Caption='Contains Hebrew Gloss'
+chkGlossH.Hint='Set this if you desire this dictionary to be used as a Greek gloss in Bible views.'
+chkGlossG.Caption='Contains Greek Gloss'
+chkGlossG.Hint='Set this if you desire this dictionary to be used as a Hebrew gloss in Bible views.'
+groupFonts.Caption='Fonts (default fonts will be applied only to non-user modules)'
+lblFontsReader.Caption='Content viewer/editor fonts (only for non-user modules):'
 lblFontsSub.Caption='Folgende Schriftarten nicht austauschen (mehrere Fonts mit Komma trennen):'
 memoFonts.Hint='Wenn in der Buchansicht die Verwendung der Standardschriften eingestellt ist, können trotzdem eine oder mehrere Schriftarten innerhalb eines Moduls gewählt werden, die NICHT ersetzt werden sollen. Die Funktion ist insbesondere nützlich, wenn spezielle Schriftarten für Griechisch oder Hebräisch verwendet werden, und diese fest bleiben sollen (bzw andere spezielle Fonts verwendet werden sollen).'#13#13'Name der Schriftart(en) eingeben, und bei mehr als einer mit Komma voneinander trennen.'
 optFontsMod.Caption='Schriftarten verwenden, die im Modul definiert sind'
 optFontsMod.Hint='Diese Option auswählen, wenn die im Modul definierten Schriftarten verwendet werden sollen.'
 optFontsDef.Caption='Standardschriftart für die Buchansicht verwenden'
 optFontsDef.Hint='Diese Option auswählen, wenn die für die Buchansicht definierten Standardschriftarten verwendet werden sollen.'
+lblFontsTopics.Caption='Topics tree/list font:'
+chkTopicsFont.Caption='Use custom font:'
+chkTopicsFont.Hint='Select if you want to use a custom font for the topics tree'
+chkTopicsFontSize.Caption='Use custom font size:'
+chkTopicsFontSize.Hint='Select if you want a custom font size for the topics tree'
+lblBuildGRHEBFonts.Caption='Build Greek/Hebrew fonts:'
+lblBuildGRHEBFonts.Hint='This does not set the Greek/Hebrew fonts it simply tells theWord what Greek and Hebrew font to look for so as to replace it.'
+lblBVfont.Caption='Book view:'
+lblBVfont.Hint='The bookview font is automatically modified unlike the Greek and Hebrew below.'
+BuildBVplus.Hint='This size will modify just this modules book view internal font size.'
+lblGRfont.Caption='Greek:'
+BuildGRplus.Hint='This size will modify just this modules Greek internal font size.'
+lblGRfont.Hint='This is the Greek font that theWord should look for. The recommended Greek build font is Gentium but may be Accordance or something else that the module builder chose.'
+lblHEBFont.Caption='Hebrew:'
+BuildHEBplus.Hint='This size will modify just this modules Hebrew internal font size.'
+lblHEBFont.Hint='This is the Hebrew font that theWord should look for. The recommended Hebrew build font is Cardo but may be Accordance or something else that the module builder chose.'
+BuildGRplus.Hint='Increase # or Decrease -# the Greek font size in this resource. Adjusts against default size.'
+BuildHEBplus.Hint='Increase # or Decrease -# the Hebrew font size in this resource. Adjusts against default size.'
 groupActions.Caption='Aktionen'
 lblAction.Caption='Eine &Aktion auswählen und auf ''Ausführen'' klicken'
-cmbActions.Items.AnsiStrings.Strings='Modul zur Weitergabe vorbereiten...','Alle Versreferenzen erkennen...','Modulinhalt zu rtf konvertieren...','Benutzerdefinierte Formatierungen vom nicht Eigenen Modul löschen...','Benutzerdefinierte Formatierung vom nicht Eigenen Modul permanent machen...','Suchindex für Themen neu erstellen...'
+cmbActions.Items.Strings='Modul zur Weitergabe vorbereiten...','Alle Versreferenzen erkennen...','Modulinhalt zu rtf konvertieren...','Benutzerdefinierte Formatierungen vom nicht Eigenen Modul löschen...','Benutzerdefinierte Formatierung vom nicht Eigenen Modul permanent machen...','Suchindex für Themen neu erstellen...'
 cmbAction.Hint='Hierbei handelt es sich um erweiterte Funktionen die auf ein Modul angewandt werden können. Bitte ein Backup der Module erzeugen, bevor eine Aktion ausgeführt wird.'
 cmdExecuteAction.Caption='Gewählte Aktion ausführen...'
+tabReadingPlan.Caption='Reading Plan'
 tabAbout.Caption='Über'
-
-grpGeneral.Caption='Allgemeine Eigenschaften und Informationen'
-grpSystem.Caption='Systemeigenschaften'
-grpElectronic.Caption='Eigenschaften des elektronischen Textes'
-lblAuthor.Caption='Autor(en):'
-txtAuthor.Hint='Dies ist der bzw sind die Autor(en) des originalen Werkes. Mittels Semikolon (;) können mehrere Autoren voneinander getrennt werden. Bitte Namenskonventionen einhalten, damit aus dem Programm heraus gesucht werden kann. Bitte auf ''Name des Autors prüfen'' klicken und genaue Schreibweise in der Liste der Autoren herausfinden. Dadurch kann eine Einheitlichkeit erzeugt, und Duplikate aufgrund unterschiedlicher Schreibweisen der Autorennamen verhindert werden.'#13#13'Der Nachname des Autors sollte vorangestellt werden, gefolgt von einem Komma, dann Vorname und ggfs. Mittelname. Beispiel:'#13'   Darby, John N.'#13'   Calvin, John'#13'   Gill, John'
-lblPublishDate.Caption='Datum der Veröffentlichung:'
-txtPublishDate.Hint='Das Erscheinungsjahr der originalen Arbeit. Üblicherweise wird nur das Jahr angegeben (z.B. ''1871'' für die Elberfelder Bibel).'
-lblPublisher.Caption='Herausgeber:'
-txtPublisher.Hint='Dies ist der Herausgeber der Arbeit (falls bekannt und existent)'
-lblISBN.Caption='ISBN des Druckes:'
-txtISBN.Hint='Falls eine gedruckte Fassung des Moduls existiert, ist dies die ISBN des Buches.'
-lblVersionDate.Caption='Versionsdatum:'
-dateVersion.Hint='Datum der letzten Versionsänderung. Immer wenn eine Version (Major oder Minor) geändert wird, sollte auch das Datum aktualisiert werden. Bitte beachten, dass dieses Datum dazu verwendet wird, dass Benutzer auf der Homepage nach kürzlich aktualisierten Modulen suchen können.'
-lblCategories.Caption='Kategorie:'
-txtCategories.Hint='Die Kategorie, zu der das Modul gehört. Um Unterkategorien zu definieren den Backslash (\) verwenden. Bitte rechts auf den Link ''Kategorie prüfen'' klicken, um eine Liste der offiziellen Kategorien auf der Seite von ''The Word'' anzusehen.'#13#13'Beispiele:   Kommentare'#13'   Apologetik'#13'   Themen\Heirat'#13'   Theologie\Dispensationalismus'
-lblKeywords.Caption='Schlüsselwörter:'
-txtKeywords.Hint='Liste der Schlüsselwörter, die mit dem Modul verbunden sind. Mehrere Schlüsselwörter mit einem Semikolon (;) trennen. Bitte rechts auf den Link ''Schlüsselwörter prüfen'' klicken, um eine Liste der offiziellen Schlüsselworte auf der Seite von ''The Word'' anzusehen.'
-lblCreator.Caption='Ersteller des Moduls:'
-txtCreator.Hint='Der vollständige Name der Person, die für die Erstellung des Moduls verantwortlich ist. Bitte auch eine E-Mail-Adresse angeben, unter der diese Person erreicht werden kann.'#13#13'Beispiel:'#13'   Johan Schmidt (johan.schmidt@email.com)'
-lblContributors.Caption='Unterstützer:'
-txtContributors.Hint='Eine Liste der Personen, die bei der Erstellung des Moduls mitgewirkt haben. Mehrere Einträge mit Semikolon (;) trennen.'#13#13'Beispiel:'#13'   Johan Schmidt (johan.schmidt@email.com); Hans Müller (h.mueller@domain.de)'
-lblSource.Caption='Quelle:'
-txtSource.Hint='Die Seite/Person/Organisation/der Verlag, von dem/der die elektronische Form stammt.'#13#13'Beispiel:'#13'   Scanning und OCR durch Johan Schmidt (johan.schmidt@email.com)'
-lblComments.Caption='Bearbeitungshinweise und Versionshistorie:'
-txtEditorialComments.Hint='Kommentare zur Bearbeitungpraxis: Wurde die Rechtschreibung korrigiert, wie wurde mit Trennzeichen umgegangen, etwaige Korrekturen, Formatierungsschema, etc. Auch Änderungen zwischen jeder Version sollten hier beschrieben werden.'
+grpGeneral.Caption='General properties and information '
+grpSystem.Caption='System properties '
+grpElectronic.Caption='Electronic text module properties '
+lblAuthor.Caption='Author(s):'
+txtAuthor.Hint='This is the author(s) of the original work. There can be more than one author separated by semi-colon (;). Please, use standard naming in order to be able to search from within the program. Click on the "Check author name" link to visit the official site and check the exact naming from a list of author names. This will allow uniformity and avoid duplicates that can be created because of different spellings of the author''s name.'#13#13'The last name of the author should come first, followed by comma, then first name, then middle name. For example:'#13'    Darby, John N.'#13'    Calvin, John'#13'    Gill, John'
+lblPublishDate.Caption='Date of publication:'
+txtPublishDate.Hint='This is the date of publication of the original work. Usually, this is only a year (e.g. ''1611'' for the original KJV).'
+lblPublisher.Caption='Publisher:'
+txtPublisher.Hint='This is the publisher of the work (if one exists).'
+lblISBN.Caption='Printed ISBN:'
+txtISBN.Hint='If there is a printed form of this module, then this is the ISBN of this book.'
+lblVersionDate.Caption='Version date:'
+dateVersion.Hint='This is the date of the last version change. Whenever you change the major or minor version you should also update this date. Please, notice that this date will be used in order for users to be able to search from the site those modules that have been updated recently.'
+lblCategories.Caption='Category:'
+txtCategories.Hint='This is the category this module belongs to. To use sub-categories use the backslash (\) character. Please, click on the ''Check category'' link on the right to see a list of official categories at the theWord site.'#13#13'Example entries:'#13'    Commentaries'#13'    Apologetics'#13'    Issues\Marriage'#13'    Theology\Dispensational'
+lblKeywords.Caption='Keywords:'
+txtKeywords.Hint='This is a list of keywords associated with this module. Separate multiple keywords with a semi-colon (;). Please, click on the ''Check keywords'' link on the right to see a list of official keywords at the theWord site.'
+lblCreator.Caption='Module creator:'
+txtCreator.Hint='This is the full name of the person responsible from creating this module. Please, include also an e-mail address where this person can be reached.'#13#13'Example entry:'#13'    John Smith (john.smith@email.com)'
+lblContributors.Caption='Contributor(s):'
+txtContributors.Hint='This is a list of names and emails of people that contributed to the creation of this module. Separate multiple entries with a semi-colon (;).'#13#13'Example entry:'#13'    John Smith (john.smith@email.com); Joe Black (j.black@domain.com)'
+lblSource.Caption='Source:'
+txtSource.Hint='This is the site/individual/organization/publisher that this electronic form came from.'#13#13'Example entries:'#13'   Scanned and OCRed manually by John Smith'#13'   e-Text provided by www.exampledomain.com'#13'   Bible books publishers LTD.'
+lblComments.Caption='Editorial comments and version history:'
+txtEditorialComments.Hint='Comments about editorial practices: whether spelling was normalized, what was done with end-of-line hyphens, corrections that were made, formatting practices, etc. You should also add here a description of changes between each version.'
 lblStatus.Caption='Status:'
 txtStatus.Hint='Aktueller Status des Textes, zB ''Korrekturlesen steht noch aus'''
 lblCheckAuthor.Caption='Name des Autors überprüfen'
@@ -315,6 +348,11 @@ Caption='Modul-Set definieren - ein Set von Modulen auswählen oder ein neues er
 gtType.Caption='nach Typ gruppieren...'
 gtTypePersonal.Caption='nach Typ gruppieren, Eigene Module separieren...'
 gtAlpha.Caption='Ersten Buchstaben nach Alphabet gruppieren...'
+gtCategories.Caption='group by categories...'
+gtKeywords.Caption='group by keywords...'
+gtPublishers.Caption='group by publishers...'
+gtAuthors.Caption='group by authors...'
+gtLanguages.Caption='group by languages...'
 cmdOK.Caption='&OK'
 cmdCancel.Caption='Abbrechen'
 sheetChoose.Caption='Existierendes Set auswählen'
@@ -366,7 +404,22 @@ cmdClear.Caption='Baum leeren...'
 cmdClear.Hint='Klicken, um den Baum der das Set darstellt zu leeren und neu zu beginnen.'
 cmdTemplates.Caption='Vorlagen...'
 cmdTemplates.Hint='Eine Vorlage auswählen, um ein benutzderdefiniertes Set zu erstellen.'
+cmdImportSet.Caption='Import set from file'
+cmdImportSet.Hint='Click to import set from file.'
+cmdTemplates.Caption='Templates...'
+cmdTemplates.Hint='Select from a template to create a custom set.'
 lblFilter.Caption='Filter:'
+cmdSortChildren.Caption='Sort children'
+cmdSortSiblings.Caption='Sort siblings'
+vtA.Header.Columns.(0).Text='Abbreviation'
+vtA.Header.Columns.(1).Text='Title'
+vtA.Header.Columns.(2).Text='Author'
+vtA.Header.Columns.(3).Text='in #sets'
+vtA.Header.Columns.(4).Text='ID'
+vtA.Header.Columns.(5).Text='Category'
+vtA.Header.Columns.(6).Text='Keywords'
+vtA.Header.Columns.(7).Text='Description'
+vtA.Header.Columns.(8).Text='Path'
 
 #in book view with a user module, right-click, select Bookmark...
 [TfrmBookmarks]
@@ -387,6 +440,7 @@ lst.Columns.(1).Caption='Thema'
 lst.Columns.(2).Caption='Text'
 cmdGoto.Caption='&Gehe zu...'
 cmdDeleteList.Caption='&Löschen'
+cmdCreateLinkTopics.Caption='Create &topic-links from selected bookmarks...'
 
 #this is the view/window where book resources are being displayed
 [TfmBookView]
@@ -459,6 +513,43 @@ edtBookAbbrev.EditCaption='Abkürzung: '
 cmdModuleTabs.Caption='Modulreiter'
 cmdOptions.Hint='Klicken, um den Dialog ''Modulsets definieren'' aufzurufen, mit dem eigene Sets für die Modulreiter erstellt werden können. Dort befinden sich auch weitere Optionen für die aktuelle Buchansicht.'
 
+#BookView TopicID Goto
+[TfrmBookTopicGoto]
+#use rc_frmBookTopicGotofrmBookTopicGoto='Go To Topic ID'
+#use rc_lblTopicIDOn='You are on Topic ID: %d'
+lblGotoTopicID.Caption='Go to Topic ID:'
+#use rc_lblMaxTopicID.Caption'Max Topic ID: %d'
+btnOK.Caption='OK'
+btnCancel.Caption='Cancel'
+
+#double click on an image in the book view to bring up the map view
+[TfmMapView]
+cmdPrevImage.Caption='Previous Image'
+cmdNextImage.Caption='Next Image'
+cmdZoomOut.Caption='Zoom out'
+cmdZoomOut.Hint='Zoom out - Hold down the CTRL key and use the mouse wheel to quickly zoom in/out'
+cmdZoomIn.Caption='Zoom in'
+cmdZoomIn.Hint='Zoom in - Hold down the CTRL key and use the mouse wheel to quickly zoom in/out'
+cmdZoom100.Caption='Actual view'
+cmdZoomWidth.Caption='Fit width'
+cmdZoomHeight.Caption='Fit height'
+cmdZoomPage.Caption='Fit to page'
+cmdThumb.Caption='Show/hide thumbnail'
+lblOptions.Caption='Thumbnail options'
+spinThumbSize.EditCaption='Size:'
+spinAlpha.EditCaption='Transparency:'
+cmdImageResizeQualitySpeed.Caption='Image resize quality/speed'
+cmdQualityLow.Caption='Low quality (fast redraw)'
+cmdQualityGood.Caption='Good quality (normal redraw)'
+cmdQualityExcellent.Caption='Excellent quality (slow redraw)'
+cmdPatternBackground.Caption='Pattern background'
+cmdOnTop.Caption='Always on top'
+cmdOptions.Caption='Options'
+cmdClose.Caption='Close'
+
+[TfrmMapView]
+Caption='Graphics viewer'
+
 #in Book search view (F2), click on the arrow at the left of the search input box.
 #From the popup select 'Select manually the modules to search...'
 [TfrmLibrary]
@@ -481,6 +572,45 @@ lblOverwrite.Caption=', oder eines der existierenden Sets überschreiben:'
 mnuDelete.Caption='Ein Set löschen'
 cmdClose.Caption='&OK'
 cmdClose.Hint='Hier klicken um den Dialog zu schließen'
+#in Bible search view (F3), click on the arrow at the left of the search input box.
+#From the popup select 'Select the Bibles to search...'
+[TfrmSelectBibles]
+Caption='Bibeln für Suche auswählen'
+lblModules.Caption='Select Bibles'
+cmdClear.Caption='Clear'
+cmdClear.Hint='Click here to clear all selections from the list below'
+cmdAddGroups.Caption='Add'
+cmdAddGroups.Hint='Add the group settings from the dropdowns which will add Bibles as additionally seletected Bibles'
+cmbType.Hint='Bible Type'
+cmbType.Items.Strings='Any type','ONT type','OT type','NT type'
+cmbFeatures.Hint='Bible Features'
+cmbFeatures.Items.Strings='Any feature','Strongs feature','Morphology feature','Lemma feature','Strongs and Morphology features','Lemma and Morphology features','Strongs, Morphology and Lemmas features'
+cmbLanguage.Hint='Bible Language'
+cmdSetsActions.Caption='Sets'
+cmdSetsActions.Hint='Click to define custom sets of Bibles'
+mnuLoad.Caption='Load saved one'
+mnuSave.Caption='Save current'
+lblNewSet.Caption='Create a new set by entering a name and pressing enter'
+txtSetName.EditCaption='Set name:'
+lblOverwrite.Caption=', or overwrite one of the existing sets below:'
+mnuDelete.Caption='Delete a set'
+cmdClose.Caption='OK'
+cmdClose.Hint='Click to close this dialog'
+chkDescr.Caption='Show descriptions'
+#parallel bible select options: this is the same dialog used in Bible search view
+#but it also appears when selecting Bibles for comparison
+#in Bible view, click on the arrow of the 'Compare' button, from the popup
+#select 'Select Bible texts for parallel view...'
+cmdParSelUp.Hint='Move up'
+cmdParSelDown.Hint='Move down'
+cmdParSelCheck.Hint='Select all'
+cmdParSelUncheck.Hint='Deselect all'
+cmdResetOrder.Hint='Reset order of Bible texts'
+cmdParSelOK.Hint='Save and Close'
+lblHor.Caption='Select Bibles to display when they are arranged in columns'
+chkHor.Caption='Use the selected Bible modules even when the modules are arranged in rows'
+lblVer.Caption='Select Bibles to display when they are arranged in rows'
+chkVer.Caption='Use the selected Bible modules even when the modules are arranged in columns'
 
 #Press F5 to open this dialog
 [TfrmCopyVerses]
@@ -514,6 +644,9 @@ mnuFmtNL.Caption='Neue Zeile (%n)'
 mnuFmtHRange.Caption='Abschnitt (%r)'
 mnuFmtHTrans.Caption='Übersetzung (%t)'
 mnuFmtHNL.Caption='Neue Zeile (%n)'
+mnuFmtHBook.Caption='Starting Book (%b)'
+mnuFmtHCh.Caption='Starting Chapter number (%c)'
+mnuFmtHVs.Caption='Starting Verse number (%v)'
 lblQuickHelpTitle.Caption='Schnellhilfe:'
 lblQuickHelp.Caption='Das Format kann mit sog. ''Platzhalter'' verändert werden. Das sind Textbausteine, die für automatisch eingesetzten Text (wie z.B. den Buchnamen, das Kapitel oder die Versnummer) stehen.'#13'Jeder Platzhalter besteht aus einem Prozentzeichen (%), gefolgt von einem kleinen Buchstaben (z.B. %b).'#13'Beispiel: Der Platzhalter %b steht für den Buchnamen, zu dem ein Vers gehört.'#13'Um einen Eindruck davon zu bekommen, wie diese Platzhalter kombiniert werden können, wählen Sie eines der ''Vordefinierten Formate'' aus und schauen sich die Formatierungstexte sowie die Vorschau an.'
 cmdCopy.Caption='&Kopieren'
@@ -521,9 +654,20 @@ cmdCancel.Caption='&Schließen'
 cmdCopyAndClose.Caption='Kopieren und sch&ließen'
 cmbFormats.Items.Strings='1. Stellenangabe vor jedem Vers und Absatz','2. Stellenangabe und Übersetzung vor jedem Vers und Absatz','3. Stellenangabe nach jedem Vers','4. Stellenangabe nach jedem Vers und Absatz','5. Kapitel und Versnummer vor dem Vers','6. Kapitel und Versnummer vor dem Vers und Absatz','7. Einfacher Textblock','8. Einfacher Textblock mit Zeilenumbruch nach jedem Vers','9. Einfacher Textblock mit Absätzen','10. Einfacher Textblock mit Versnummern','11. Versnummern mit Zeilenumbruch nach jedem Vers','12. Versnummern mit Absatz nach jedem Vers','13. Versnummer und Kapitel mit Zeilenumbruch nach jedem Vers','14. Versnummer und Kapitel mit Absatz nach jedem Vers','15. Benutzerdefiniert'
 FormatPatterns.Items.Strings='(%b %c:%v) |%n%n','(%b %c:%v [%t])%n|%n%n','| (%b %c:%v)%n','| (%b %c:%v)%n%n','(%c:%v) | ','(%c:%v) |%n%n','|','|%n','|%n%n','%v | ','%v) |%n','%v. |%n%n','%c:%v |%n','%c:%v |%n%n'
-lblFontSize.Caption='&Schriftgröße:'
-lblFontSize.Hint='Schriftgröße für den kopierten Bibeltext wählen.'#13'Die Größe der Versnummer wird 2 Punkte kleiner sein, die für die Kopfzeile 1 Punkt größer.'
 lblRangeHint.Caption='(das Mausrad über den Buttons für ''Seite auf/Seite ab'' verwenden, um schnell Verse hinzuzufügen/wegzunehmen)'
+cmdAdvOptions.Caption='Advanced options'
+optFontSize.EditCaption='Default verse text Font size:'
+optHeaderFontSize.EditCaption='Header (overall and chapter) relative font size:'
+optFooterFontSize.EditCaption='Numbers and footer relative font size:'
+cmdBoldNonVerse.Caption='Bold text for non-verse elements'
+cmdAsTextOnly.Caption='Copy as text only (no formatting)'
+cmdRefsOnly.Caption='Copy only verse references'
+cmdNoStep4ForSingleVerses.Caption='No verse reference (''Step 4'') for single verses'
+lblCustomSets.Caption='Custom Sets:'
+cmdF5StepLeft.Hint='Step through saved sets'
+cmdF5StepRight.Hint='Step through saved sets'
+cmdF5Save.Hint='Save verse-copy formatting Set'
+cmdF5Delete.Hint='Delete verse-copy formatting set'
 
 #Bible view options. From main menu click on Tools->Bible view options...
 [TfrmOptions]
@@ -536,7 +680,6 @@ cmdOK.Caption='&OK'
 cmdOK.Hint='Änderungen übernehmen und das Einstellungsfenster schließen.'
 cmdApply.Caption='Übernehmen'
 cmdApply.Hint='Änderungen übernehmen ohne das Einstellungsfenster zu schließen.'
-Categories.Items.Strings='Schriftarten und -farben','Allgemeines Verhalten &  Vergleichsansicht','Absätze und Zwischenüberschriften','Strongnummern','Morphologische Schlüssel','Fußnoten und Querverweise','Kommentarverweise','Kommentartexte einfügen','Wörter nachschlagen','Optionen für Klick auf Wörter','Allgemeine Optionen'
 #page Bible
 lblBFontAndColors.Caption='Schriftart, -farbe und Formatierung des Bibeltextes'
 lblBDefFontColor.Caption='Standard Schriftfarbe:'
@@ -591,6 +734,21 @@ chkBParHeader.Hint='Wählen, ob eine schwebende Kopfzeile mit den Übersetzungsn
 chkBParAltClr.Caption='Alternative Hintergrundfarbe für jeden zweiten Vers:'
 chkBParHideVol.Caption='Bibelmodule verbergen, die das aktuelle Kapitel nicht beinhalten'
 chkBParHideVol.Hint='Einige Übersetzungen enthalten nur Teile der Bibel (z.B. nur das Neue Testament).'#13'Wählen Sie diese Option, wenn die Spalten/Reihen für diese Übersetzungen ausgeblendet'#13'werden sollen, wenn das aktuelle Kapitel nicht im Modul vorhanden ist.'
+#Parallel Compare Verse settings
+lblBCompVerse.Caption='Compare Verses'
+lblBCompVerse.Hint='Settings for Compare Verses (color, ignore)'
+lblBParallelPercColor.Caption='% | c'
+lblBParallelPercColor.Hint='Percent and Character Count Difference Color'
+lblBParallelBaseColor.Caption='Primary Color:'
+lblBParallelBaseColor.Hint='The highlight color of the primary compare verse when there is a difference'
+lblBParallelSecColor.Caption='Secondary Color:'
+lblBParallelSecColor.Hint='The highlight color of the secondary compare verse when there is a difference'
+chkBParIgnoreDiacritics.Caption='Ignore diacritics'
+chkBParIgnoreDiacritics.Hint='This causes the compare feature to ignore diacritics'
+chkBParIgnoreCase.Caption='Ignore case'
+chkBParIgnoreCase.Hint='This causes the compare feature to ignore case'
+chkBParIgnorePunctuation.Caption='Ignore punctuation'
+chkBParIgnorePunctuation.Hint='This causes the compare feature to ignore puntuation'
 #page Bible Headings
 lblBTextDisplay.Caption='Anzeige des Textes'
 optBNormalMode.Caption='Neue Zeile für jeden Vers, Versnummer vor den Text'
@@ -636,6 +794,16 @@ chkBMorphInstead.Caption='Anstelle der morphologischen Codes folgende(s) Zeichen
 chkBMorphWordPopup.Caption='Keinen Link zeigen, lediglich in einem Pop-Up die morphologischen Daten einblenden wenn die Maus über den Wörtern steht (falls vom Modulunterstützt, andernfalls Standardeinstellung)'
 chkBMorphCTRL.Caption='Wörterbucheintrag zum morphologischen Schlüssel nur anzeigen, wenn STRG gedrückt ist'
 lblBMorphFontSize.Caption='Relative Schriftgröße für morphologische Wörter:'
+#Original Word
+chkBOrigWord.Caption='Show Original Word in Popup'
+chkBOrigWordCTRL.Caption='Show Original Word on a popup window only when CTRL is pressed'
+#Original Word and transliteration
+lblBOrigWordTransl.Caption='Original Word and Transliteration (Hebrew/Greek only):'
+chkBOrigTransl.Caption='Show Original Word Transliteration'
+lblBOrigTranslColorRelSize.Caption='Color and Relative font size of text for Original Word transliteration:'
+chkBOrigTranslWordPopup.Caption='show no link, just show in a popup the Original Word transliteration when mouse hovers over each word (if supported by module)'
+chkBOrigTranslCTRL.Caption='Show Original Word Transliteration on a popup window only when CTRL is pressed'
+chkOrigtranslUseNonBiblicalFont.Caption='Use Non-Biblical elements font'
 #page: footnotes and cross-references
 lblBFootnotes.Caption='Fußnoten der Übersetzer'
 chkBFootnotes.Caption='Hinweise und Fußnoten der Übersetzer anzeigen'
@@ -666,6 +834,8 @@ optBXrefsOverlayOnly.Hint='Wählen Sie diese Option, um die gewählten Querverwe
 lblXRefsOverlayTip.Caption='Hinweis: die Positionseinstellung für Querverweise wird ignoriert, wenn Verweise aus einem anderen Set überlagert werden. In diesem Fall erscheinen die Verweise am Ende von jedem Vers.'
 cmdOrganizeXrefs.Caption='Gliederung...'
 cmdOrganizeXrefs.Hint='Querverweise organisieren'
+cmdOrganizeXrefs.Caption='Organize...'
+cmdOrganizeXrefs.Hint='Click to organize your cross-references.'
 #page commentary links
 lblBCmtLinks.Caption='Kommentarlinks'
 chkBCmtLinks.Caption='Kommentarlinks nach jedem Vers anzeigen'
@@ -703,6 +873,9 @@ lblBDctsLookup.Caption='...in diesen Wörterbüchern nachschlagen:'
 lblBDctsModules.Caption='Wählen Sie die Wörterbücher in denen nachgeschlagen werden soll, wenn Sie mit der Maus über ein Wort fahren. Änderung der Reihenfolge durch Ziehen mit der Maus.'
 lblBDctsNotice.Caption='Sie können auch eine Standardauswahl an Wörterbüchern erstellen, die auf alle Bibelmodule angewandt wird, für die Sie keine spezifische Auswahl angelegt haben. Die Standardauswahl können Sie mit dem Eintrag ''Alle Module'' der Auswahlliste ''Für dieses Bibelmodul...'' bearbeiten.'
 cmbBDcts.Items.Strings='Alle Module'
+cmbBDcts.Items.Strings='All modules'
+chkBDctsBooksAlso.Caption='Show non-dictionaries also'
+chkBDctsBooksAlso.Hint='Check this option if you want to include in the list above modules that are not dictionaries (e.g. books, maps, etc)'
 #page word click/lookup options
 lblLookupOptions.Caption='Optionen für das Nachschlagen von Wörtern'
 lblLUGeneral.Caption='Diese Optionen finden Anwendung wenn auf ein Wort in der Bibelansicht geklickt wird, das kein Link ist. Normalerweise wird das Wort in den aktiven Buchansichten nachgeschlagen. Die Optionen hier finden in den Fällen Anwendung, wo für das Wort eine Strong-Nummer, morphologischer Code und/oder ein Lemma existieren, und die Option gewählt wurde, diese NICHT als Links, sondern als Pop-Ups anzuzeigen (Diese Optionen können auf den Seiten [Strong Nummern] und [Morphologischer Code] gesetzt, und müssen von den Modulen unterstützt werden).'
@@ -715,14 +888,88 @@ lblLUStrong.Caption='Strong Nummer (falls existent)'
 lblLUMorph.Caption='morphologischer Eintrag (falls existent)'
 lblLULemma.Caption='Lemma (falls existent)'
 lblLUWord.Caption='Wort, auf das geklickt wurde'
-#page general
-lblBDctsDelay.Caption='Verzögerung des Popup (in Millisekunden):'
-lblBDctsDelay.Hint='Verzögerung des Pop-Ups, das für unverlinkte Wörter erscheint. Dies schließt Nachschlagen in Wörterbüchern, Strongs, morphologischem Code, und Lemmata ein (falls die Optionen so gesetzt wurden, dass für Wörter ohne Links nur Pop-Ups angezeigt werden).'
+#page general options
+lblGeneralOptions.Caption='General options'
+lblBDctsDelay.Caption='Delay popup with definition (in milliseconds):'
+lblBDctsDelay.Hint='This delay is used for popups that appear for non-linked words. This includes Word lookup dictionaries, Strong''s, Morph and Lemmas (when options are set to only show popups over the word without links).'
+chkWordStudy.Caption='Use Word Study View instead of Popup for words'
+chkWordStudy.Hint='Use the Active Book View to display the Word Study instead of the Popup (popup setting still apply), if SHIFT is held down then if a unique word it add to the Word Study else it replaces.'
+lblPOList.Caption='Word Popup Order (Does not affect Bibles internal order):'
+chkStats.Caption='Include statistics if Strongs or Lemma is available.'
+chkStats.Hint='Will include statistis in Word popup if Strongs or Lemma is available and SHIFT is pressed. Note if no Bible search is available it will make one.'
+optNum.Caption='Number'
+optNum.Hint='Display the results according to number first (alphabetical).'
+optText.Caption='Text'
+optText.Hint='Display the results according to text first (alphabetical).'
+optOrg.Caption='Original'
+optOrg.Hint='Display the results as they occured (not alphabetical).'
+chkAutoSplitWords.Caption='Auto Split Words of Bible without Word Groups'
+chkAutoSplitWords.Hint='When this is enable Bibles without <wt Word Groups attemps to be autosplit. Helpful for Gloss, Lemma, Strongs popups, etc.'
+
+#page User Toggles
+lblUserToggles.Caption='User Toggles for this Bible: '
+chkBaToggle.Caption='"a" Toggle'
+chkBbToggle.Caption='"b" Toggle'
+chkBeToggle.Caption='"e" Toggle'
+chkBgToggle.Caption='"g" Toggle'
+chkBiToggle.Caption='"i" Toggle'
+chkBkToggle.Caption='"k" Toggle'
+chkBrToggle.Caption='"r" Toggle'
+chkBvToggle.Caption='"v" Toggle'
+chkByToggle.Caption='"y" Toggle'
+chkBzToggle.Caption='"z" Toggle'
+
+#page Column Text
+lblInterlinearOptions.Caption='Column Text Options'
+chkBChapterView.Caption='Column Text Chapter (slower) / Verse View'
+chkBChapterView.Hint='Check this option if you want the Column Text to be for the whole chapter.'
+chkBWordWrap.Caption='Word Wrap'
+chkBWordWrap.Hint='Check this option if you want Word wrap enabled.'
+lblBInterLVerRng.Caption='Verse Range before/after:'
+editBInterLVerRng.Hint='This adds additional verses before or after the current verse.'
+#Gloss Options
+#in rc lblBGloss.Caption='Glosses for Hebrew/Greek:'
+#in rc lblGlossAddTitles.Caption='Get Hebrew/Greek Database.twdb from Add Titles to enable Glosses'
+chkBGloss.Caption='Show Glosses (possible glosses, please examine context)'
+lblBGlossHDct.Caption='Use the following Glosses module for Hebrew:'
+lblBGlossGDct.Caption='Use the following Glosses module for Greek:'
+lblBGlossColorRelSize.Caption='Color and Relative font size of text for glosses:'
+chkBGlossWordPopup.Caption='Show no link, just show in a popup the Gloss entry when mouse hovers over each word (if supported by module, else standard options apply)'
+chkBGlossFirstOnly.Caption='First gloss only in Bible view for Lemma/Strongs (less expanded but faster).'
+chkBGlossFirstOnly.Hint='Does not affect popup and does not affect Bible without Lemma/Strongs'
+chkBGlossCTRL.Caption='Show Gloss on a popup window only when CTRL is pressed'
+#Page: Lemma (section Lemma Options)
+lblBLemma.Caption='Lemma Options'
+chkBLemma.Caption='Show Lemma'
+lblBLemmaHDct.Caption='Use the following dictionary module to lookup Hebrew Lemma:'
+cmbBLemmaHDct.Hint='Make sure this is a dictionary with Hebrew Lemma'
+lblBLemmaGDct.Caption='Use the following dictionary module to lookup Greek Lemma:'
+cmbBLemmaGDct.Hint='Make sure this is a dictionary with Greek Lemma'
+lblBLemmaColorRelSize.Caption='Color and Relative font size of text for Lemma:'
+chkBLemmaInstead.Caption='Instead of showing the Lemma, show:'
+optBLemmaInsteadText.Caption='the following letter/text:'
+chkBLemmaWordPopup.Caption='Show no link, just show in a popup the Lemma entry when mouse hovers over each word (if supported by module, else standard options apply) - SHIFT+L to toggle'
+chkBLemmaCTRL.Caption='Show Lemma definitions on a popup window only when CTRL is pressed'
+lblBStrongMorphAdvanced3.Caption='Global override for each Bible: Set separate Lemma dictionaries...'
+chklemmaUseOrigFont.Caption='Use Hebrew/Greek font instead of Bible font.'
+#Page: Lemma (section Lemma Transliteration)
+lblBLemTransl.Caption='Lemma Transliteration:'
+chkBLemTransl.Caption='Show Lemma Transliteration'
+lblBLemTranslColorRelSize.Caption='Color and Relative font size of text for lemma transliteration:'
+chkBLemTranslWordPopup.Caption='show no link, just show in a popup the Lemma entry when mouse hovers over each word (if supported by module)'
+chkBLemTranslCTRL.Caption='Show Lemma Transliteration definitions on a popup window only when CTRL is pressed'
+chklemtranslUseNonBiblicalFont.Caption='Use Non-Biblical elements font'
 
 #Main window. Top level menus, etc
 [TMainReaderForm]
 #statusbar
 stBarCurVerse.Hint='Klicken, um zu kopieren. Mit Halten von STRG wird die Bibelabkürzung weggelassen.'
+lblViews.Caption='Views:'
+lblViews.Hint='This tool bar contains minimized views.'
+miniProg.Hint='This status is for mini progress updates to theWord.'
+lblminiStatus.Caption='Background Status:'
+lblminiStatus.Hint='This tool bar is for mini updates to theWord that primarily run in the background. Please use theWord as normal.'
+
 
 #toolbar captions
 tlbxMainMenu.Caption='Hauptmenü'
@@ -730,6 +977,8 @@ tlbxApp.Caption='Einstellungen Ansicht'
 tlbxFmt.Caption='Formatierung Bibeltexte'
 tlbxVerseRef.Caption='Versreferenz'
 tlbxBkm.Caption='Alle Bookmarks'
+tlbxBkm.Caption='Bookmarks'
+tlbxMinimizedViews.Caption='Views'
 
 #Main menu bar
 actFile.Caption='&Datei'
@@ -742,7 +991,9 @@ actWindow.Caption='&Fenster'
 actWindow.Hint='Fenster (Ansichten) organisieren'
 actHelp.Caption='&Hilfe'
 actHelp.Hint='Informationen über Programm und installierte Bibeltexte'
-
+actAddTitles.Caption='Module hinzufügen ...'
+actAddTitles.Hint='Bibeln und Bücher zur Installation hinzufügen'
+cmdNewTitles.Caption='Neue Module verfügbar ...'
 #window menu
 cmdWindowClose.Caption='Schließen'
 
@@ -764,6 +1015,7 @@ cmdPrint.Caption='Drucken'
 #tray icon only
 mnuRestore.Caption='Wiederherstellen'
 mnuTrayClipMon.Caption='Überwachung der Zwischenablage aktivieren'
+mnuParseClipboard.Caption='Parse clipboard contents now...'
 
 #Help menu
 actTWHelp.Caption='"The Word" Hilfe'
@@ -790,6 +1042,7 @@ cmdViewTlbVerseRef.Caption='Versreferenz'
 cmdViewTlbOptions.Caption='Einstellungen Ansicht'
 cmdViewTlbBFmt.Caption='Formatierung Bibeltext'
 cmdViewTlbBkms.Caption='Alle Bookmarks'
+cmdViewTlbMinViews.Caption='Minimized Views'
 mnuLayout.Caption='Layout'
 mnuLayout.Hint='Aktuelles Layout des Programms (Fenster, Größe, etc) speichern oder schneller Wechsel zu einem anderen Layout'#13#13'Die vordefinierten Layouts können auch ausgeblendet werden: Datei -> Einstellungen -> Allgemein -> Einstellungen Ansicht'
 
@@ -807,6 +1060,8 @@ actNewBookView.Caption='Neue Studieransicht'
 actNewBookView.Hint='SHIFT gedrückt halten, um eine neue schwimmende Buchansicht zu erzeugen'
 actNewBookSearchView.Caption='Neue Buch-Suchansicht'
 actNewBookSearchView.Hint='SHIFT gedrückt halten, um eine neue schwimmende Buch-Suchansicht zu erzeugen'
+actNewBookSearchView.Caption='New Book search view'
+actNewBookSearchView.Hint='Hold down the SHIFT key to create a new Floating Book search view with docking menu.'
 
 #view toolbar
 actSearch.Hint='Suchansicht öffnen'#13'Bei gedrückter STRG-Taste wird eine neue Suchansicht geöffnet.'
@@ -886,6 +1141,8 @@ rvActionSuperscript2.Caption='Hochgestellt'
 rvActionSubscript2.Caption='Tiefgestellt'
 rvActionFontShrinkOnePoint2.Caption='Schriftart um einen Punkt verkleinern'
 rvActionInsertPicture1.Caption='Bild aus Datei einfügen'
+rvActionFontShrinkOnePoint2.Caption='Shri&nk Font By One Point'
+rvActionInsertPicture1.Caption='Insert a picture from a file'
 
 #bible formatting toolbar
 actFmtToggle.hint='Benutzerdefinierte Formatierung ein-/ausblenden'
@@ -998,6 +1255,7 @@ cmdCopyRefs.Caption='Nur Versreferenzen kopieren'
 cmdDuplicateList.Caption='Eine Kopie der Liste unter neuem Namen erzeugen...'
 cmdGrabMode.Caption='''Packen und Verschieben''-Modus'
 cmdGrabmode.Hint='Klick aktiviert den ''Packen-Modus''.'#13'In diesem Modus kann der Inhaltsbereich mit der Maus angefasst und bewegt werden. Der Modus ist besonders bei Tablet-PCs nützlich.'
+cmdGrabmode.Hint='Click to enter ''Grab mode''.'#13'In this mode you can grab and move the content area with your mouse to scroll it.'#13'This mode is useful if you are using a tablet PC.'
 
 #This is the Bible view, the window that displays Bible texts
 [TfmBibleView]
@@ -1027,6 +1285,17 @@ actSync.Hint='Auf den schwarzen Pfeil klicken, um eine oder mehrere Bibelansicht
 actOptions.Caption='Einstellungen zur Bibelansicht...'
 actShowHideViewerIcons.Caption='Icons anzeigen/verbergen'
 actOptions.Hint='Optionen für Bibelansicht'
+actParSecondary.Hint='There can be multiple Secondary Bibles for Comparing. (Note this is the Bible not the Column.)'
+tbitemTabContext.Hint='Current Bible options, and general options of current window and Bible toolbar'
+tbitemBibleSets.Hint='Bible sets, Edit Bible sets'
+tbitemTabs.Hint='Tab Single/Multi Row Options'
+actSync.Caption='Synchronize with'
+actSync.Hint='Click on the black arrow to select one or more Bible views that you want this view to be synchronized with.'#13#13'Pressing the button itself works like a switch, turning on and off the synchronizing function altogether.'
+cmdRefreshView.Caption='Refresh View'
+cmdRefreshView.Hint='Reloads the current Bible view. Useful for if you have modified a gloss.'
+actOptions.Caption='Bible view &options...'
+actShowHideViewerIcons.Caption='Show/hide viewer icons'
+actOptions.Hint='Set options for the Bible view'
 #options submenu
 actChapterHeadings.Caption='Zwischenüberschriften'
 actFootnotes.Caption='Fußnoten der Übersetzer'
@@ -1150,8 +1419,20 @@ lstFiles.Columns.(2).Caption='Pfad'
 tabs.tabCredits.Caption='Credits'
 lblUses.Caption='Dieses Programm verwendet:'
 lblVistaIco.Caption='Icons von VisatICO.com'
-lblSpTBX.Caption='die SpTbxLib Library für Menus, Werkzeugkästen und Andockfelder'
-
+lblPinvokeIco.Caption='icons from ''pinvoke.com'''
+lblIcons8.Caption='icons from ''Icons8.com'''
+lblSpTBX.Caption='the ''SpTbxLib library'' for menus, toolbars and docking panels'
+lblSubtlePatterns.Caption='patterns from ''Subtle Patterns'''
+lblTranslators.Caption='Translators:'
+lstTranslatorCredits.Columns.(0).Caption='Language'
+lstTranslatorCredits.Columns.(1).Caption='File'
+lstTranslatorCredits.Columns.(2).Caption='Translator/Credits'
+#tab disabled modules
+#keep CTRL+SHIFT pressed while showing this dialog to force this tab to be displyed to translate it
+tabDisabledModules.Caption='Disabled modules'
+lblDisabledTop.Caption='The following modules have been disabled because the program has no write-access to their folder:'
+lblDisabledFix.Caption='To enable these modules, move them to the default modules'' folder, which is ''%s''.'
+lvDisabledFiles.Columns.(0).Caption='Disabled modules'
 #this is the splash screen
 [TFrmStartup]
 lblStatus.Caption='Initialisierung. Bitte warten...'
@@ -1170,7 +1451,7 @@ cmdOptions.Caption='Einstellungen...'
 cmdAppendToVerseList.Hint='Alle Verse zur aktuellen Versliste hinzufügen'
 prg.Hint='Ein Klick bricht automatisches Schließen ab'
 
-this dialog is displayed when auto-updating (no way to display in another way, sorry.)
+#this dialog is displayed when auto-updating (no way to display in another way, sorry.)
 [TfrmAutoUpdate]
 Caption='Automatisches Update'
 lblCurVerD.Caption='Aktuelle Version: :'
@@ -1255,6 +1536,24 @@ lblFont.Caption='Schriftart'
 lblGreekFont.Caption='Standardschriftart für griechische Texte:'
 lblHebrewFont.Caption='Standardschriftart für hebräische Texte:'
 lblStudyViewFont.Caption='Standardschriftart für die Studieransicht:'
+#Proofing tab
+tabProofing.Caption='Proofing'
+lblLiveSpellingOptions.Caption='List spelling options (Book view user modules):'
+chkLiveSpelling.Caption='Check spelling as you type'
+chkSpellIgnoreUppercase.Caption='Ignore words in UPPERCASE'
+chkSpellIgnoreLinks.Caption='Ignore links'
+chkSpellIgnoreWordsWithNumber.Caption='Ignore words with numbers'
+lblSpellingErrorsColor.Caption='Use this color for curly underline for mispelled words:'
+lblCustomDictionary.Caption='Custom dictionary:'
+lblCustomDctPath.Caption='Path:'
+lblAvailableSpellingDCTs.Caption='Available dictionaries:'
+lblSpellDctsLink.Caption='Click here to get dictionaries in more languages'
+lblSpellInfo.Caption='- Check the dictionaries you want to use'#13' - Double click on an entry to open the directory where the dictionary files resides.'#13' - Unchecked dictionaries will not be used for spell checking.'
+lblSpellDisabled.Caption='Spelling is disabled!'
+cmdOpenFolder.Caption='Browse'
+#lstSpellDcts.Columns.(1).Caption='Language'
+#lstSpellDcts.Columns.(2).Caption='Filename'
+lbllstSpellDcts.Caption='Enabled | Language | Filename'
 
 #advanced tab
 tabAdvanced.Caption='Erweitert'
@@ -1265,6 +1564,63 @@ chkBVReverseVRefLogic.Caption='Aktives Bibelmodul, oder das Standard-Bibelmodul 
 grpBookView.Caption='Buchansicht'
 chkBkvWantTabs.Caption='TAB fügt Tabulatoren ein, anstatt durch die Bedienelemente zu navigieren'
 chkBkvWantTabs.Hint='Normalerweise wird TAB in Windowsprogrammen dazu verwendet, zwischen den verschiedenen Bedienelementen zu springen. In Editoren wird TAB jedoch dazu verwendet, ein Tabulator-Zeichen inden Text einzufügen. In diesem Fall wird die normale Windowsfunktion unterbrochen, sobald der Fokus in einem Editor steht.'#13#13'Hier kann gewählt werden, welches Verhalten der Editor der Buchansicht zeigt.'#13#13'Anmerkung:mit SHIFT+TAB wird die normale Windows-Funktionalität zum Navigieren ausgeführt, unabhängig von der Auswahl hier.'
+lblVRefsChooseBiblesDescr.Caption='Display the verse references in these additional translations in popups:'
+lblVRefsChooseBiblesDescr.Hint='Note: When choosing Bibles the default/Active Bible will always appear top of the popup'
+lblVRefsChooseBibles.Caption='Choose Bibles...'
+lblVRefsChooseBibles.Hint='Note: When choosing Bibles the default/Active Bible will always appear top of the popup'
+chkExtraBiblesAltCtrl.Caption='Only display additional translations when SHIFT is pressed'
+chkShowBibleViewHints.Caption='Show hints when hovering over Bible view module tabs'
+chkShowBibleViewHints.Hint='Check if you want to get a tooltip with information about the Bible when you hover the mouse over a module tab/button'
+chkShowBookViewHints.Caption='Show hints when hovering over book view module tabs'
+chkShowBookViewHints.Hint='Check if you want to get a tooltip with information about the module when you hover the mouse over a module tab/button'
+grpGlobal.Caption='Global'
+chkKeepFocusOnInputbox.Caption='Keep the focus on the current input box after pressing ''Enter'' to execute command'
+chkKeepFocusOnInputbox.Hint='By default, when you place the cursor in an input box, type something and press ''Enter'', the focus moves to the view/window that normally is the receiver of the associated function.'#13'Check this option if you prefer the focus to remain in the input box instead.'#13#13'This option affects:'#13'  - the Verse Reference input box (accessed with F4)'#13'  - the Bible Search View input box (accessed with F3)'#13'  - the Book Search View input box (accessed with F2)'#13'  - the Bible view module search input box (accessed with SHIFT+F3)'#13'  - the Book view module search input box (accessed with SHIFT+F2)'
+chkShowHints.Caption='Show help tips'
+chkShowHints.Hint='Check if you want to display help tips when you pause your mouse over buttons and other controls'
+chkPopupStrong.Caption='Turn off Strongs in Verse Reference Popups'
+chkPopupStrong.Hint='If you don''t want the Strong numbers to appear in Verse Reference Popups, no matter if the current/active Bible view displays them.'
+chkPopupMorph.Caption='Turn off Morphology in Verse Reference Popups'
+chkPopupMorph.Hint='If you don''t want the Morphological codes numbers to appear in Verse Reference Popups, no matter if the current/active Bible view displays them.'
+chkPopupLemma.Caption='Turn off Lemma in Verse Reference Popups'
+chkPopupLemma.Hint='If you don''t want the Lemma to appear in Verse Reference Popups, no matter if the current/active Bible view displays them.'
+chkPopupLemmaTransl.Caption='Turn off Lemma Transliteration in Verse Reference Popups'
+chkPopupLemmaTransl.Hint='If you don''t want the Lemma Transliteration to appear in Verse Reference Popups, no matter if the current/active Bible view displays them.'
+chkPopupOrgWordTransl.Caption='Turn off Original Word Transliteration in Verse Reference Popups'
+chkPopupOrgWordTransl.Hint='If you don''t want the Original Word Transliteration to appear in Verse Reference Popups, no matter if the current/active Bible view displays them.'
+chkPopupGloss.Caption='Turn off Gloss in Verse Reference Popups'
+chkPopupGloss.Hint='If you don''t want the Gloss to appear in Verse Reference Popups, no matter if the current/active Bible view displays them.'
+
+#file associations tab
+tabAssociations.Caption='File Associations'
+groupAssoc.Caption='Assocations:'
+lblAssocTip.Caption='Select the file types/extensions that you wish to be opened automatically with this instance of theWord when double clicked in explorer.'
+cmdExtsSelectAll.Caption='Select all'
+
+#View Layout tab
+tabGlobalLayout.Caption='Global Layout/Colors'
+grpBibleTree.Caption='Bible Tree'
+lblBibleTreeBack.Caption='Background'
+lblBibleTreeFont.Caption='Font'
+chkBibleTreeSkin.Caption='Skin Color'
+grpBibleSearch.Caption='Bible Search'
+lblBibleSearchBack.Caption='Background'
+lblBibleSearchFont.Caption='Font'
+chkBibleSearchSkin.Caption='Skin Color'
+grpBookSearch.Caption='Book Search'
+lblBookSearchBack.Caption='Background'
+lblBookSearchFont.Caption='Font'
+chkBookSearchSkin.Caption='Skin Color'
+lblDockSplitterSize.Caption='Dock Splitter Size:'
+chkPopupDarken.Caption='Gradient Background in Popup'
+chkPopupDarken.Hint='Causes popups such as in Bible view to have a gradient background.'
+cmdManSaveConfig.Caption='Save Config Manually'
+cmdManSaveConfig.Hint='Forces the config.ini to manually get saved at the time of pressing this.'
+chkHLUnderline.Caption='Suppress Underline highlights'
+chkHLUnderline.Hint='This is for suppressing underlining highlights in searches.'
+btnDefaultHighlights.Caption='Default Highlight Colors'
+btnDefaultHighlights.Hint='Default highlight colors for this light/dark mode.'
+
 
 #this is the area in the File->Preferences dialog under 'Bible texts tab'
 [TfmBibleTexts]
@@ -1409,6 +1765,34 @@ rvActionPaste1.Caption='&Einfügen'
 rvActionUndo1.Caption='&Zurück'
 rvActionRedo1.Caption='&Wiederholen'
 rvActionSelectAll1.Caption='Alles auswäh&len'
+#popup menu to select Bibles to search
+cmdSearchWhat.Hint='Bibeln für die Suche auswählen'
+lblModulesToSearch.Caption='Welche Bibeln sollen durchsucht werden?'
+cmdSearchCurrent.Caption='Aktuelle Bibel'
+cmdSearchDefault.Caption='Standardbibel'
+cmdSearchSingle.Caption='In dieser Bibel'
+cmdSearchSelect.Caption='Auswahl von Bibel (Auswahl speichern)...'
+cmdSearchAll.Caption='Alle Bibeln'
+cmdSearchSavedSet.Caption='Gespeicherte Auwahl'
+#statistics 
+lblStats.Caption='Statistics:'
+lblStats.Hint='This area displays the statistics/analysis of the search.'
+rveStats.Hint='This area displays the statistics/analysis of the search.'
+pnlStatsFooter.Hint='Settings for statistics.'
+lblUpImm.Caption='Sort preferences for search (update immediately):'
+lblUpImm.Hint='The settings in this area causes an immediate update to statistics.'
+optNum.Caption='Number'
+optNum.Hint='Display the results according to number first (alphabetical).'
+optText.Caption='Text'
+optText.Hint='Display the results according to text first (alphabetical).'
+optOrg.Caption='Original'
+optOrg.Hint='Display the results as they occured (not alphabetical).'
+chkRefs.Caption='References'
+chkRefs.Hint='Include references for each search. They can be hovered or clicked.'
+lblUpSearch.Caption='Sort preferences for search (update on next search):'
+lblUpSearch.Hint='The settings in this area are applied to the next search.'
+chkGrp.Caption='Group'
+chkGrp.Hint='Group results or Ungroup - which is best with original to see them in the order in which the match occured.'
 
 #this form is used to define a custom search range
 #to display, in a Bible search view, click 'Detailed' tab and click
@@ -1660,6 +2044,13 @@ optBk.Caption='Allgemeines &Buch'
 optBk.Hint='Ein ''Allgemeines Buch'' erlaubt, eigene Notizen zu schreiben und diese in einer hierarchischen Struktur anzuordnen, so wie ein e-Book. Die Themen können in verschiedenen Ebenen gruppiert, und jeweils Notizen eingefügt werden.'
 optDct.Caption='&Wörterbuch'
 optDct.Hint='Ein ''Wörterbuch'' ist eine Liste von Wörtern (oder Themen). Es ist ähnlich einem "Allgemeinen Buch'', erlaubt jedoch keine hierarchische Struktur. Alle Themen sind auf der gleichen Ebene organisiert.'
+optDct.Hint='A dictionary is a list of words (or topics). It is very similar to a generic book, but it does not allow hierarchical topics. All topics are organized as a list in one level.'
+chkHeb.Caption='Hebrew'
+chkHeb.Hint='Enable this if this dictionary will be used for Hebrew. It will also auto generate Hebrew topics/Strongs. (Requires Ancient Hebrew Language Databases.)'
+chkGrk.Caption='Greek'
+chkGrk.Hint='Enable this if this dictionary will be used for Greek. It will also auto generate Greek topics/Strongs. (Requires Ancient Greek Language Databases.)'
+chkGloss.Caption='Glosses'
+chkGloss.Hint='Enable this if this dictionary will be used for Glosses requires Hebrew or Greek checked'
 
 #main menu Help->Donate
 [TFrmDonate]
@@ -1667,12 +2058,359 @@ Caption='Wichtige Anmerkung zu ''The Word'''
 cmdClose.Caption='Schließen'
 lblInfo.Caption='Dieser Dialog erscheint nur einmal automatisch. Er wird nicht nochmal erscheinen, es sei denn er würde in weniger  als 2 Minuten geschlossen. Bitte nehmen Sie sich die Zeit, ihn durchzulesen.'
 
+#main menu Help->Welcome Screen
+[TFrmWelcome]
+Caption='Welcome to theWord!'
+lblTopTitle.Caption='Welcome to theWord Bible Software'
+lblTopTitle2.Caption='Please take a moment to read through'
+lblSubtitle.Caption='Choose your initial layout - Quick start guide'
+lblSubtitle2.Caption='theWord is a versatile program which can be tailored to be as simple or complex as you would like it to be! Please select the initial layout that you would like to use. You can create and close individual views at any time and switch to pre-configured arrangements from the View menu (View->Layouts).'
+lblLngs.Caption='Language |'
+lblLngs.Hint='Click to select your language of choice.'
+lblSkns.Caption='Skin'
+lblSkns.Hint='Click to select your skin of choice.'
+lblHelp.Caption='| Help'
+lblHelp.Hint='Check out help for theWord. Please make use of help often!'
+tabBeginner.Caption='Beginner'
+tabBasic.Caption='Basic'
+tabDefault.Caption='Default'
+tabtW6.Caption='Upgrade from tW6'
+btnCancel.Caption='Cancel'
+btnPreview.Caption='Preview'
+btnGo.Caption='Go'
+lblBottomTip.Caption='This screen is accessible from the menu ''Help''->''Welcome screen'''
+
+#menu File->New Bible Reading Plan...
+#see also message rc_rdp_*
+[TFrmNewReadingPlan]
+#top area
+Caption='Create a new Bible reading plan'
+lblTop.Caption='Setup a new Bible Reading Plan'
+lblTop2.Caption='Follow the steps to setup a customized Bible reading Plan'
+#bottom area
+cmdNext.Caption='&Next'
+cmdPrev.Caption='&Previous'
+cmdCancel.Caption='Cancel'
+#page 1
+lblPredefinedTip.Caption='Use this option to select from a list of available reading plans that are already installed. '
+lblCustomTip.Caption='Use this option to select all the details of the plan and adjust it to your personal needs. You will be able to select the number of text you want to read and adjust the duration and the number of days.'
+optChoosePredefinedReadingPlan.Caption='Choose a pre-defined reading plan'
+optCreateCustomReadingPlan.Caption='Create a customized reading plan by yourself'
+#page 2
+lblWhichBibleTitle.Caption='Which Bible do you want to read?'
+lblWhichPartTitle.Caption='Which part of the Bible do you want to read?'
+optNoSpecificBible.Caption='I don''t want to define a specific translation'
+optThisBible.Caption='Use this one:'
+lblRead.Caption='I want to read:'
+lblPassagesIncluded.Caption='Passages included:'
+chkActualSessions.Caption='Passages are the actual readings per session (advanced)'
+chkActualSessions.Hint='If you check this option, then the passages above will be treated as if they are the actual readings for each day.'#13'In that case, each line corresponds to a single day; you may add more passages per day by separating multiple passages with a semi-colon (;)'
+lblPassagesTip1.Caption='Separate non-contiguos ranges with a semi-colon (; )'#13#10', use a hyphen (-) for ranges'
+lblPassagesTip2.Caption='Add in a separate line passages to combine for each day'
+cmbPassages.Items.String='The Entire Bible, from Genesis to Revelation|Gen-Rev','The Entire Bible, mixed OT & NT passages daily|Gen-Mal|Mat-Rev','Old Testament only|Gen-Mal','New Testament only|Mat-Rev','The Law (Pentateuch)|Gen-Deu','Historical Literature|Josh-Neh','Poetry and Wisdom Literature|Job-Song','Major Prophets|Isa-Dan','Minor Prophets|Hos-Mal','Gospel & Acts|Mat-Acts','General Epistles|Heb-Rev','Paul''s Epistles|Rom-Heb','Custom'
+#page 3
+lblStartWhen.Caption='When do you want to start?'
+chkNoCalendar.Caption='I don''t want to bind this plan to calendar days'
+lblHowOften.Caption='How often do you want to read?'
+optEveryDay.Caption='Every day'
+optEveryWeekday.Caption='Every weekday'
+optDaysChoose.Caption='Let me choose'
+lstDays.Items.String='Sun','Mon','Tue','Wed','Thu','Fri','Sat'
+lblHowMuchToRead.Caption='How much do you want to read each time?'
+optFinishOn.Caption='I want to finish on:'
+optFinishIn.Caption='I plan to finish in:'
+optReadEachTime.Caption='I prefer to read each time:'
+cmbFinishIn.Items.String='year(s)','month(s)','week(s)'
+cmbReadEachTime.Items.String='chapter(s)','verse(s)'
+chkBreakOnChapters.Caption='break on chapters'
+chkBreakOnChapters.Hint='Check this option if you prefer to stop each day''s reading at the end of a chapter.'#13'This will only have effect if each reading is more than 10 verses.'
+lblReadEachTime.Caption='Select ranges for each passage...'
+lblQuickInfoTop.Caption='Quick info'
+lblPreviewPlan.Caption='Preview plan'
+#page 4
+lblFinishRPTitle.Caption='Choose an abbreviation, title and description for your reading plan!'
+lblPathTip.Caption='(click on Path to reset to default path)'
+lblAbbrev.Caption='Abbreviation:'
+lblTitle.Caption='Title:'
+lblDescr.Caption='Description:'
+cmdCreatePlan.Caption='Create my Reading Plan'
+lblPath.Caption='Path:'
+lblPreviewPlan2.Caption='Preview plan'
+#page 2A (for predefined plans)
+lblChoosePredefinedPlan.Caption='Choose a predefined plan:'
+chkTemplatesOnly.Hint='Check this option to only list Reading plan templates. If you uncheck this option, then the list above will also include any previous readings plans you have created yourself or installed by another means.'
+chkTemplatesOnly.Caption='show templates only'
+
+#this pops up from within page 3 of the 'frmNewReadingPlan' when the user clicks on the 
+#'Select ranges for each passage' link (this link appears if the plan has more than one passage
+#for each day, e.g. 'The Entire bible, mixes OT & NT passages daily')
+[TfrmMultiPassages]
+lblTop.Caption='How many verses/chapter do you want to read each time from each passage?'
+lbl0.Caption='Passage'
+cmb0.Items.String='chapter(s)','verse(s)'
+chk0.Caption='Cycle if needed'
+lblClose.Caption='Close'
+
+#this pops up from within page 3 of the 'frmNewReadingPlan' when the user clicks on the 
+#'preview' link
+#message from the rc_rdpc_list_* category are used also
+[TFrmRPPreview]
+lblClose.Caption='Close'
+
+#Appears in the 'Module Properties' dialog, on the second tab for Reading Plans
+#Also, when clicking on the 'Stats & Actions' topic in a reading plan
+#see also rc_rdp_props_* messages
+[TfmReadingPlanProperties]
+lblProgress.Caption='Current Progress'
+lblFallBehind.Caption='Falling behind on your schedule?'
+lblFallBehindTip1.Caption='Shift scheduled readings so that you start today with the first unread session. '
+lblFallBehindTip2.Caption='Your plan will be re-scheduled by placing the first unread passage on the next planned day of the week; all subsequent sessions will be moved accordingly.'
+lblRestart.Caption='Want to restart?'
+lblRestartTip.Caption='Restarting your plan will reset all reading history and will re-schedule the starting day on the next planned day of the week.'
+cmdCatchUp.Caption='Catch Up...'
+cmdRestart.Caption='Restart Plan...'
+
+#menu Tools->Daily Readings. See also rc_dr_* messages
+[TfrmDailyReading]
+Caption='Daily Readings'
+lblTitle.Caption='Today''s Reading'
+lblSubtitle.Caption='Click on a link to jump to the Reading Plan or Devotional Book. Click on a Verse Range to start reading immediately!'
+cmdClose.Caption='Close'
+cmdOptions.Caption='Startup options...'
+chkShowUnreadOnly.Caption='Show unread only'
+lblNewPlan.Caption='Create a new Bible Reading Plan'
+lblChooseDevs.Caption='Choose Devotionals to read daily'
+
+[TfrmDROptions]
+Caption='Daily Reading startup options'
+pnlBottom.cmdOK.Caption='OK'
+pnlBottom.cmdCancel.Caption='Cancel'
+optOnce.Caption='Show once a day'
+optNever.Caption='Never show on program startup'
+optAlways.Caption='Show every time the program starts'
+optScheduled.Caption='Show if there is an unread scheduled reading'
+pnlTop.lblSubtitle.Caption='Choose how you prefer the dialog to popup on program startup in order to remind you of your scheduled readings.'
+pnlTop.lblTitle.Caption='When do you want the ''Daily Readings'' dialog to display?'
+chkNoCal.Caption='Consider a single reading per day for plans with no calendar'
+chkOnTop.Caption='Keep the ''Daily Readings'' dialog above other windows'
+
+#Form that appears as a popup when pressing the 'Calendar' icon on the book view toolbar. 
+#This button appears only for devotionals, so make sure you are using one in order to see it.
+[TFrmDevCalendar]
+lblTip.Caption='Select the day''s devotional reading'
+
+#File->Daily Readings dialog, click on the 'Choose devotionals to read daily' link
+[TFrmChooseDevotionals]
+Caption='Choose Devotionals'
+lblTitle.Caption='Which Devotional Books do you want to read?'
+lblSubtitle.Caption='Select the devotional books to read on a calendar basis. The ones you select below will appear on the ''Today''s Reading'' dialog.'
+cmdOK.Caption='OK'
+cmdCancel.Caption='Cancel'
+
+#From a Book view, click the 'Green book icon' (the options menu), and go to Options->Reader's margins
+[TfrmBookMargins]
+Caption='Page Margins'
+pnlBottom.cmdOK.Caption='OK'
+pnlBottom.cmdCancel.Caption='Cancel'
+pnlTop.lblSubtitle.Caption='To make your reading more comfortable, you may choose some empty space around your text.'
+pnlTop.lblTitle.Caption='Select page margins for your book view'
+pnlMiddle.lblTop.Caption='&top'
+pnlMiddle.SpTBXLabel1.Caption='&bottom'
+pnlMiddle.SpTBXLabel2.Caption='&left'
+pnlMiddle.SpTBXLabel3.Caption='&right'
+pnlMiddle.SpTBXLabel4.Caption='Offsets in pixels'
+pnlMiddle.chkEqual.Caption='&Equal values'
+pnlMiddle.chkGlobalMargin.Caption='Global Margins'
+pnlMiddle.lblRangeHint.Caption='Use the mouse wheel over the buttons to change the values quickly'
+lblDefaults.Caption='Reset &Defaults'
+
+#Add Titles dialog
+[TfrmDownloadModules]
+Caption='Download Titles'
+cmdVisNotInstalled.Caption='Show titles not already installed'
+cmdVisNeedUpdate.Caption='Show titles for which a newer version exists'
+cmdVisAll.Caption='Show all titles'
+cmdVisNew.Caption='Show New Titles (added in the last 30 days)!'
+cmdExpandAll.Hint='Expand Groups'
+cmdGroupType.Caption='Group by Type'
+cmdGroupLang.Caption='Group by Language'
+cmdGroupAuthor.Caption='Group by Author'
+cmdGroupNone.Caption='[No Grouping]'
+lblRepositories.Caption='Repositories'
+cmdEditRepositories.Caption='Edit Repositories...'
+lblTop.Caption='Download Books and Bibles'
+lblTop2.Caption='Select the modules you want to install and click ''Download and Install...'' button at the bottom'
+lblCurrentRepository.Caption='[no module repository selected]'
+lblCurrentRepository.Hint='More repositories/modules inside icon'
+cmdDownload.Caption='Download and Install...'
+lblTitles.Caption='Show titles where a newer version exists'
+lblGroupBy.Caption='Group by Language'
+lblSearch.Caption='Search:'
+lblPurchase.Caption='Purchase online'
+lblClickRepo.Caption='Current Repository:'
+lblClickRepo.Hint='More repositories/modules inside icon'
+lblCheckLang.Caption='Lng:'
+lblCheckLang.Hint='Get Language codes here ISO 639-2'
+txtAddTitleLang.Hint='Only see these langagues in Add Titles.    Enter language code separated by ,  (comma) or leave blank for all.    Enter key applies or clicking outside of this edit.'
+vt.Header.Columns.(1).Text='Language'
+vt.Header.Columns.(2).Text='Type'
+vt.Header.Columns.(3).Text='!'
+vt.Header.Columns.(4).Text='Title'
+vt.Header.Columns.(5).Text='Size'
+vt.Header.Columns.(6).Text='Author'
+vt.Header.Columns.(7).Text='Last updated'
+vt.Header.Columns.(8).Text='Price'
+
+#Add Titles dialog -> Click on 'Repositories' link on top-right, click on new
+[TfrmNewDownloadRepository]
+Caption='Repository details'
+pnl.cmdOK.Caption='OK'
+pnl.cmdCancel.Caption='Cancel'
+pnl.lblDescr.Caption='Repository description:'
+pnl.lblUrl.Caption='Repository URL:'
+
+#Add Titles dialog -> Click on 'Repositories' link on top-right
+[TfrmDownloadModulesRepositories]
+Caption='Module Repositories'
+lblRepositories.Caption='Repositories:'
+cmdCancel.Caption='Cancel'
+cmdOK.Caption='OK'
+cmdNew.Caption='New...'
+cmdEdit.Caption='Edit...'
+cmdDelete.Caption='Delete...'
+
+#Add Titles dialog-> select some module and click 'Download'
+[TfrmDownloadFiles]
+Caption='Download files'
+pnlGridBottom.lblURL.Caption='URL:'
+pnlGridBottom.lblFileSize.Caption='File size:'
+pnlGridBottom.lblDownloaded.Caption='Downloaded:'
+pnlGridBottom.lblSpeed.Caption='Speed:'
+pnlGridBottom.cmdCancel.Caption='Cancel download(s)'
+pnlGridBottom.lblTitle.Caption='Title:'
+pnlGridBottom.lblDownloading.Caption='Downloading files...'
+
+#File->Install modules
+[TFrmInstallModules]
+Caption='Install Modules'
+lblTitle.Caption='Install new modules'
+lblSubtitle.Caption='Click ''Browse'' to select or drag-n-drop files to install them.'
+lblBrowse.Caption='Select files to install:'
+cmdBrowse.Caption='Browse from local disk...'
+cmdDownload.Caption='Download file from URL...'
+lblOR.Caption='Or'
+lblInstallDirLabel.Caption='Install location:'
+lblChange.Caption='Change'
+lblFilesToInstall.Caption='Files to install:'
+lblClearList.Caption='Clear list'
+cmdInstallSelected.Caption='Install selected modules...'
+cmdClose.Caption='Close'
+
+#In a book view displaying a user module, right-click and select Insert->Insert manager
+[TfrmSnippets]
+Caption='Insert Manager'
+mnuSnippetsCalendar1.Caption='Calendar'
+mnuSnippetsYears.Caption='Years'
+yearasatwodigitnumber00991.Caption='Year As A Two-Digit Number (00-99)'
+yearasafourdigitnumber1.Caption='Year As A Four-Digit Number'
+mnuSnippetsMonths.Caption='Months'
+MonthWithoutALeadingZero1121.Caption='Month Without A Leading Zero (1-12)'
+MonthWithALeadingZero01121.Caption='Month With A Leading Zero (01-12)'
+MonthAsAnAbbreviationJanDec1.Caption='Month As An Abbreviation (Jan-Dec)'
+MonthFullNameJanuaryDecember1.Caption='Month Full Name (January-December)'
+mnuSnippetsDays.Caption='Days'
+DayWithoutALeadingZero1311.Caption='Day Without A Leading Zero (1-31)'
+DayWithALeadingZero01311.Caption='Day With A Leading Zero (01-31)'
+DayAsAnAbbreviationSunSat1.Caption='Day As An Abbreviation (Sun-Sat)'
+DayAsAFullNameSundaySaturday1.Caption='Day As A Full Name (Sunday-Saturday)'
+mnuSnippetsDateShort1.Caption='System Date Short'
+mnuSnippetsDateLong1.Caption='System Date Long'
+mnuSnippetsClock1.Caption='Clock'
+mnuSnippetsHours1.Caption='Hours'
+mnuSnippetsHourWithoutALeadingZero.Caption='Hour Without A Leading Zero (0-23)'
+mnuSnippetsHourWithALeadingZero.Caption='Hour With A Leading Zero (00-23)'
+mnuSnippetsMinutes1.Caption='Minutes'
+mnuSnippetsMinuteWithoutALeadingZero.Caption='Minute Without A Leading Zero (0-59)'
+mnuSnippetsMinuteWithALeadingZero.Caption='Minute With A Leading Zero (00-59)'
+mnuSnippetsSeconds1.Caption='Seconds'
+mnuSnippetsSecondWithoutALeadingZero.Caption='Second Without A Leading Zero (0-59)'
+mnuSnippetsSecondWithALeadingZero.Caption='Second With A Leading Zero (00-59)'
+mnuSnippetsSystemTimeShort1.Caption='System Time Short'
+mnuSnippetsSystemTimeLong1.Caption='System Time Long'
+mnuSnippetsSystemTimeampm1.Caption='System Time  am/pm'
+mnuSnippetsampm1.Caption='am/pm'
+mnuSnippetsap1.Caption='a/p'
+mnuSnippetsampm2.Caption='ampm'
+mnuSnippetsMisc1.Caption='Misc.'
+NewLine1.Caption='New Line'
+ab1.Caption='Tab Char'
+btnClose.Caption='Close'
+btnInsert.Caption='&Insert'
+cmdSnippetsAdd.Caption='Add'
+cmdSnippetsUpdate.Caption='Update'
+cmdSnippetsDelete.Caption='Delete...'
+cmdSnippetsSymbols.Caption='Symbols'
+cmdSnippetsHelp.Caption='Help'
+cmdSnippetsReset.Caption='Reset...'
+lblName.Caption='Description:'
+lblValue.Caption='Insert Value:'
+lblQuickHelp.Caption='Double Click an item to Insert into the current book view.'#13#13'The following variables are some available for use:'#13#13'%dd%'#9#9'day short'#13'%dddd%'#9#9'day long'#13'%mm%'#9#9'month short'#13'%mmmm%'#9'month long'#13'%yy%'#9#9'year short'#13'%yyyy%'#9#9'year long'#13'%date%'#9#9'Default Date'#13#13'New Line'#9#9'\n'#13'Tab'#9#9'\t'
+
+[TFrmCustomWelcome]
+chkShowOnStartup.Caption='Show this welcome screen on startup'
+lblClose.Caption='Close and continue'
+
+[TFrmExportTopics]
+Caption='Export Topics'
+lblTop2.Caption='Which topics do you want to export?'
+optAll.Caption='Export all topics'
+optSelected.Caption='Export selected topics'
+lblExportOptions.Caption='Export Options'
+chkHeadings.Caption='Include topic subject as heading'
+chkRemoveHyperlinks.Caption='Remove hyperlinks'
+chkResetHyperlinkStyle.Caption='Reset hyperlinked text to default format'
+cmdExport.Caption='Export...'
+cmdClose.Caption='Close'
+
+[TDataModPopupVerses]
+mnuCopy.Caption='Copy'
+mnuSendToEditor.Caption='Copy and paste to editor'
+mnuPasteToList.Caption='Add to list'
+mnuPasteToListMulti.Caption='Add to list'
+
+#Find dialog in Book view
+[TRvaFindDialog]
+Caption='Find'
+lblFindWhat.Caption='Find wha&t:'
+chkWholeWord.Caption='Match &whole word only'
+chkMatchCase.Caption='Match &case'
+grpDirection.Caption='Direction'
+optUp.Caption='&Up'
+optDown.Caption='&Down'
+cmdFind.Caption='&Find'
+cmdCancel.Caption='Cancel'
+
+[TrvaReplaceDialog]
+Caption='Find & Replace'
+lblFindWhat.Caption='Find wha&t:'
+lblReplace.Caption='R&eplace with'
+chkWholeWord.Caption='Match &whole word only'
+chkMatchCase.Caption='Match &case'
+grpDirection.Caption='Direction'
+optUp.Caption='&Up'
+optDown.Caption='&Down'
+cmdFind.Caption='&Find'
+cmdReplace.Caption='&Replace'
+cmdReplaceAll.Caption='Replace &All'
+cmdCancel.Caption='Cancel'
 
 #Below are generic messages that are being used to build dialogs, popups, etc
 #in most cases, there is a comment that may help you to understand where
 #these messages appear. Messages specific to dialog are marked in comments
 [Messages]
 
+#Tip that appears when hovering over the >> on the toolbars (when they don't fit)
+rc_morebuttons_hint='More buttons'
 #context menu for bible view (right click on tabs)
 rc_tabvolume_mnu_optionsfor='Optionen für: [%s]'
 #set tab icon submenu
@@ -1690,6 +2428,9 @@ rc_tabvolume_mnu_generaloptions='Allgemeine Optionen'
 rc_tabvolume_mnu_tlbcolor='Hintergrundfarbe Bibelleiste'
 rc_tabvolume_mnu_title='Titel: '
 rc_tabvolume_make_default='Zum Standard machen (%s)'
+rc_tabvolume_mnu_biblesets_edit='Edit sets...'
+rc_tabvolume_mnu_title='Title: '
+rc_tabvolume_make_default='Set as default (%s)'
 rc_tabvolume_info='Info...'
 rc_tabvolume_multiline='Reiter in mehreren Zeilen'
 rc_tabvolume_taboptions='Reiter-Optionen'
@@ -1697,6 +2438,8 @@ rc_tabvolume_tabsinsinglerow='Wenn Reiter in nur einer Zeile'
 rc_tabvolume_moveuseditems='Verwendete Reiter nach vorne'
 rc_tabvolume_parallel_sticky='[Vergleich]-Reiter immer sichtbar'
 rc_tabvolume_list_sticky='[Versliste]-Reiter immer sichtbar'
+rc_tabvolume_parallel_sticky='[Compare] tab always visible'
+rc_tabvolume_list_sticky='[List] tab always visible'
 #actions
 rc_tabvolume_mnu_iconactions='Reiter-Icons automatisch zuweisen'
 rc_tabvolume_mnu_assignflags='Flaggen zuweisen'
@@ -1721,6 +2464,7 @@ rc_prefefined_layouts_5='5. Allgemein 1 (Bibel+Buch x2+Baum)'
 rc_prefefined_layouts_6='6. Allgemein 2 (Bibel+Buch x2+Suche)'
 rc_prefefined_layouts_7='7. Erweitert 1 (Bibel x2+Buch x2)'
 rc_prefefined_layouts_8='8. Erweitert 2 (Bibel x2+Buch x2+ Suche x2)'
+rc_prefefined_layouts_9='9. tW7 (Bible Column+Bible+Tree+Search+Book X2)'
 
 #Verse list
 rc_vl_list='Versliste'
@@ -1762,6 +2506,10 @@ rc_app_message_title='Im Anfang war das Wort'
 rc_tab_nt_only='nur Neues Testament'
 rc_tab_ot_only='nur Altes Testament'
 rc_tab_ont='Altes und Neues Testament'
+rc_app_message_title='theWord'
+rc_tab_nt_only='New Testament only'
+rc_tab_ot_only='Old Testament only'
+rc_tab_ont='Old and New Testament'
 rc_tab_hint_default='Default'
 rc_tab_extra_info=#13#13'Beim Klicken STRG drücken, um in neuer Ansicht zu öffnen'#13'Beim Klicken SHIFT+STRG drücken, um in neuer schwimmender Ansicht zu öffnen'
 rc_bv_sync_choose='Bitte auf den kleinen Pfeil neben ''Synchronisieren mit'' klicken, um die Bibelansicht(en) zu wählen mit denen diese Ansicht synchronisiert werden soll.'
@@ -1770,6 +2518,16 @@ rc_bv_sync_choose='Bitte auf den kleinen Pfeil neben ''Synchronisieren mit'' kli
 #you move over a strong number (rare cases)
 rc_strong_in_orig='Diese Strongnummer ist auf ein Wort referenziert, das im Original existiert, aber nicht übersetzt wurde.'
 rc_strong_same_as_prev='Dieses Wort ist im Original kein eigenständiges Wort, aber ist hier wiedergegeben da der originale Ausdruck mit mehr als einem Wort übersetzt wurde. Das bedeutet dass mindestens ein weiteres Wort unter der selben Strongnummer in der Nähe existiert (davor oder dahinter).'
+#bible view for compare
+#%25 is needed keep it %25 for % since this is part of a URL
+rc_bible_view_par_comppercentage='%25 different to '
+rc_bible_view_par_compcharacters=' characters different to '
+rc_bible_view_par_compbase='Base is '
+rc_bible_view_par_compp='%'
+rc_bible_view_par_compc='c'
+rc_bible_view_par_compb='b'
+rc_bible_view_par_isbase='This Bible is already set as Base.'
+rc_bible_view_par_isbase_NoSec='This Bible is already set as Base.'#13'It can''t be made Secondary unless another Base is set first.'
 
 #search
 rc_search_vkeyb='Virtuelle Tastatur'
@@ -1794,10 +2552,43 @@ rc_booksearch_curmod='Aktuelles Modul:'
 rc_booksearch_nocurmod='Kein aktuelles Modul'
 rc_booksearch_cancelsearch='Suche abbrechen?'
 rc_booksearch_error='Unerwarteter Fehler während der Suche in [%s].'#13'Weitersuchen?'
+rc_booksearch_notindexed_parent='Non-indexed Modules'
+rc_booksearch_notindexed_ignored=' and ignored [%d non-indexed module)(s)]'
+rc_booksearch_what='Please, select if you want to "Search in" the "Subjects", "Topic content" or both.'
+rc_booksearch_curmod='Current module: '
+rc_booksearch_nocurmod='No current module'
+#used in Book AND Bible search view Message dialog when user presses ESC to cancel a running search
+rc_booksearch_cancelsearch='Cancel searching?'
+rc_booksearch_error='An unexpected error occured during searching of [%s].'#13'Continue searching?'
+rc_booksearch_busy='The module: [%s] is busy please wait for it to finish before searching it.'#13#13'This dialog will close automatically after 10 seconds'#13#13'Continue showing this dialog during this search? (Yes/No) OR Cancel to stop search.'
+rc_booksearch_options='Options: '
+#only one here like ; or , not more than one letter/character
+rc_booksearch_options_sep=','
+rc_booksearch_options_any='Any'
+rc_booksearch_options_all='All'
+rc_booksearch_options_phrase='Phrase'
+rc_booksearch_options_regex='RegEx'
+rc_booksearch_options_subjects='Subjects'
+rc_booksearch_options_content='Content'
+rc_booksearch_options_ignore_case='Ignore Case'
+rc_booksearch_options_whole_words='Whole Words'
+rc_booksearch_options_ignore_diacritics='Ignore Diacritics'
+rc_booksearch_options_ignore_punctuation='Ignore Punctuation'
+rc_booksearch_options_only_bible_refs='ONLY Bible Refs'
+rc_booksearch_options_bible_refs='Bible Refs'
+
+
+
+#Book view Goto Topic ID
+rc_frmBookTopicGoto='Go To Topic ID in %s'
+rc_lblTopicIDOn='You are on Topic ID: %d'
+rc_lblMinMaxTopicID='Min Topic ID: %d | Max Topic ID: %d'
+rc_topicID_not_exist='Sorry this Topic ID: %d does not exist in %s'
 
 #search context menu
 rc_mnu_search_select_all='Alles auswäh&len'
 rc_mnu_copy_to_list='[%s] zu aktueller Versliste hinzufügen...'
+rc_mnu_paste_to_editor='Paste [%s] to editor'
 
 #bookmarks
 rc_msg_bm_exists='Es existiert bereits ein Lesezeichen zu ''%s'''#13'Soll wirklich ein weiteres hinzugefügt werden?'
@@ -1817,17 +2608,43 @@ rc_main_mnu_view_in_bibleview='Zeigt ''%s'' in der Bibelansicht...'
 rc_main_mnu_copy_special='&Verse kopieren...'
 rc_main_mnu_copy_selection='Auswahl kopieren'
 rc_main_mnu_closeview='Ansicht schließen'
+rc_main_mnu_nb='Non-Biblical element, not searchable'
 
 #the following words appear in 2 cases:
 #1. when user hovers over strong/morph word
 #2. In Bible view context menu when right-clickin on a strong/morph word to search on (see WHNU module)
+rc_strongs='Strongs'
 rc_lemma='Lemma'
+rc_lemma_hom='Lemma Homonym'
+rc_strongs_or_lemma='Strongs OR Lemma'
+rc_lemtransl='Lemma Transliteration'
+rc_lemhomtransl='Lemma Homonym Transliteration'
 rc_morph='Morph'
 rc_word='Wort'
+rc_word_nf='(exact)'
+rc_origtransl='Word Transliteration'
+rc_origgloss='Gloss'
+rc_statistics='Statistics'
+#the rc_nomatch is for Bible view look up menu (when there is no match)
+rc_nomatch='[no match]'
+rc_lookup='Lookup'
+rc_bksearch='Search "%s"'
+rc_bksearch_hint='Book search for this.'
+rc_bksearch_ref='Reference search "%s"'
+rc_bksearch_ref_hint='Book search for Bible reference'
 
 #options dialog. Custom Bible font selection -> default font on font combo when clicking on the font column
 rc_msg_use_def_font='[ Standard-Schriftart verwenden]'
 rc_msg_default_always_visible='Der Standard Bibeltext muss immer sichtbar bleiben.'#13'Wenn diese Übersetzung geschlossen werden soll, muss erst ein anderer Bibeltext als ''Standard'' gesetzt werden.'
+#bookview->export topics dialog
+rc_msg_exporttopics_cannot_export='At least one or more topics from [%s] cannot be exported for copyright reasons.'#13'Do you want to export a limited number only?'
+rc_msg_exporttopics_fileexists='File [%s] already exists. Overwrite?'
+rc_msg_exporttopics_exporting='Exporting topics... (press ESC to cancel)'
+rc_msg_exporttopics_converting='Converting topic %d of %d...'
+rc_msg_exporttopics_abort='Abort export?'
+rc_msg_exporttopics_writing_file='Writing file %s ...'
+rc_msg_exporttopics_format_err='Cannot save to file "%s", format extension not supported'
+rc_msg_exporttopics_conversion_failed='Conversion failed'
 
 #general
 rc_msg_no_bible_found='Keine installierten Bibeltexte gefunden.'#10'Es muss mindestens ein Bibeltext installiert werden, damit das Programm korrekt funktioniert.'#13#13'Wenn Bibeltexte herunter geladen und in einem anderen Ordner gespeichert wurden, kann dieser angegeben werden.'#13#13'Soll diese Aktion durchgeführt jetzt werden?'
@@ -1841,6 +2658,12 @@ rc_statusbar_active='Aktiv'
 rc_error_opening_bible_file='Beim Öffnen des Bibelmoduls %s ist ein Fehler aufgetreten:'#13'%s'
 rc_msg_no_valid_bibles='Keine gültigen Bibelmodule gefunden.'#13'Das Programm wird nun beendet.'
 rc_msg_requires_newer_ver='Das Modul ''%s'' benötigt eine neuere Version des Programms, um zuverlässig zu funktionieren.'#13#13'Bitte diese Datei verschieben/löschen, damit diese Meldung nicht weiter erscheint. Alternativ unter ''www.theword.gr'' auf die aktuellste Version updaten.'
+rc_statusbar_active='Active'
+rc_error_opening_bible_file='There was an error opening the Bible file %s:'#13'%s'
+rc_msg_no_valid_bibles='No valid Bible modules found.'#13'The program will now exit'
+rc_msg_duplicate_bible_title='There are duplicate Bible Titles.'#13'While these duplicates exists items like Bible View Names, Global Strong''s, Morphology, etc. won''t work correctly.'#13#13'To fix from within theWord right click the original Bible Module with _DUPLICATE_TITLE_ and set it as "original".'#13#13'To manual fix go to the Cache folder (which can be found in Help> About> File Locations) look for BibleDuplicateTitles.txt which holds the duplicate filenames and paths.'#13'Please set the filename to something unique.'#13#13'If you can''t fix the Bible yourself by adjusting the Title then please contact the author. [Worst case scenario use ignore.duplicate.bible.title=1 in config.ini but only as a last resort.]'#13#13'This dialog will appear on startup until this is resolved. It is important to fix this!'
+rc_msg_duplicate_bible_id='There are duplicate Bible ids.'#13'While these duplicates exists items like Compare View compare highlights, etc. won''t work correctly.'#13#13'The Bibles that are affected are marked with _DUPLICATE_ID_ until fixed.'#13#13'To manual fix go to the Cache folder (which can be found in Help> About> File Locations) look for BibleDuplicateIDs.txt which holds the duplicate filenames, ids, and paths.'#13' Please set the module ids to something unique.'#13#13'If you can''t fix the Bible yourself by adjusting the Title then please contact the author. [Worst case scenario use ignore.duplicate.bible.title=1 in config.ini but only as a last resort.]'#13#13'This dialog will appear on startup until this is resolved. It is important to fix this!'
+rc_msg_requires_newer_ver='The module ''%s'' requires a newer version of the program to work properly.'#13#13'Please, remove/delete this file in order to avoid seeing this message again. You may update to the latest version by visiting ''www.theword.net''.'
 #NOTICE: changed F9 to F8 here: for translators
 rc_bibletreeview_title='Bibelbaum (F8)'
 rc_maximize_floating_warn='Schwimmende Fenster können nicht maximiert werden.'#13'Bitte zuerst an das Hauptfenster andocken.'
@@ -1860,6 +2683,11 @@ rc_searchview_noverses='Es wurden keine Verse gefunden.'
 rc_searchview_parsed_expr_prefix='Suche in {\cf1\b %s} nach:'
 rc_searchview_bookhint='Gesamtzahl der Übereinstimmungen: %d '#13' Übereinstimmungen in [%s]: %d '#13' prozentuale Übereinstimmung in [%s]: %d%%'
 rc_searchview_switched_to_boolean='Wechsel zur Suchart ''Boolean'', um Strongnummer zu finden'#13'(''regular expression'' unterstützen keine Strongnummern)'
+rc_searchview_ansi='The Bible "%s" is not autoconverting from ANSI please notify theWord team of this Bible.'#13'This search has been cancelled. Please remove the Bible %s from your next search'
+rc_searchview_fndmatches='Found matches: %s in %s ms'
+rc_searchview_dctsel='Please select a dictionary in Word Lookup for the Bible you searched. Then search again.'
+rc_biblesearch_search_locked='"%s" is already running please wait until it is done.'
+rc_biblesearch_search_stats_locked='"%s" a statistics search is already running please slow down.'#13'This dialog will close in %d seconds.'#13#13'After this dialog closes theWord will be locked for %d-%d seconds as needed. This is necessary to help the statistics search catch up.'
 
 #search results tree context menu
 rc_searchview_ctxmenu_view='%s anzeigen'
@@ -1873,6 +2701,75 @@ rc_searchview_ctxmenu_pasteall='[%d] Vers(e) vom Buch [%s] in Liste einfügen'
 rc_searchview_ctxmenu_paste_selbooks='[%d] Vers(e) von [%d] ausgewählten Büchern in Liste einfügen'
 rc_searchview_ctxmenu_paste_selected='[%d] ausgewählte(n) Vers(e) in Liste einfügen'
 rc_searchview_ctxmenu_clear='Löschen'
+rc_searchview_ctxmenu_paste_selected='Add all [%d] selected verse(s) to list'
+rc_searchview_ctxmenu_pasteeditorone='Paste [%s] to editor'
+rc_searchview_ctxmenu_pasteeditorall='Paste all [%d] verse(s) from book of [%s] to editor'
+rc_searchview_ctxmenu_pasteeditor_selbooks='Paste all [%d] verse(s) from the [%d] selected books to editor'
+rc_searchview_ctxmenu_pasteeditor_selected='Paste all [%d] selected verse(s) to editor'
+rc_searchview_ctxmenu_clear='Clear'
+rc_searchview_ctxmenu_stats_selectallcopy='Select all and Copy'
+rc_searchview_ctxmenu_stats_pasteeditorall='Paste All to User Editor'
+rc_searchview_ctxmenu_stats_pastecustomrange='Paste all [%d] References to Custom Range (for Re-Search)'
+#Bible search statistics
+rc_stat_abbrev_orig='O/H: %s'
+rc_stat_abbrev_strong='S: %s'
+rc_stat_abbrev_morph='M: %s'
+rc_stat_abbrev_lemma='L: %s'
+rc_stat_search_matches='Searching.... Match(es)'
+rc_stat_highlight_orig_count='Original/Highlighted Match(es) (%d)'
+rc_stat_search_count='Search Match(es) (%d)'
+rc_stat_strong_count='Strong Match(es) (%d)'
+rc_stat_lemma_count='Lemma Match(es) (%d)'
+rc_stat_morph_count='Morphology Match(es) (%d)'
+rc_stat_prg='Match(es) %s: %d'
+rc_stat_prg_highlight_orig='Highlight'
+rc_stat_prg_search='Search'
+rc_stat_prg_strong='Strong'
+rc_stat_prg_lemma='Lemma'
+rc_stat_prg_morph='Morphology'
+
+#fmBibleview - Bible view specific
+rc_bibleview_setorigvoltitle_confirm='You are about to set the title of the following module as original:'#13'    [%s]'#13'with the path:'#13'  [%s]'#13#13'WARNING! You cannot undo this action.'#13'The associated module will be set as the original and all others with the same title as duplicates.'#13#13'theWord will restart after this procedure!'#13#13'Continue?'
+rc_bibleview_setorigvoltitle_failed='Failed to set the module''s associated title as original:'#13'    %s'#13#13'This may happen if the file is open by another application,'#13'or you are running another instance of theWord.'#13#13'You will need to shut down other instances of theWord, or else the module will be'#13'seen as a duplicate again.'
+
+#frmOptions - Bible view options
+rc_bibleview_opts_pgBible_caption='Fonts colors and styles'
+rc_bibleview_opts_pgBibleGenBehavior_caption='General behavior'
+rc_bibleview_opts_pgBibleHeadings_caption='Paragraphs'#13'Headings'
+rc_bibleview_opts_pgGeneral_caption='General options'
+rc_bibleview_opts_pgUserToggles_caption='User Toggles'
+rc_bibleview_opts_pgBibleCompare_caption='Compare view options'
+rc_bibleview_opts_pgInterlinear_caption='Column Text Mode'
+rc_bibleview_opts_pgBibleOriginalWord_caption='Original Word'#13'Original Transliteration'
+rc_bibleview_opts_pgBibleGloss_caption='Glosses for Hebrew/Greek'
+rc_bibleview_opts_pgBibleGloss_lblBGloss_caption='Glosses for Hebrew/Greek:'
+rc_bibleview_opts_pgBibleGloss_lblGlossAddTitles_caption='Get Hebrew/Greek Database.twdb from Add Titles to enable Glosses'
+rc_bibleview_opts_pgBibleStrong_caption='Strong''s numbers'
+rc_bibleview_opts_pgBibleMorph_caption='Morphology'
+rc_bibleview_opts_pgLemma_caption='Lemma'
+rc_bibleview_opts_pgBibleXRefsFootnotes_caption='Footnotes'#13'Cross-references '
+rc_bibleview_opts_pgCmtLinks_caption='Commentary links'
+rc_bibleview_opts_pgBibleInlineCmts_caption='Inline commentaries'
+rc_bibleview_opts_pgBibleDcts_caption='Word lookup dictionaries'
+rc_bibleview_opts_pgLookupOptions_caption='Word click options'
+rc_bibleview_opts_pgGeneral_caption='General options'#13'User Toggles'
+rc_bibleview_opts_pgUserToggles_lbl='User Toggles in this view for this Bible: %s'
+rc_bibleview_opts_pgUserToggles_compare='Compare Mode'
+rc_bibleview_opts_pgUserToggles_list='List Mode'
+rc_bibleview_opts_pgBibleStrong_strongs='Strong''s numbers%s'
+rc_bibleview_opts_pgBibleMorph_morphology='Morphology codes%s'
+rc_bibleview_opts_pgBibleMorph_original_trans='Original Word and Transliteration (Hebrew/Greek)%s'
+rc_bibleview_opts_pgBibleMorph_lemma='Lemma Options%s'
+rc_bibleview_opts_pgBibleMorph_lemma_trans='Lemma Transliteration%s'
+rc_bibleview_opts_BibleMode_Interlinear=' | Column Text Mode |'
+rc_bibleview_word_popup_order_if=', if in popup or Word-study'
+rc_bibleview_word_popup_order_word='Word%s'
+rc_bibleview_word_popup_order_translit='Word Transliteration%s'
+rc_bibleview_word_popup_order_gloss='Gloss%s'
+rc_bibleview_word_popup_order_morph='Morphology%s'
+rc_bibleview_word_popup_order_strongs='Strongs%s'
+rc_bibleview_word_popup_order_lemma='Lemma%s'
+rc_bibleview_word_popup_order_lemtranslit='Lemma Transliteration%s'
 
 #fmBookview - book view specific 
 rc_bookview_nocmtentry='    Kein Kommentareintrag für '
@@ -1913,6 +2810,10 @@ rc_bookview_dnd_secure='Dies ist ein geschütztes Modul: Kopieren/Verschieben is
 rc_bookview_dnd_copying='Kopiere ''%s''...'
 rc_bookview_dnd_err='Beim Drag-n-drop trat ein unerwarteter Fehler auf: %s.'#13#13'Soll die ganze Operation widerrufenwerden?'
 rc_bookview_dnd_cmt_exist='Die geplante Operation wird %d Kommentare überschreiben.'#13#13'Die Kommentare zu folgenden Versen werden überschrieben: '#13'%s'#13#13'Wirklich fortfahren?'
+#bookview B C V button hints
+rc_bookview_Bbutton_hint='Book level comments'#13'Click to see comments for the associated Bible Book'
+rc_bookview_Cbutton_hint='Chapter level comments'#13'Click to see comments for the associated Bible Chapter'
+rc_bookview_Vbutton_hint='Verse level comments'#13'Click to see comments for the associated Bible Verse'
 #bookview conext menu items in 
 rc_bookview_find='Suche ''%s''...'
 rc_bookview_lookup='''%s'' nachschlagen in'
@@ -1921,6 +2822,8 @@ rc_bookview_detectvrefsel='Versreferenzen in der Auswahl detektieren...'
 rc_bookview_detectvrefall='Alle Versreferenzen in der Anzeige detektieren...'
 rc_bookview_editbkm='Bookmark ändern...'
 rc_bookview_insertbkm='Bookmark einfügen...'
+rc_bookview_editbkm='Edit bookmark...'
+rc_bookview_insertbkm='Insert bookmark...'
 rc_bookview_bookmarks='Bookmarks...'
 rc_bookview_bkmexists='Ein Bookmark namens ''%s'' existiert bereits.'#13'Sicher, dass ein weiterer mit demselben Namen hinzugefügt werden soll?'
 rc_bookview_goto='Zu [%s] in der Bibelansicht gehen'
@@ -1929,6 +2832,9 @@ rc_bookview_warn_invalidid='Das Modul ''%s'' enthält einen Themen-ID mit dem We
 rc_bookview_loadtopics_err='Beim Laden der Themen des Moduls ''%s'' ist ein Fehler aufgetreten.'#13'Dies weist auf ein Problem mit dem Modul an sich hin. Falls es sich nicht um ein offizielles Modul handelt, bitte an den Ersteller wenden, andernfalls einen bug report an root@theword.gr.'
 rc_bookview_createsidx_err='Beim Erstellen des Suchindexes für das Modul ''%s'' (Themen-ID %d) ist ein Fehler aufgetreten. Dadurch kann es passieren, dass Worte beim Durchsuchen des Moduls nicht gefunden werden.'#13#13'Trotzdem weiter indizieren?'
 rc_bookview_createsidx_err2='Es wurden %d missbildete Themen gefunden, die nicht indizeirt werden konnten. Wahrscheinlich ist die Indizierung dieser Einträge fehlgeschlagen, und können nicht durchsucht werden.'
+rc_bookview_createsidx_ref_err='Reference searches will not work on every topic in this module "%s" starting with (topic id: %d).'#13#13'If this is an official module, please submit a bug report including the Book Name and TopicID of the error.; if not, please contact the author.'#13#13'NOTICE: This dialog will close in 20 seconds and indexing will continue if you don''t click "OK".'
+rc_bookview_createsidx_ref_exit_err='There was an problem while creating the search index for the module "%s".'#13'Indexing will now stop on this module and be attempted again at a later time.'#13#13'Next time when you see this module "%s" indexing we recommend you let theWord run without any user interaction during the indexing of this module.'#13#13'Special note: Normally you can use theWord during the indexing of many of the modules'#13'NOTICE: This dialog will close in 20 seconds and theWord will continue on if you don''t click "OK".'
+rc_bookview_idx_of=' of '
 #the 'inline matches' is used in the topics combo box when the user enters a letter and matches are displayed in the popup
 rc_bookview_inline_matches=' - Inline Treffer -'
 rc_bookview_buildwordindex='Erstelle Wortindex für ''%s'''
@@ -1938,6 +2844,18 @@ rc_bookview_indexing='Indizierung...'
 rc_bookview_idx_starting='Index für %s erstellen: Starten...'
 rc_bookview_idx_progress='Erstelle Index für %s: %d%%'
 rc_bookview_buildingtree='Baum erstellen...'
+rc_bookview_idx_starting='Creating index for %s: starting...'
+rc_bookview_idx_progress='Creating index for %s: %d%%'
+rc_bookview_idx_progress_v2='Creating index for %s'
+rc_bookview_idx_check_bookof='Check index on book %d of %d'
+rc_bookview_idx_start_bookof='Indexing search on book %d of %d'
+rc_bookview_resetidx_ref_start_bookof='Reset search ref on book %d of %d'
+rc_bookview_resetidx_both_start_bookof='Reset search both on book %d of %d'
+rc_bookview_idx_catching_up_bookof1='Search index taking a break ... book %d of %d'
+rc_bookview_idx_catching_up_bookof2='Search index taking a break . . . book %d of %d'
+rc_bookview_idx_reindex_books='%d will possibly be reindexed next time.'
+rc_bookview_idx_books_background='This is a background process it starts in theWord as needed. Feel free to use theWord as normal.'
+rc_bookview_buildingtree='Building tree...'
 #items for the the tip when the mouse hovers over a book view tab
 rc_bookview_tip_abbrev='Abkürzung'
 rc_bookview_tip_title='Titel'
@@ -1946,13 +2864,37 @@ rc_bookview_tip_publishdate='Veröffentlichung'
 rc_bookview_tip_categories='Kategorien'
 rc_bookview_tip_keywords='Schlüsselwörter'
 rc_bookview_tip_description='Beschreibung'
+rc_bookview_tip_description='Description'
+rc_msg_duplicate_book_id='There are duplicate Book ids.'#13'While these duplicates exists items like Module Sets, Strong''s, Morphology, etc may not work correctly.'#13#13'To fix from within theWord right click the original Book Module with _DUPLICATE_ID_ and set it as "original".'#13#13'To manual fix go to the Cache folder (which can be found in Help> About> File Locations) look for BookDuplicate.txt which holds the duplicate filenames and paths and set the module ids to something unique.'#13#13'This dialog will appear on startup until this is resolved. It is important to fix this!'
+#devotion specific
+rc_bookview_dev_noexist='No devotional reading exists for %s.'#13'Dates with devotional readings are shown with bold numbers.'
 #when right-click on a module tab, first label
 rc_bookview_optionsfor='Optionen für [%s]'
-#default tab layouts descriptions
+rc_bookview_deletemod_confirm='You are about to delete the following module:'#13'    [%s]'#13#13'WARNING! You cannot undo this action.'#13'The associated file will be permanently deleted from your disk.'#13#13'Continue?'
+rc_bookview_deletemod_failed='Failed to delete the module''s associated file:'#13'    %s'#13#13'This may happen if the file is open by another application,'#13'or you are running another instance of theWord.'#13#13'You will need to delete this file manually, or else the module will be'#13'available again the next time you start theWord.'
+rc_bookview_setorigmodid_confirm='You are about to set the id of the following module as original:'#13'    [%s]'#13'with the path:'#13'  [%s]'#13#13'WARNING! You cannot undo this action.'#13'The associated module will be set as the original and all others with the same id as duplicates.'#13#13'Continue?'
+rc_bookview_setorigmodid_failed='Failed to set the module''s associated id as original:'#13'    %s'#13#13'This may happen if the file is open by another application,'#13'or you are running another instance of theWord.'#13#13'You will need to shut down other instances of theWord, or else the module will be'#13'seen as a duplicate again.'
+#default tab layouts descriptions. Also use in 'Add Titles...' dialog as grouping entries in the list of modules
 rc_All_modules='Alle Module'
 rc_Dictionaries='Wörterbücher'
 rc_Commentaries='Kommentare'
 rc_Books='Bücher'
+rc_Maps_and_Graphics='Maps and Graphics'
+rc_Reading_Plans='Reading Plans'
+rc_Bibles='Bibles'
+rc_Devotionals='Devotionals'
+rc_Indigenous_Bibles='Indigenous Bibles'
+rc_Graphics='Graphics'
+
+#TfrmSelectBibles messages
+rc_selectbibles_prompt_save_set='Would you like to save the changes made to the set [%s]?'
+rc_selectbibles_prompt_save_empty_set='Sorry the set [%s] cannot be saved since it is empty.'#13'The set [%s] will remain unchanged.'
+rc_group_lng_any='Any language'
+rc_group_lng_none='No language set'
+rc_selectbibles_no_matching_bibles='Sorry your group settings resulted in no Bibles added. Please adjust your settings before clicking apply again.'
+
+#Biblical Languages Database
+rc_blngs_requiresnewer='The Biblical Language Database ''%s'' requires a newer version of the program to work properly.'#13#13'Please, remove/delete this file in order to avoid seeing this message again.'#13'You may update to the latest version by visiting ''www.theword.net''.'
 
 #frmBookmarks messages
 rc_bkms_warn='Der ''Name'' eines Bookmarks sollte nur aus englischen Zeichen, Nummern und Unterstrichen bestehen, und mit einem Buchstaben beginnen.'#13#13'Bitte korrigieren, um fortzufahren.'
@@ -1968,6 +2910,15 @@ rc_custtabs_dcts='Wörterbücher'
 rc_custtabs_cmts='Kommentare'
 rc_custtabs_bks='Bücher'
 rc_custtabs_maps='Karten'
+rc_custtabs_maps='Maps'
+rc_custtabs_plans='Reading Plans'
+rc_custtabs_modinsets='Appears in sets: '
+rc_custtabs_placeholder='Module place holder (please ignore)'
+rc_custtabs_nocategory='No-Category'
+rc_custtabs_nokeyword='No-Keyword'
+rc_custtabs_nopublisher='No-Publisher'
+rc_custtabs_noauthor='No-Author'
+rc_custtabs_nolanguage='No-Language'
 
 #frmHyperlink messages
 rc_hyper_defbible='[Verstext des aktuellen ''Standard'' Bibelmoduls verwenden]'
@@ -2024,6 +2975,10 @@ rc_mp_detectvrefs_progress='Versreferenzen detektieren...'
 rc_mp_detectvrefs_current='Automatische Detektion der Versreferenzen in Thema %d von %d...'
 rc_mp_detectvrefs_perc='Automatische Detektion der Versreferenzen: %d%%'
 rc_mp_detectvrefs_err='Bei der automatischen Detektion der Versreferenzen trat ein Fehler auf. Es wurden keine Änderungen gemacht.'
+rc_mp_detectvrefs_err='An error occurred while processing the verse references. No changes will be made'
+#strongs
+rc_mp_detectstrongs_start='Initializing auto-detection operation...'
+rc_mp_detectstrongs_perc='Auto detecting Strong''s/lemmas: %d%%'
 #compact module action messages
 rc_mp_compacting='Modul komprimieren...'
 rc_mp_compacting_err='Komprimierung des Moduls schlug fehl:'
@@ -2042,6 +2997,7 @@ rc_mp_enc_user_notallowed='Dieser Vorgang kann nur an unverschlüsselten Eigenen
 rc_mp_nonuseronly='Dieser Vorgang kann nur an Eigenen Modulen ausgeführt werden.'
 rc_mp_nonenc_nonuser='Dieser Vorgang kann nur an unverschlüsselten, nicht-Eigenen Modulen ausgeführt werden.'
 rc_mp_cmtsonly='Dieser Vorgang kann nur an Kommentaren ausgeführt werden.'
+rc_mp_cmtsonly='This action cannot be executed for commentaries.'
 
 #frmNewComment messages
 rc_newcmt_addconfirm='Kommentar zu ''%s'' hinzufügen/ändern?'
@@ -2061,6 +3017,7 @@ rc_pp_printtitle='Im Anfang war das Wort'
 #frmStrongMorphAdvanced messages (the ones in the drop-down for selecting dictionaries)
 rc_smadv_bvdefault='[Standard für Bibelansicht]'
 rc_smadv_moddefault='[Standard für Module]'
+rc_smadv_notsupported='[Not Supported in this Bible]'
 
 
 #html inline
@@ -2069,6 +3026,11 @@ rc_btext_prev_chapter='Voriges Kapitel'
 rc_btext_next_chapter='Nächstes Kapitel'
 rc_html_parallel_no_bible='Parallelansicht ist <b>nicht</b> verfügbar, da:<li>keine (a) Bibel(n) für diese Ansicht gewählt sind, oder<li>die gewählte(n) Bibel(n) enthält/enthalten diesen Vers nicht<br><br><div align=center><a href=cmd:parallelSelectBible>Bibeltext wählen</a></div>'
 rc_html_verse_list_default='<html><body><font color=black>**Verse mit der Maus hierher ziehen von:<ul><li>der Liste der Suchresultate (<b>einen</b> or <b>mehrere</b> ausgewählte Verse)<li>dem Bibel Baum: <b>einen</b> Vers<li>dem Bibel Baum: ein <b>ganzes</b> Kapitel</ul><p><p>Um einen <b>zusammenhängenden Bibelabschnitt zu erstellen</b>: nachdem</b> ein Vers in die  Liste aufgenommen wurde auf den Vers klicken ''<b>Abschnitt bis...</b>'' wählen. Mit der Taste <b>Strg</b> und gleichzeitigem Klick auf eine Versreferenz erhöht die Obergrenze eines durchgängigen Abschnitts um einen Vers, während <b>Strg+Alt</b> und Klick auf die Versreferenz sie analog herabsetzt.<p><div align=right>Weitere Funktionen durch Klicken auf die Vers Referenz der Liste</div></font></body></html>'
+rc_dctnot_strong='Strongs'
+rc_dctnot_lemma='Lemma'
+rc_dctnot_morph='Morphology'
+rc_dctnot_wordlookup='Word Lookup'
+rc_html_searchview_dctnotfound='Sorry did not find <b>"%s"</b> in <b>"%s"</b> which is the resource(s) selected in <b>%s Tab</b> for the Bible view you searched.<br><br><div align=center><i>Note: If you change dictionaries in <b>%s tab</b> make sure to search again.</i></div>'
 #auto update messages
 rc_autoupdate_checkfailed='Beim Überprüfen auf eine neue Version trat ein Fehler auf. Soll direkt der Browser geöffnet werden, um manuell nach einer neuen Version zu sehen?'
 rc_autoupdate_msg2='Für das Auto-Update muss eine Internetverbindung bestehen. Das Programm wird automatisch die Seite ''www.theword.gr'' aufrufen, wo nach möglichen Updates gesucht wird.'#13#13'Soll dieser Vorgang weiter ausgeführt werden?'
@@ -2078,6 +3040,8 @@ rc_autoupdate_msg10='Das Programm wird in einer Woche erneut fragen, ob das Upda
 rc_autoupdate_warnbeforeconnecting='Das Programm überprüft nun, ob eine neuere Version verfügbar ist. Für diese Operation ist eine Internetverbindung notwendig. Das Programm sendet keine sensiblen Informationen währedn dieses Vorgangs.'#13#13'Falls eine Firewall installier ist, kann evtl eine Warnung erscheinen, dass ein Programm auf die Seite ''www.theword.gr'' zugreifen möchte. Diese Verbindung kann unbedenklich erlaubt werden, und ist zur Durchführung des Vorgangs erforderlich.'#13#13'Die automatische Überprüfung auf Updates kann unter Datei -> Einstellungen deaktiviert werden.'#13#13'Vorgang weiter ausführen?'
 rc_autoupdate_turnoff='Soll die automatische, regelmäßige Überprüfung auf Updates ausgeschaltet werden?'
 rc_autoupdate_inoneweek='Das Programm wird in einer Woche erneut nach Updates suchen.'#13#13'Wenn das Programm nicht automatisch nach Updates suchen soll, kann die entsprechende Option im Menü ''Datei->Einstellungen...'' geändert werden.'
+rc_autoupdate_newtiltes='Neue Module...'
+rc_autoupdate_loading='Loading...'
 
 #clipboard viewer messages
 rc_clip_truncate='Versmonitor gekürzt bis '
@@ -2086,6 +3050,10 @@ rc_sel_one_text='Bitte mindestens einen Bibeltext auswählen.'
 rc_clip_gotoverse='Stelle aufschlagen'
 rc_clip_pastetolist='zur Liste'
 rc_clip_init_notice='The Word - Bibelsoftware'#13#13'Dieser Hinweis kommt von der Software ''The Word'': Dieses gerade auf dem Bildschirm erschienene Fenster zeigt Bibelverse an, deren Referenzen gerade in die Zwischenablage kopiert wurden.'#13#13'Dies ist eine Funktion in The Word, genannt ''Versmonitor''. Ziel ist, die Zwischenablage zu monitoren, und ein Popup zu erzeugen das die Stelle(n) anzeigt deren Versrefenzen (oder Text der Versreferenzen enthält) gerade kopiert wurden.'#13#13'Für weitere Informationen zu dieser Funktion bitte das Manual von The Word untersuchen. Zum Deaktivieren ins Menü Datei -> Einstellungen -> Versmonitor gehen.'#13#13'Dies ist eine einmalige Inforamtion, und wird nicht nochmals erscheinen.'
+rc_clip_offsetvref='Mouse wheel scroll to offset'
+rc_hlclrs_light_color='Light Highlight Color'
+rc_hlclrs_dark_color='Dark Highlight Color'
+rc_hlclrs_sample_text='Sample Text'
 
 #splash screen messages
 rc_splash_build_index='Index wird erstellt für'
@@ -2097,6 +3065,10 @@ rc_copy_verse_to='Bis [Klick für Versauswahl] ...'
 rc_copy_verse_verses='Verse'
 rc_copy_verse_from_with='Von: [%s]'
 rc_copy_verse_to_with='Bis: [%s]'
+rc_copy_verse_sets_save_name='You must supply a unique valid name'#13' - of three characters or more -'#13'before you can save the current settings.'
+rc_copy_verse_sets_overwrite='The set ''%s'' already exists.'#13#13'Are you sure you want to overwrite and update?'
+rc_copy_verse_sets_notexists='The set ''%s'' does not exist.'
+rc_copy_verse_sets_confirmdelete='Are you certain you wish to delete set ''%s''?'
 
 #define range dialog message (for searches)
 #be ware that the messages of the 'copy verse dialog' (the ones above) are also used in this dialog
@@ -2114,6 +3086,18 @@ rc_lyt_user_layout='Benutzerlayout %d'
 rc_lyt_as='als: '
 rc_lyt_confirm_delete='Soll das Layout ''%s''wirklich gelöscht werden?'
 rc_lyt_no_empty='Es kann kein leerer Name für das Layout verwendet werden. Bitte etwas eingeben...'
+rc_lyt_update='Would you like to save current arrangement in layout ''%s''?'
+rc_lyt_loading='Loading layout: %d%%'
+rc_lyt_saving='Saving layout: %d%%'
+rc_lyt_fmttoolbar_close_error='Restoring layout - format toolbar error - exiting. Please restart theWord'
+
+#WordStudy Book messages
+rc_wordstudy_rightclick='Word-Study on "%s"'
+rc_wordstudy_rightclick_hint='Hold down SHIFT to add a new topic if unique word, or it replaces same word.'
+rc_wordstudy_abbrev='Word-Study'
+rc_wordstudy_title='Word-Study View'
+rc_wordstudy_description='This Book is designed for viewing/holding Word Study results'
+rc_wordstudy_replace_topic='Word Study'
 
 #add xref dialog
 rc_addxref_range_too_big='ein Versbereich kann 255 aufeinanderfolgende Verse nicht übersteigen'
@@ -2160,18 +3144,48 @@ rc_wctx_dock_top='obere Reihe'
 rc_wctx_dock_bottom='untere Reihe'
 rc_wctx_dock_middle='Mitte'
 rc_wctx_cc_screenlimits='Schwimmende Fenster innerhalb Bildschirm halten'
+rc_wctx_dock_middle='Middle area'
+rc_wctx_recent='Recent (R)'
+rc_wctx_recent_hint='A new view with recent settings that were saved'
+rc_wctx_floating='Floating (F)'
+rc_wctx_floating_hint='A new floating view'
+rc_wctx_always_floating='Always Floating (A)'
+rc_wctx_always_floating_hint='A new view that is always floating.'
+rc_wctx_cancel='Cancel (ESC)'
+rc_wctx_cancel_hint='Never mind I don''t want to make a new view'
+rc_wctx_cc_screenlimits='Restrict floating windows within screen'
 
 #skin related message
 rc_skin_border='Fensterrand aus Oberfläche verwenden'
 rc_skin_hint='(über dem Gegenstand warten, um die Oberfläche zu sehen)'
 rc_skin_none='[keine Oberfläche]'
 rc_skin_tw3default='''The Word 3'' Standardoberfläche'
+rc_skin_inspector_hint='Hover the mouse cursor over items in theWord and use this information in the Skin Editor. Press ESC to end.'
+rc_skin_inspector_active='Skin Inspector active - Press ESC to exit'
+rc_skin_inspector_name='Name: '
+rc_skin_inspector_type='Type: '
+rc_skin_hint='(Pause over an item to see the skin)'
+rc_skin_none='[No skin]'
+rc_skin_tw3default='theWord default theme'
+rc_internalskins_hint='Skins'
+rc_style_hint='Delphi Styles (no preview)'
+rc_fileskin_hint='*.skn Files'
+rc_skin_reloaded='Skin reloaded'
+rc_skin_reload_failed='Skin reload failed'
+rc_skin_reload_not_supported='Delphi styles don''t have files to reload'
+rc_skin_reload_not_needed='No skin or default skin doesn''t need reloading'
+rc_skin_no_load='Your selected skin could not load try a different skin in the View > Skins Menu. Please select another skin otherwise menus'' text could be wrong.'
+
+#messages for when theWord shutsdown using frmStartup
+rc_shutdown_lblStatus='theWord is shutting down, please wait'
 
 #messages related to new modules that are being found during startup: following 4 messages are combined to a big one. Be careful to keep spaces, dots, etc...
 rc_newmods_list='Folgende neue Module wurden erkannt:'
 rc_new_mods_list_more='  - ... mehr neue Module vorhanden ...'
 rc_new_mods_make_sure='Soll sichergestellt werden, dass diese alle in den Buchansichten sichtbar sind?'
 rc_new_mods_choose='Wenn ''Ja''  gewählt wird,  versucht das Programm diese neuen Module in existierende Buchansichten einzupassen bzw erzeugt neue Ansichten und bringt sie darin unter. Für jedes Modul wird ein  Bestätigunsdialog angezeigt.'#13#10#13#10'Wenn ''Nein'' gewählt wird, können die Module je nach aktuellen Einstellungen in einigen Buchansichten erscheinen (oder auch nicht). In jedem Fall können Sie über den Dialog ''Modulsets definieren'' manuell hinzugefügt werden.'
+rc_new_rptpl='At least one new Reading Plan template has been detected.'#13#13'Would you like to start the ''New Reading Plan Wizard'' to create a new Bible Reading Plan?'
+rc_newmods_count='The are %d new modules available! Click to check them out'
 
 #messages related to failure to load book modules
 rc_modfail_err='Beim Initialisieren einiger der installierten Module sind Fehler aufgetreten. Folgende Module konnten nicht geladen werden:'
@@ -2203,6 +3217,137 @@ rc_lockwarn_verify='Für %d Modul(e) wurde noch kein legaler Besitznachweis erbr
 rc_lockwarn_enteremail='<Hier bitte die E-Mail-Adresse eingeben, die bei der Registrierung verwendet wurde>'
 rc_lockwarn_autoverify_check='Immer, wenn die Checkbox ''Ich bin der legale Eigentümer dieses Moduls'' gewählt wird, werden alle anderen Module mit dem gleichen registrierten Eigentümer ebenfalls gewählt.'
 rc_lockwarn_autocheck='Es sind noch %d Modul(e) auf den gleichen Namen und E-Mail-Adresse registriert.'#13'Soll die Checkbox ''Ich bin der legale Eigentümer'' autmoatisch bei allen gewählt werden?'#13#13'Bitte nur mit ''Ja'' antworten, wenn Sie wirklich rechtmäßiger Eigentümer von allen sind.'
+#messages from frmDownloadModules
+rc_dlm_loadingrepinfo='Loading module repositories information...'
+rc_dlm_purchaseonline='Acquire Online: %s'
+rc_dlm_repinfofail='Could not get information about official modules repositories'#13#10'Please make sure that you are connected to the Internet and that there is no firewall blocking access to theWord Software.'
+rc_dlm_loadingmods='Loading modules from %s'
+rc_dlm_modinforepo='Repository'
+rc_dlm_official='Official theWord Repository'
+rc_dlm_loadingrepinfos='Loading New Title info...'
+rc_dlm_modinfofail='Could not contact the module repository to look for Books and Bibles.'#13#10'Please make sure that you are connected to the Internet and that there is no firewall blocking access to theWord Software.'
+rc_dlm_selectone='Please select at least one module to download and install.'
+rc_dlm_selectedpaid='You have selected to install at least one paid module that you have not yet unlocked. When the download process completes and theWord restarts, you may proceed with unlocking your module(s).'#13#13'Please make sure you have already received the email with the unlock data.'#13#13'Would you like to continue?'
+rc_dlm_selmod='Select a title from the list to see more information.'
+rc_dlm_latestversioninstalled='You already have the latest version of this module installed.'#13#10'Are you sure you want to download it again?'
+rc_dlm_appreciation='Free-Appreciation'
+rc_dlm_free='Free'
+rc_dlm_appreciation='Free/Appreciation'
+rc_dlm_version='Version'
+rc_dlm_versiondate='Version date'
+rc_dlm_selected='Selected'
+rc_dlm_modules='modules'
+rc_dlm_totalsize='Total size'
+rc_dlm_st_notinstalled='This title is not installed. Select it and click the ''Download and Install...'' button to add it to your library'
+rc_dlm_st_latestinstalled='You already have the latest version of this title Installed'
+rc_dlm_st_neweravail='A newer version of this title is available. Select if you want to update your copy.'
+rc_Official_theWord_Repository='Official theWord Repository'
+rc_html_loadinfo='Loading information...'
+rc_html_loaderr='Failed to load information.'
+
+#messages from frmNewDownloadRepository
+rc_dlr_delconfirm='Are you sure you want to delete the repository %s'
+
+#message from spelling dictionaries module
+rc_spell_loading='Loading spelling dictionary %d/%d for language "%s"...'
+rc_spell_more_dictionaries='To add more spelling dictionaries select the "Add Titles..." menu from within theWord. A list of available spelling dictionaries is available under the "Spelling Dictionaries" type there.'
+#messages from frmDownloadFiles
+rc_dlf_downloading='Downloading file %d of %d ...'
+rc_dlf_err='An error occured while downloading "%s"'#13'What would you like to do?'
+rc_dlf_cancel='Are you sure you want to cancel downloads?'
+
+#messages from frmInstallModules (Files->Install modules)
+rc_instmod_inuse='File [%s] is already in use by theWord.'#13#10'You don''t need to install it.'
+rc_instmod_unknowntype='File [%s] is not a known file type or archive.'
+rc_instmod_nomodsinarch='The archive [%s] does not seem to contain any modules.'
+rc_instmod_noaffspellfile='The archive [%s] seems to contain a spelling dictionary, yet an important (.aff) file is missing.'
+rc_instmod_nomodsinarch_more='There were more archive files that did not contain any modules.'#13'The "Files to install" list contains all identified modules.'
+rc_instmod_lblfiles='%d modules detected, %d checked for installation'
+rc_instmod_tmpdirfail='Failed to create temporary directory for extracting archive files.'
+rc_instmod_extracting='Extracting [%s]...'
+rc_instmod_extractfail='Failed to extract file [%s] from archive.'#13'Installation of module failed.'
+rc_instmod_extractretry='Extract of file [%s] failed. Retry?'
+rc_instmod_targetexists='Target file [%s] already exists and a [%s%s] file will be made.'#13'Replace file?'
+rc_instmod_targetexists_warning=#13#13'Notice: If you have applied any highlighting in this title, it will be lost.'
+rc_instmod_targetexists_skineditor='Skin Editor [%] already exists and a [%s%s] file will be made.'#13'Replace file?'
+rc_instmod_targetexists_theword='theWord main program [%s] already exists and a [%s%s] file will be made.'#13'Replace file?'
+rc_instmod_copyfailed='Copying of file [%s] failed. Module installation failed.'
+rc_instmod_copyfailednfp='Copying of file [%s] failed. Module/Archive installation failed/incomplete.'
+rc_instmod_instsuccess='%d new module(s)/package(s) have been installed.'#13'They will be available the next time you restart theWord.'
+rc_instmod_instsuccess_more=#13#13'Please make sure that no other instance of theWord is running'#13'when you restart theWord, or else the new module(s) will not be available.'
+rc_instmod_askrestart=#13#13'Would you like to restart theWord now?'
+rc_instmod_passmsgtitle='Archive is password protected'
+rc_instmod_passmsg='Please enter password for archive:'
+rc_instmod_enterurl='Please, enter the URL to download the module from:'
+rc_instmod_invalidurl='Failed to download file. Please check the URL you entered.'
+#following values are for the Open dialog filter (Browse button)
+rc_instmod_browsefilter_allsupported='All supported files'
+rc_instmod_filter_twmods='theWord modules'
+rc_instmod_filter_allarch='All Archives'
+rc_instmod_filter_nsisinstaller='exe installers'
+rc_instmod_browsefilter_all='All files'
+
+#messages from frmNewReadingPlan (File->New Bible Reading Plan...)
+rc_rdp_nopassages='The Bible translation you have chosen does not contain the included passages.'#13#10'Please, choose another translation or do not define a translation at all.'
+rc_rdp_toomanypassages='You have selected more than 20 passages to read each day, which seems unusual. If you want theWord to treat these passages as the actual daily readings (instead of dividing them later), please select the ''Passages are the actual readings per session (advanced)'' option.'
+rc_rdp_parsed='Parsed passages:'
+rc_rdp_enterpassages='Enter the required passages to the area below.'
+rc_rdp_deffilename='My Reading Plan'
+rc_rdp_defabbrev='MyPlan'
+rc_rdp_deftitle_prefix='Bible Reading Plan'
+rc_rdp_invaliddate='The date you picked is before the starting date, please correct.'
+rc_rdp_noabbrev='Please, choose an Abbreviation.'
+rc_rdp_notitle='Please, choose a Title.'
+rc_rdp_nopath='Please, choose a path to save your new Reading Plan.'
+rc_rdp_prev_sessions='Sessions: '
+rc_rdp_prev_verseperday='Verses/day: '
+rc_rdp_prev_chapperday='Chapters/day: '
+rc_rdp_prev_starton='Start on: '
+rc_rdp_finishon='Finish on: '
+
+#these are used for the topics tree for Reading Plans (the 3 grouping nodes)
+rc_Calendar_View='Calendar View'
+rc_List_View='List View'
+rc_Stats_&_Actions='Stats & Actions'
+
+#following messages are used for the consturction of the Reading Plan calendar/content
+rc_rdpc_list_date='Date'
+rc_rdpc_list_passages='Passages'
+rc_rdpc_list_sessions='Sessions'
+rc_rdpc_list_session='Session %d'
+rc_rdpc_check_tip='Check here when you have completed the reading of this day'
+rc_rdpc_no_calendar='No Calendar days found in Reading Plan'
+#the following is an extra for the 'Preview' popup from within the 'New Reading Plan' dialog
+rc_rdpc_list_passage='Passage %d'
+
+#messages for the Properties page for Reading Plans
+rc_rdp_props_sessions_msg='<font color=green>%d</font> of %d'
+rc_rdp_props_verses='Verses'
+rc_rdp_props_verses_msg='<font color=green>%d</font> of %d (~%d/day)'
+rc_rdp_props_chapters='Chapters'
+rc_rdp_props_chapters_msg='<font color=green>%d</font> of %d (~%d/day)'
+rc_rdp_props_completed='Completed'
+rc_rdp_props_sessions='sessions'
+rc_rdp_props_remaining='Remaining'
+rc_rdp_props_ask_update='Are you sure you want to update your reading plan?'
+
+#message used within the Bible views for reading plans
+rc_rdp_bv_startreading='Start Reading'
+rc_rdp_bv_done='Done'
+rc_rdp_bv_close='Close'
+rc_rdp_bv_stopreading='Stop Reading'
+
+#messages for frmDailyReading form
+rc_dr_rdp_for_today='Reading Plans for today.'
+rc_dr_no_readings='No readings scheduled for today.'
+rc_dr_rdp_no_cal='Reading Plans without calendar; read one more session'
+rc_dr_no_more='No plans or remaining readings exist.'
+rc_dr_dev='Devotional Readings for today'
+rc_dr_no_dev='No devotional readings remain for today.'
+rc_dr_missed_day_warning='Based on your plan, it seems that you have missed at least one reading. You may go to your Reading Plan ''Stats & Actions'' page and select the ''Catch Up'' function to re-sync your readings.' 
+
+#message for frmOptions form
+rc_background_texture_tip='You may want to combine the background texture you selected with an appropriate background color for optimal results.'#13#13'The default textures that come with theWord appear gray, but, in reality, they are semi-transparent so you can combine them with any background color for better results.'
 
 #status bar
 rc_stbar_cmt='Kom: %s'
@@ -2212,12 +3357,87 @@ rc_stbar_dct='Wöb: %s'
 rc_display_topic_no_view_create='Gefundenes Thema kann nicht angezeigt werden, da keine der Buchansichten das Modul ''%s'' enthält.'#13#13'Soll eine neue Buchansicht erzeugt werden um das Modul anzuzeigen?'
 rc_display_topic_no_view='Dieses Thema kann nicht angezeigt werden, da keine der Buchansichten das Modul ''%s'' enthält.'#13#13'Soll dieses Modul zur schattierten Buchansicht hinzugefügt werden um das Modul anzuzeigen?'
 
+#Not used any more: see below the rc_SMsgDLgXXX messages instead
 #generic dialog: used when saving/renaming verse lists
 rc_dlg_ok='&OK'
 rc_dlg_cancel='Abbrechen'
+#names of the default paragraph sets shipped with TW
+rc_default_paragraphs='Default paragraphs'
+rc_default_paragraphs_alt='Default paragraphs 2'
+rc_english_headings='English headings'
+
+#welcome screen messages
+rc_welcome_cancel='Are you sure you don''t want to select your initial layout?'#13'(The ''Welcome Screen'' can be accessed at any time from the menu ''Help''->''Welcome screen'')'
+rc_welcome_info='The new layout has been applied!'#13'TIP:'#13'You can select from more pre-defined layouts from the menu ''View''->''Layouts'' or you can create and save your own layouts. You may open new views at any time from the ''Window'' menu or close them using the ''X'' button on the top-right corner of each view.'#13'The ''Welcome Screen'' can be accessed at any time from the menu ''Help''->''Welcome screen'''
+rc_welcome_preview='You can drag this dialog from the top to move it out of the screen temporarily in order to preview the actual arrangement of the views!'
+
+#frmSnippet messages
+rc_snip_descr='Description'
+rc_snip_value='Insert Value'
+rc_snip_maxsnips='You currently have the maximum number of snippets (50).'#13#13'A snippet must be deleted before adding another.'
+rc_snip_del_conf='Are you sure you wish to delete ''%s''?'
+
+#generic message box button captions
+rc_SMsgDlgYes='&Yes'
+rc_SMsgDlgNo='&No'
+rc_SMsgDlgOK='OK'
+rc_SMsgDlgCancel='Cancel'
+rc_SMsgDlgAbort='&Abort'
+rc_SMsgDlgRetry='&Retry'
+rc_SMsgDlgIgnore='&Ignore'
+rc_SMsgDlgAll='&All'
+rc_SMsgDlgNoToAll='N&o to All'
+rc_SMsgDlgYesToAll='Yes to &All'
+rc_SMsgDlgHelp='&Help'
+#generic message box captions
+rc_SMsgDlgWarning='Warning'
+rc_SMsgDlgError='Error'    
+rc_SMsgDlgInformation='Information'
+rc_SMsgDlgConfirm='Confirm'
 
 #don't change this if your language does not require to do so. Not very well tested
 chapter.verse.separator=':'
+#digits=0123456789
+#digits=০১২৩৪৫৬৭৮৯
+
+########################################################################################
+##### SPECIAL SECTION BEGIN ############################################################
+########################################################################################
+#The following messages are special because they are already translated 
+#in the following languages: 
+# 'Armenian','Bulgarian','Byelorussian','Catalan','Chinese Simplified','Chinese Traditional',
+# 'Czech','Dutch', 'English','Farsi', 'Finnish','Francais','German','Hungarian','Italian',
+# 'Lithuanian','Norsk','Polish','Portuguese Brazilian','Portuguese Portuguese','Romanian',
+# 'Russian','Slovak','Spanish','Svenska','Thai','Turkish','Ukrainian'
+#If this language file is for one of these languages, then you don't need to translate
+#them, you just need to define the following line (property rc_rva_use_language)
+#to match the correct language. Be carefult, the value of the rc_rva_use_language must
+#be a language from the list above EXACTLY as it appears or empty (e.g. ''), for example:
+#  rc_rva_use_language='Chinese Simplified' 
+#OR
+#  rc_rva_use_language='Norsk'  
+#OR
+#  rc_rva_use_language=''  
+#
+# IMPORTANT: if your language does NOT exist you still need to include an empty value for the
+# rc_rva_use_language property.
+rc_rva_use_language='English'
+
+#Now, in case the language of this language file is NOT in the list above, then
+#you will need to translate the following messages. Notice that all these messages
+#start with rc_rvam_. You can also comment the above line (rc_rvam_use_language)
+#Be careful to remove the # sign in front of the following lines to 'uncomment' them.
+
+#FindDialogEx
+#rc_rvam_src_NotFound='Search string ''%s'' not found.'
+#rc_rvam_src_ContinueFromStart='The end of the document is reached, continue from the beginning?'
+#rc_rvam_src_ContinueFromEnd='The beginning of the document is reached, continue from the end?'
+#rc_rvam_src_Complete='Search Complete'
+#rc_rvam_src_1Replaced='1 string replaced.'
+#rc_rvam_src_NReplaced='%d strings replaced.'
+########################################################################################
+##### SPECIAL SECTION END ##############################################################
+########################################################################################
 
 ###############################################
 
@@ -2362,7 +3582,7 @@ rc_bk_alias3_65='Jud'
 rc_bk_alias3_66='Off'
    
 # search patterns. Order is important!!!
-#  Format is '<search_patter>|<book_number>'
+#  Format is '<search_patter>|<book_number>[|1]'
 #  where <book_number> is from 1 to 66
 #NOTICE!!!: P0hilemon|57: there is an extra zero (0) after P:
 #this will give Philemon less priority than Philippians, when
@@ -2370,6 +3590,8 @@ rc_bk_alias3_66='Off'
 #Added the '.' after each number. The letters/numbers before the dot
 #are not counted to ignore to match the book name (e.g. the first letter
 #after the dot must match also.
+#There can be a 3rd argument (ver 3.1.3+): if it is 1, then the pattern is used
+#as is WITHOUT removing diacritics or downcasing!
 [Search.Patterns]
 1.Mose1|1
 2.Mose2|2
@@ -2524,6 +3746,37 @@ Offenbarung|66
 65|65
 66|66
 
+-cos|0
+-fig|0
+-as|0
+-on|0
+-in|0
+-isXXX|0
+-at|0
+-number|0
+-ami|0
+-me|0
+-can|0
+-do|0
+-so|0
+-to|0
+-ii|0
+-die|0
+-duty|0
+-here|0
+-her|0
+-eat|0
+-el|0
+-else|0
+-sons|0
+-due|0
+-dry|0
+-relation|0
+-east|0
+-of|0
+-see|0
+-per|0
+-era|0
 #The [Notice] section contains the raw content of an rtf file. 
 #The original file to be translated can be obtained here from http://www.theword.gr/docs/notice.rtf 
 #Once you translate the notice.rtf file (retaining all formatting), just copy/paste the raw
@@ -2561,3 +3814,156 @@ Wenn Sie jedoch eine Spende machen, werde ich Ihnen eine CD oder einen USB Stick
 \par
 \pard\f3\par
 }
+
+#The following 3 sections contains full html documents. They appear in the welcome 
+#screen (Help->Welcome screen). Each section is for a layout. You need to keep the html tags
+#as close as possible to the original
+#Notice: In order to use the % character, you need to put it twice (used in a td tag). 
+#This is because it is used for the substitution of the layout name
+[welcome-begginner-description]
+<html>
+<body>
+	<font size=+1><b>%s layout</b></font>
+	<br>
+  Includes a single <b>Bible view</b> to read your Bible and a 
+	list/tree on the left for navigating through the different books of the Bible. 
+	You can switch between different translations by clicking on 
+	the tabs/buttons at the top of the Bible view.
+	<br>
+	<b>Quick tip!</b>
+	<br>
+	<b>Views</b> are rectangular areas within the main window of <b>theWord</b>, 
+	used for a particular function. There are five different view types, yet the 
+	two most important views are the <font color=#3064F8><b>Bible view</b></font> and 
+	the <font color=#EB6307><b>Book view.</b></font><br>
+	The captions of the views (<font color=red>red square</font>) are <u>colored according to their function.</u>
+	Notice that:
+	<table>
+	<tr>
+		<td valign=top><img src="caption-bible-view"></td>
+		<td width=100%%><font color=#3064F8><b>Bible views</b></font> (using <font color=#3064F8><b>blue</b></font> 
+			captions) are used to display <u>Bible text.</u> Clicking on the tabs/buttons on the top allows you 
+			to switch between different Bible translations.
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><img src="caption-book-view"></td>
+		<td width=100%%><font color=#EB6307><b>Book views</b></font> (using <font color=#EB6307><b>orange</b></font> 
+			captions) are used to display <u>non-Bible reference material</u> such as commentaries, dictionaries, 
+			maps, graphics, devotionals, etc.
+		</tr>
+	</table>
+</body>
+</html>
+
+
+[welcome-basic-description]
+<html>
+<body>
+	<font size=+1><b>%s layout</b></font>
+	<br>
+  Includes a <font color=#3064F8><b>Bible view</b></font> to read your Bible and a 
+  <font color=#EB6307><b>Book view</b></font>
+  where you can read all reference material. The Book view is <b>linked</b> with the
+  Bible view so all commentaries automatically show the appropriate comment as
+  you read through your Bible. Clicking on a word in the 
+  <font color=#3064F8><b>Bible view</b></font> will also
+  cause all dictionaries in the <font color=#EB6307><b>Book view</b></font> to show 
+  the definition of this word (if present).
+  <br>
+  The <font color=#3064F8><b>Bible view</b></font> has a few more options enabled, like
+  passage headings and footnotes. 
+  On the right column there are also the two Search views: 
+  <ul>
+  	<li>the one with the <font color=green><b>green</b></font> caption is the 
+  		<font color=green><b>Bible search view</b></font>, used to search the Bible.
+  	<li>the one with the <font color=purple><b>purple</b></font> caption is the 
+  		<font color=purple><b>Book search view</b></font>, used to search reference material.
+  </ul>
+  Click on the <b>X</b> button on the top-right of a view to close it. 
+  Use the <b>Window</b> menu to reopen views.
+  <br>
+  <b>Quick Tip:</b><br>
+  <table><tr>
+  	<td valign=top><img src="gear"></td>
+  	<td width=100%%>Notice the small <b>gear icon</b> on the vertical toolbar in the 
+  		Bible view (the bottom/last icon - <font color=red>red square</font>). Clicking on the small black down-pointing arrow on the 
+  		right will display a popup menu that allows you to quickly switch on/off several features
+  		of the <font color=#3064F8><b>Bible view</b></font> display (press <b>H</b> for 
+  		example to toggle passage headings)! 
+  		</td> 
+  	</tr>
+  </table>  
+</body>
+</html>
+
+[welcome-default-description]
+<html>
+<body>
+	<font size=+1><b>%s layout</b></font>
+	<br>
+  Includes a <font color=#3064F8><b>Bible view</b></font> to read your Bible and 
+  two  <font color=#EB6307><b>Book views</b></font> at the bottom.
+  The left <font color=#EB6307><b>Book view</b></font> contains
+  all available non-Bible modules whereas the right one contains only commentaries.
+  On the left column there is also the <font color=#A39A01><b>Bible tree</b></font>. 
+  <hr>
+  <b>Quick Tip:</b><br>
+  <table><tr>
+  	<td valign=top><img src="books"></td>
+  	<td width=100%%>Notice the icon with the <b>green books</b>  on the leftmost
+  		area of each Book view (<font color=red>red square</font> on the screenshot). 
+  		Clicking on it allows you to choose what modules you want
+  		to have available on the current <font color=#EB6307><b>Book view</b></font>.
+  		</td> 
+  	</tr>
+  </table>
+  You can open as many <font color=#EB6307><b>Book views</b></font> as you like 
+  and choose the type of modules you want
+  each one to display. So, you can have one <font color=#EB6307>Book view</font> with all 
+  	your <font color=maroon>dictionaries</font>,
+  one with all your <font color=blue>commentaries</font> and one with your 
+  <font color=green>graphics</font>. You can even choose
+  specific modules to put there and even group them together in categories from the 
+  <b>Define module sets...</b> dialog (accessible from the green books icon).
+  <hr>
+  Remember that you can re-arrange all views within theWord by clicking on their caption
+  with the mouse and dragging to a different position. Try also the <b>Dock to</b> menu,
+  accessible from the system button of each view (<img src="system-button">, 
+  <img src="system-button-2">, etc.)
+</body>
+</html>
+
+[welcome-tW6-description]
+<html>
+<body>
+	<font size=+1><b>%s layout</b></font>
+	<br>
+  This tries to upgrade your theWord6 Layout to theWord 7 Layout. Note: If your layout does
+  not upgrade properly please try to reload it using the Layout menu.
+  <hr>
+  <b>Quick Tip:</b><br>
+  <table><tr>
+  	<td valign=top><img src="books"></td>
+  	<td width=100%%>Notice the icon with the <b>green books</b>  on the leftmost
+  		area of each Book view (<font color=red>red square</font> on the screenshot). 
+  		Clicking on it allows you to choose what modules you want
+  		to have available on the current <font color=#EB6307><b>Book view</b></font>.
+  		</td> 
+  	</tr>
+  </table>
+  You can open as many <font color=#EB6307><b>Book views</b></font> as you like 
+  and choose the type of modules you want
+  each one to display. So, you can have one <font color=#EB6307>Book view</font> with all 
+  	your <font color=maroon>dictionaries</font>,
+  one with all your <font color=blue>commentaries</font> and one with your 
+  <font color=green>graphics</font>. You can even choose
+  specific modules to put there and even group them together in categories from the 
+  <b>Define module sets...</b> dialog (accessible from the green books icon).
+  <hr>
+  Remember that you can re-arrange all views within theWord by clicking on their caption
+  with the mouse and dragging to a different position. Try also the <b>Dock to</b> menu,
+  accessible from the system button of each view (<img src="system-button">, 
+  <img src="system-button-2">, etc.)
+</body>
+</html>

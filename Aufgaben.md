@@ -1,0 +1,273 @@
+# Aufgaben
+
+[ ] Entsprechung der Zeilen prüfen 
+[ ] Namen der Variablen abgleichen 
+
+# Übersetzung nach Bereichen 
+
+[ ] Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
+[ ] Help->Unlock modules.
+[ ] [TfmLockedModuleInfo]
+[ ] [TTips2] popup dialog that displays verse texts and topics (e.g. when you move your mose over search results)
+[ ] [TfrmUpdateSubject]
+[ ] [TfrmNewFolder]
+[ ] [TfrmNewDctEntry]
+[ ] [TfrmNewComment]
+[ ] [TfrmModuleProperties]
+[ ] [TfrmMigrateV2Notes]
+[ ] [TfrmHyperlink]
+[ ] [TfrmCustomizeBookTabs]
+[ ] [TfrmBookmarks]
+[ ] [TfmBookView]
+[ ] [TfrmBookTopicGoto]
+[ ] [TfmMapView]
+[ ] [TfrmMapView]
+[ ] [TfrmLibrary]
+[ ] [TfrmSelectBibles]
+[ ] [TfrmCopyVerses]
+[ ] [TfrmOptions]
+[ ] page Bible
+[ ] page general and parallel view
+[ ] Parallel Compare Verse settings
+[ ] page Bible Headings
+[ ] Page: strong's and morph
+[ ] page morph
+[ ] Original Word
+[ ] Original Word and transliteration
+[ ] page: footnotes and cross-references
+[ ] [ ] page commentary links
+[ ] 'preview' link
+[ ] Add Titles dialog
+[ ] Add Titles dialog -> Click on 'Repositories' link on top-right
+[ ] Add Titles dialog -> Click on 'Repositories' link on top-right, click on new
+[ ] Add Titles dialog-> select some module and click 'Download'
+[ ] Appears in the 'Module Properties' dialog, on the second tab for Reading Plans
+[ ] Bible search statistics
+[ ] Bible search view
+[ ] Biblical Languages Database
+[ ] Book serarch view: Press F2
+[ ] Book view Goto Topic ID
+[ ] Click on Help->Bible info->any item. Shows info about a Bible module
+[ ] Dialog to select Bible modules to display in parallel (Compare).
+[ ] File menu
+[ ] File->Daily Readings dialog, click on the 'Choose devotionals to read daily' link
+[ ] File->Install modules
+[ ] Find dialog in Book view
+[ ] FindDialogEx
+[ ] Form that appears as a popup when pressing the 'Calendar' icon on the book view toolbar. 
+[ ] From a Book view, click the 'Green book icon' (the options menu), and go to Options->Reader's margins
+[ ] Gloss Options
+[ ] Help menu
+[ ] IMPORTANT NOTICE: the 3 tabs (Fast, Detailed, Options) have shortcuts keys. Be careful
+[ ] If this language file is for one of these languages, then you don't need to translate
+[ ] In a book view displaying a user module, right-click and select Insert->Insert manager
+[ ] Just copy paste and delete completely the [TDataMod] section
+[ ] Main menu bar
+[ ] Main window. Top level menus, etc
+[ ] Page: Lemma (section Lemma Options)
+[ ] Page: Lemma (section Lemma Transliteration)
+[ ] Proofing tab
+[ ] TfrmSelectBibles messages
+[ ] The [Notice] section contains the raw content of an rtf file. 
+[ ] The following 3 sections contains full html documents. They appear in the welcome 
+[ ] The following messages are special because they are already translated 
+[ ] The original file to be translated can be obtained here from http://www.theword.gr/docs/notice.rtf 
+[ ] There can be a 3rd argument (ver 3.1.3+): if it is 1, then the pattern is used
+[ ] This button appears only for devotionals, so make sure you are using one in order to see it.
+[ ] This is because it is used for the substitution of the layout name
+[ ] This is the Bible view, the window that displays Bible texts
+[ ] Tip that appears when hovering over the >> on the toolbars (when they don't fit)
+[ ] Verse list
+[ ] View Layout tab
+[ ] View menu
+[ ] WordStudy Book messages
+[ ] [Common modules folder]\Misc\default.layouts.twm file
+[ ] actions
+[ ] add xref dialog
+[ ] advanced tab
+[ ] auto update messages
+[ ] bible formatting toolbar
+[ ] bible tabs messages
+[ ] bible texts tab
+[ ] bible tree (F8)
+[ ] bible view for compare
+[ ] bible view for strongs: these messages may appear in the popup window when
+[ ] book formatting toolbar
+[ ] bookmarks
+[ ] bookmarks toolbar
+[ ] bookview B C V button hints
+[ ] bookview conext menu items in 
+[ ] bookview->export topics dialog
+[ ] bottom area
+[ ] click on the print button in a Bible view (second button from the end on the vertical toolbar)
+[ ] clipboard monitor tab
+[ ] clipboard viewer messages
+[ ] compact module action messages
+[ ] context menu for bible view (right click on tabs)
+[ ] context menu for views (arrow on left on views captions)
+[ ] convert to rtf action messages
+[ ] copy verse messages
+[ ] default tab layouts descriptions. Also use in 'Add Titles...' dialog as grouping entries in the list of modules
+[ ] define range dialog message (for searches)
+[ ] detect all vrefs action messages
+[ ] devotion specific
+[ ] file associations tab
+[ ] final menu items
+[ ] fmBibleview - Bible view specific
+[ ] fmBookview - book view specific 
+[ ] follow are the titles and descriptions of the default personal modules that are created with ver.3 if no other personal modules exists. These are the ones most users will see
+[ ] follow are title, descr, about for module that is created to migrate footnotes of ver.2
+[ ] follow are title, descr, about for module that is created to migrate subject-notes of ver.2
+[ ] follow are title, descr, about for module that is created to migrate verse-notes of ver.2
+[ ] following messages are used for the consturction of the Reading Plan calendar/content
+[ ] following values are for the Open dialog filter (Browse button)
+[ ] fonts tab
+[ ] for each day, e.g. 'The Entire bible, mixes OT & NT passages daily')
+[ ] for the similar buttons
+[ ] frmBookmarks messages
+[ ] frmCustomizeBookTabs messages
+[ ] frmHyperlink messages
+[ ] frmMigrateV2Notes messages
+[ ] frmModuleProperties messages
+[ ] frmNewComment messages
+[ ] frmNewFolder messages
+[ ] frmNewModule messages
+[ ] frmOptions - Bible view options
+[ ] frmOrganizeXRefs messages
+[ ] frmPrintPreview messages
+[ ] frmSnippet messages
+[ ] frmStrongMorphAdvanced messages (the ones in the drop-down for selecting dictionaries)
+[ ] from Book search view, click on the first icon of the toolbar.
+[ ] from within the 'Organize cross-references' dialog, click the 'Explore...' button
+[ ] from within the 'Organize cross-references' dialog, click the 'Manage files...' button
+[ ] from within the 'Organize cross-references' dialog, click the 'New' button
+[ ] from within the 'Print preview' dialog, select 'Page setup...' button
+[ ] general
+[ ] general options
+[ ] general options and below
+[ ] general tab
+[ ] generic dialog: used when saving/renaming verse lists
+[ ] generic message box button captions
+[ ] generic message box captions
+[ ] html formatting
+[ ] html inline
+[ ] in Bible view, click on the arrow of the 'Compare' button, from the popup
+[ ] in most cases, there is a comment that may help you to understand where
+[ ] in rc lblBGloss.Caption='Glosses for Hebrew/Greek:'
+[ ] in rc lblGlossAddTitles.Caption='Get Hebrew/Greek Database.twdb from Add Titles to enable Glosses'
+[ ] items for the the tip when the mouse hovers over a book view tab
+[ ] keep CTRL+SHIFT pressed while showing this dialog to force this tab to be displyed to translate it
+[ ] layout specific messages
+[ ] lstSpellDcts.Columns.(1).Caption='Language'
+[ ] lstSpellDcts.Columns.(2).Caption='Filename'
+[ ] main menu File->New user module
+[ ] main menu Help->Donate
+[ ] main menu Help->Welcome Screen
+[ ] main menu Tools->Organize cross references
+[ ] menu File->New Bible Reading Plan...
+[ ] menu File->Preferences
+[ ] menu Tools->Daily Readings. See also rc_dr_* messages
+[ ] message for frmLockedModulesWarn (warning dialog when running TW from another PC with locked modules)
+[ ] message for frmOptions form
+[ ] message from spelling dictionaries module
+[ ] message from the rc_rdpc_list_* category are used also
+[ ] message used within the Bible views for reading plans
+[ ] message when adding new module
+[ ] messages for frmDailyReading form
+[ ] messages for frmUnlockModules dialog (unlocking new modules Help-About menu)
+[ ] messages for the Properties page for Reading Plans
+[ ] messages for when theWord shutsdown using frmStartup
+[ ] messages from disabled modules
+[ ] messages from frmDownloadFiles
+[ ] messages from frmDownloadModules
+[ ] messages from frmInstallModules (Files->Install modules)
+[ ] messages from frmNewDownloadRepository
+[ ] messages from frmNewReadingPlan (File->New Bible Reading Plan...)
+[ ] messages related to failure to load book modules
+[ ] messages related to new modules that are being found during startup: following 4 messages are combined to a big one. Be careful to keep spaces, dots, etc...
+[ ] messages used in this dialog
+[ ] names of the default paragraph sets shipped with TW
+[ ] new messages in general tab
+[ ] on the 'Range (click for custom)' link
+[ ] only one here like ; or , not more than one letter/character
+[ ] options dialog. Custom Bible font selection -> default font on font combo when clicking on the font column
+[ ] options submenu
+[ ] page 1
+[ ] page 2
+[ ] page 2A (for predefined plans)
+[ ] page 3
+[ ] page 4
+[ ] page Column Text
+[ ] page User Toggles
+[ ] page general options
+[ ] page inline commentaries
+[ ] page word click/lookup options
+[ ] page word definition dictionaries
+[ ] parallel bible select
+[ ] parsing the reference "Phi" (and so Philippians will appear)
+[ ] popup menu to select Bibles to search
+[ ] popup menu when clicking in the search box
+[ ] popup menu when clicking the button on the arrow at the left of the search box
+[ ] popup menu when right-clicking in the search box
+[ ] predefined layouts: rc_prefefined_layouts_<n>, where <n> is the id of the
+[ ] progress dialog that is displayed during various operations
+[ ] rc_rvam_src_1Replaced='1 string replaced.'
+[ ] rc_rvam_src_Complete='Search Complete'
+[ ] rc_rvam_src_ContinueFromEnd='The beginning of the document is reached, continue from the end?'
+[ ] rc_rvam_src_ContinueFromStart='The end of the document is reached, continue from the beginning?'
+[ ] rc_rvam_src_NReplaced='%d strings replaced.'
+[ ] rc_rvam_src_NotFound='Search string ''%s'' not found.'
+[ ] right click in Bible view and select 'Add a cross-references on ...'
+[ ] right click in Bible view on a user xref (one you added) and select 'Delete cross reference ...'
+[ ] rtf content below.
+[ ] screen (Help->Welcome screen). Each section is for a layout. You need to keep the html tags
+[ ] search
+[ ] search books view
+[ ] search context menu
+[ ] search history menu
+[ ] search results tree context menu
+[ ] search view specific
+[ ] second button on the vertical toolbar
+[ ] see also message rc_rdp_*
+[ ] see also messages starting with "rc_searchrange_" and "rc_copy_verse_" for
+[ ] see also rc_rdp_props_* messages
+[ ] select 'Select Bible texts for parallel view...'
+[ ] set tab icon submenu
+[ ] skin related message
+[ ] splash screen messages
+[ ] start with rc_rvam_. You can also comment the above line (rc_rvam_use_language)
+[ ] statistics 
+[ ] status bar
+[ ] statusbar
+[ ] strongs
+[ ] tab 'Credits'
+[ ] tab 'Files'
+[ ] tab disabled modules
+[ ] this form is used to define a custom search range
+[ ] this is the About dialog
+[ ] this is the Verse list part of the Bible view. Click on 'List' in a Bible view
+[ ] this is the area in the File->Preferences dialog under 'Bible texts tab'
+[ ] this is the clipboard viewer window
+[ ] this is the description of the default set of cross-references of the user
+[ ] this is the splash screen
+[ ] this pops up from within page 3 of the 'frmNewReadingPlan' when the user clicks on the 
+[ ] this pops up from within page 3 of the 'frmNewReadingPlan' when the user clicks on the 
+[ ] this will give Philemon less priority than Philippians, when
+[ ] to display, in a Bible search view, click 'Detailed' tab and click
+[ ] to display, just copy 'Jn 1:1' (select this text here and press Copy)
+[ ] to match the correct language. Be carefult, the value of the rc_rva_use_language must
+[ ] toolbar buttons
+[ ] toolbar captions
+[ ] tools menu
+[ ] top area
+[ ] tray icon only
+[ ] trying to display a topic but no book view exists
+[ ] used in Book AND Bible search view Message dialog when user presses ESC to cancel a running search
+[ ] verse list: popup menu on verse
+[ ] verse reference toolbar
+[ ] view toolbar
+[ ] view toolbar: layout specific  (layout specific messages in section [Messages] start with rc_lyt_):
+[ ] welcome screen messages
+[ ] when right-click on a module tab, first label
+[ ] when you select to show inline cmts or lookup dcts and no modules are selected
+[ ] window menu
