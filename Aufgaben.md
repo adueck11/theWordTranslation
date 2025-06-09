@@ -1,18 +1,25 @@
-# Aufgaben
+# Allgemeines
+- Sprache in theWord aktualisieren (auch bei geäffneten Dialogfenstern): CTRL+SHIFT+L 
 
-- [ ] Entsprechung der Zeilen prüfen 
+# Aufgaben
+- [ ] Entsprechung der Zeilen prüfen - Vergleich mit english.lng
 - [ ] Namen der Variablen abgleichen 
+- [ ] Einheitliche Schreibweise für Tasten: 
+	- Strg, STRG, Shift, SHIFT, Umschalt
+	- Deutsch oder Englisch? 
+	- Großbuchstaben? 
 
 # Übersetzung nach Bereichen 
-
-- [ ] Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
-- [ ] Help->Unlock modules.
-- [ ] [TfmLockedModuleInfo]
-- [ ] [TTips2] popup dialog that displays verse texts and topics (e.g. when you move your mose over search results)
+- [x] TfrmStrongMorphAdvanced
+- [x] TfrmUnlockModules
+- [x] TfmLockedModuleInfo
+- [x] TfrmLockedModulesWarn
+- [x] TfmLockedModuleInfo
+- [x] [TTips2] 
 - [ ] [TfrmUpdateSubject]
-- [ ] [TfrmNewFolder]
-- [ ] [TfrmNewDctEntry]
-- [ ] [TfrmNewComment]
+- [x] [TfrmNewFolder]
+- [x] [TfrmNewDctEntry]
+- [x] [TfrmNewComment]
 - [ ] [TfrmModuleProperties]
 - [ ] [TfrmMigrateV2Notes]
 - [ ] [TfrmHyperlink]
