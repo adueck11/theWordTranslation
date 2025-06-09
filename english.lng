@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1555-407
+version=7.0.0.1556-410
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -3116,6 +3116,9 @@ rc_Devotionals='Devotionals'
 rc_Indigenous_Bibles='Indigenous Bibles'
 rc_Graphics='Graphics'
 
+#Gloss Book
+rc_adding_topics='Adding topic %d of %d. Please wait...'
+
 #TfrmSelectBibles messages
 rc_selectbibles_prompt_save_set='Would you like to save the changes made to the set [%s]?'
 rc_selectbibles_prompt_save_empty_set='Sorry the set [%s] cannot be saved since it is empty.'#13'The set [%s] will remain unchanged.'
@@ -3320,6 +3323,12 @@ rc_lyt_update='Would you like to save current arrangement in layout ''%s''?'
 rc_lyt_loading='Loading layout: %d%%'
 rc_lyt_saving='Saving layout: %d%%'
 rc_lyt_fmttoolbar_close_error='Restoring layout - format toolbar error - exiting. Please restart theWord'
+
+#BibleSearch create message
+rc_biblesearch_create='A "Bible Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
+
+#BookSearch create message
+rc_biblesearch_create='A "Book Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
 
 #WordStudy Book messages
 rc_wordstudy_rightclick='Word-Study on "%s"'

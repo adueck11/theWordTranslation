@@ -271,3 +271,7 @@
 - [ ] when right-click on a module tab, first label
 - [ ] when you select to show inline cmts or lookup dcts and no modules are selected
 - [ ] window menu
+- [ ] Gloss Book
+- [ ] BibleSearch create message
+- [ ] BookSearch create message
+
