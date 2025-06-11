@@ -9,6 +9,9 @@
 	- Deutsch oder Englisch? 
 	- Großbuchstaben? 
 
+# Englisch oder Deutsch?
+- Identifier oder Kennung? 
+
 # Übersetzung nach Bereichen 
 - [x] TfrmStrongMorphAdvanced
 - [x] TfrmUnlockModules
