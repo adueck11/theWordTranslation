@@ -5,7 +5,7 @@
 - [ ] Entsprechung der Zeilen prüfen - Vergleich mit english.lng
 - [ ] Namen der Variablen abgleichen 
 - [ ] Einheitliche Schreibweise für Tasten: 
-	- Strg, STRG, Shift, SHIFT, Umschalt
+	- Strg, STRG, Shift, SHIFT, Umschalt, Enter
 	- Deutsch oder Englisch? 
 	- Großbuchstaben? 
 
@@ -30,11 +30,11 @@
 - [x] [TfrmBookmarks]
 - [x] [TfmBookView]
 - [ ] [TfrmBookTopicGoto]
-- [ ] [TfmMapView]
-- [ ] [TfrmMapView]
-- [ ] [TfrmLibrary]
-- [ ] [TfrmSelectBibles]
-- [ ] [TfrmCopyVerses]
+- [x] [TfmMapView]
+- [x] [TfrmMapView]
+- [x] [TfrmLibrary]
+- [x] [TfrmSelectBibles]
+- [x] [TfrmCopyVerses]
 - [ ] [TfrmOptions]
 - [ ] page Bible
 - [ ] page general and parallel view
