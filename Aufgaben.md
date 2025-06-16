@@ -9,8 +9,13 @@
 	- Deutsch oder Englisch? 
 	- Großbuchstaben? 
 
+# Gelöschte Strings
+- chkAutosizeImages.Hint='Aktivieren Sie diese Option, wenn das Modul große Bilder enthält. Dadurch kann der Endbenutzer die Schaltfläche ''Automatische Größenanpassung'' in der Buchansicht aktivieren, die die Größe der Bilder automatisch an den verfügbaren Platz in der Buchansicht anpasst. '#13#13' Beachten Sie, dass diese Option auch für jedes einzelne Bild eingestellt werden kann. Beachten Sie, dass diese Option auch auf der Ebene der einzelnen Bilder gesetzt werden kann. Die Option pro Bild hat Vorrang vor dieser Option, die für alle Bilder gilt, für die die spezifische Option NICHT gesetzt ist.'#13#13'Diese Option ist nur für Nicht-Benutzermodule verfügbar.'
+- cmdCenterNode.Caption='Selektierten Knoten in der Ansicht zentrieren'
+
 # Englisch oder Deutsch?
 - Identifier oder Kennung? 
+- Skin 
 
 # Übersetzung nach Bereichen 
 - [x] TfrmStrongMorphAdvanced
@@ -37,8 +42,8 @@
 - [x] [TfrmCopyVerses]
 - [ ] [TfrmOptions]
 - [ ] page Bible
-- [ ] page general and parallel view
-- [ ] Parallel Compare Verse settings
+- [x] page general and parallel view
+- [x] Parallel Compare Verse settings
 - [ ] page Bible Headings
 - [ ] Page: strong's and morph
 - [ ] page morph
