@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1556-410
+version=7.0.0.1558-412
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -1801,6 +1801,11 @@ chkHLUnderline.Caption='Suppress Underline highlights'
 chkHLUnderline.Hint='This is for suppressing underlining highlights in searches.'
 btnDefaultHighlights.Caption='Default Highlight Colors'
 btnDefaultHighlights.Hint='Default highlight colors for this light/dark mode.'
+lblHighDPI.Caption='High DPI Setting:'
+lblHighDPI.Hint='Set your High DPI for theWord here and then restart theWord.'
+cmbHighDPI.Strings='Unaware','System Aware','Per Monitor Aware','Per Monitor Aware v2','GDI Scaled'
+cmbHighDPI.Hint='After setting please restart theWord for the setting to take affect.'
+
 
 
 #this is the area in the File->Preferences dialog under 'Bible texts tab'

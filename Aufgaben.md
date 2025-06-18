@@ -8,6 +8,7 @@
 	- Strg, STRG, Shift, SHIFT, Umschalt, Enter
 	- Deutsch oder Englisch? 
 	- Großbuchstaben? 
+- [ ] Vereinhetlichen: Popup / Pop-Up
 
 # Gelöschte Strings
 - chkAutosizeImages.Hint='Aktivieren Sie diese Option, wenn das Modul große Bilder enthält. Dadurch kann der Endbenutzer die Schaltfläche ''Automatische Größenanpassung'' in der Buchansicht aktivieren, die die Größe der Bilder automatisch an den verfügbaren Platz in der Buchansicht anpasst. '#13#13' Beachten Sie, dass diese Option auch für jedes einzelne Bild eingestellt werden kann. Beachten Sie, dass diese Option auch auf der Ebene der einzelnen Bilder gesetzt werden kann. Die Option pro Bild hat Vorrang vor dieser Option, die für alle Bilder gilt, für die die spezifische Option NICHT gesetzt ist.'#13#13'Diese Option ist nur für Nicht-Benutzermodule verfügbar.'
@@ -41,16 +42,16 @@
 - [x] [TfrmSelectBibles]
 - [x] [TfrmCopyVerses]
 - [ ] [TfrmOptions]
-- [ ] page Bible
+- [x] page Bible
 - [x] page general and parallel view
 - [x] Parallel Compare Verse settings
-- [ ] page Bible Headings
-- [ ] Page: strong's and morph
-- [ ] page morph
-- [ ] Original Word
-- [ ] Original Word and transliteration
-- [ ] page: footnotes and cross-references
-- [ ] - [ ] page commentary links
+- [x] page Bible Headings
+- [x] Page: strong's and morph
+- [x] page morph
+- [x] Original Word
+- [x] Original Word and transliteration
+- [x] page: footnotes and cross-references
+- [x] page commentary links
 - [ ] 'preview' link
 - [ ] Add Titles dialog
 - [ ] Add Titles dialog -> Click on 'Repositories' link on top-right
