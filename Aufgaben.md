@@ -8,11 +8,40 @@
 	- Strg, STRG, Shift, SHIFT, Umschalt, Enter
 	- Deutsch oder Englisch? 
 	- Großbuchstaben? 
-- [ ] Vereinhetlichen: Popup / Pop-Up
+- [ ] Vereinheitlichen: 
+	- Popup / Pop-Up
+	- Skin / Oberfläche
+- [ ] Fehler: 
+	- Zeile 1001: Einstellungen zur Bibelansicht -> User Toggles: nur Englisch zeigt in Überschrift den Bibelnamen an, Deutsch nicht 
+	- ab Zeile 1021: Überschrift "lblBGloss.Caption" auskommentiert - nicht aktiv
+	- Zeilen 1099 + 1100 noch notwendig? Keine Punkte im Menü sichtbar - actImportNotes.Caption und actImportNotes.Hint
 
 # Gelöschte Strings
 - chkAutosizeImages.Hint='Aktivieren Sie diese Option, wenn das Modul große Bilder enthält. Dadurch kann der Endbenutzer die Schaltfläche ''Automatische Größenanpassung'' in der Buchansicht aktivieren, die die Größe der Bilder automatisch an den verfügbaren Platz in der Buchansicht anpasst. '#13#13' Beachten Sie, dass diese Option auch für jedes einzelne Bild eingestellt werden kann. Beachten Sie, dass diese Option auch auf der Ebene der einzelnen Bilder gesetzt werden kann. Die Option pro Bild hat Vorrang vor dieser Option, die für alle Bilder gilt, für die die spezifische Option NICHT gesetzt ist.'#13#13'Diese Option ist nur für Nicht-Benutzermodule verfügbar.'
 - cmdCenterNode.Caption='Selektierten Knoten in der Ansicht zentrieren'
+- tbitemTabContext.Hint='Aktuelle Einstellung Bibel, und allgemeine Einstellungen aktuelles Fenster und Bibel-Werkzeugkasten'
+- actSync.Caption='Synchronisieren mit'
+- actSync.Hint='Auf den schwarzen Pfeil klicken, um eine oder mehrere Bibelansichten auszuwählen, mit denen diese Ansicht synchronisiert werden soll.'#13#13'Der Button selbst dient als Schalter, und wechselt zwischen Synchronisierung AN/AUS.'
+- actOptions.Caption='Einstellungen zur Bibelansicht...'
+- actShowHideViewerIcons.Caption='Icons anzeigen/verbergen'
+- actOptions.Hint='Optionen für Bibelansicht'
+- 
+
+#Dialog to select Bible modules to display in parallel (Compare).
+#in Bible view, click on the arrow of the 'Compare' button, from the popup
+#select 'Select Bible texts for parallel view...'
+[TfrmParallelSelect]
+#parallel bible select
+cmdParSelUp.Hint='nach oben'
+cmdParSelDown.Hint='nach unten'
+cmdParSelCheck.Hint='Alles auswäh&len'
+cmdParSelUncheck.Hint='Alles abwählen'
+cmdParSelOK.Hint='Speichern'
+lblHor.Caption='Bibelmodule für die Spaltenansicht auswählen'
+chkHor.Caption='Diese Auswahl auch für die Zeilenansicht verwenden'
+lblVer.Caption='Bibelmodule für die Zeilenansicht auswählen'
+chkVer.Caption='Diese Auswahl auch für die Spaltenansicht verwenden'
+chkDescr.Caption='Beschreibungen anzeigen'
 
 # Englisch oder Deutsch?
 - Identifier oder Kennung? 
@@ -41,7 +70,7 @@
 - [x] [TfrmLibrary]
 - [x] [TfrmSelectBibles]
 - [x] [TfrmCopyVerses]
-- [ ] [TfrmOptions]
+- [x] [TfrmOptions]
 - [x] page Bible
 - [x] page general and parallel view
 - [x] Parallel Compare Verse settings
@@ -52,36 +81,33 @@
 - [x] Original Word and transliteration
 - [x] page: footnotes and cross-references
 - [x] page commentary links
-- [ ] 'preview' link
+- [x] TMainReaderForm
 - [ ] Add Titles dialog
-- [ ] Add Titles dialog -> Click on 'Repositories' link on top-right
-- [ ] Add Titles dialog -> Click on 'Repositories' link on top-right, click on new
-- [ ] Add Titles dialog-> select some module and click 'Download'
 - [ ] Appears in the 'Module Properties' dialog, on the second tab for Reading Plans
 - [ ] Bible search statistics
-- [ ] Bible search view
+- [x] Bible search view
 - [ ] Biblical Languages Database
-- [ ] Book serarch view: Press F2
+- [x] Book search view: Press F2
 - [ ] Book view Goto Topic ID
 - [ ] Click on Help->Bible info->any item. Shows info about a Bible module
 - [ ] Dialog to select Bible modules to display in parallel (Compare).
-- [ ] File menu
+- [x] File menu
 - [ ] File->Daily Readings dialog, click on the 'Choose devotionals to read daily' link
 - [ ] File->Install modules
 - [ ] Find dialog in Book view
 - [ ] FindDialogEx
 - [ ] Form that appears as a popup when pressing the 'Calendar' icon on the book view toolbar. 
 - [ ] From a Book view, click the 'Green book icon' (the options menu), and go to Options->Reader's margins
-- [ ] Gloss Options
-- [ ] Help menu
+- [x] Gloss Options
+- [x] Help menu
 - [ ] IMPORTANT NOTICE: the 3 tabs (Fast, Detailed, Options) have shortcuts keys. Be careful
 - [ ] If this language file is for one of these languages, then you don't need to translate
 - [ ] In a book view displaying a user module, right-click and select Insert->Insert manager
 - [ ] Just copy paste and delete completely the [TDataMod] section
-- [ ] Main menu bar
+- [x] Main menu bar
 - [ ] Main window. Top level menus, etc
-- [ ] Page: Lemma (section Lemma Options)
-- [ ] Page: Lemma (section Lemma Transliteration)
+- [x] Page: Lemma (section Lemma Options)
+- [x] Page: Lemma (section Lemma Transliteration)
 - [ ] Proofing tab
 - [ ] TfrmSelectBibles messages
 - [ ] The [Notice] section contains the raw content of an rtf file. 
@@ -95,22 +121,22 @@
 - [ ] Tip that appears when hovering over the >> on the toolbars (when they don't fit)
 - [ ] Verse list
 - [ ] View Layout tab
-- [ ] View menu
+- [x] View menu
 - [ ] WordStudy Book messages
 - [ ] [Common modules folder]\Misc\default.layouts.twm file
 - [ ] actions
 - [ ] add xref dialog
 - [ ] advanced tab
 - [ ] auto update messages
-- [ ] bible formatting toolbar
+- [x] bible formatting toolbar
 - [ ] bible tabs messages
 - [ ] bible texts tab
 - [ ] bible tree (F8)
 - [ ] bible view for compare
 - [ ] bible view for strongs: these messages may appear in the popup window when
-- [ ] book formatting toolbar
+- [x] book formatting toolbar
 - [ ] bookmarks
-- [ ] bookmarks toolbar
+- [x] bookmarks toolbar
 - [ ] bookview B C V button hints
 - [ ] bookview conext menu items in 
 - [ ] bookview->export topics dialog
@@ -213,8 +239,8 @@
 - [ ] page 2A (for predefined plans)
 - [ ] page 3
 - [ ] page 4
-- [ ] page Column Text
-- [ ] page User Toggles
+- [x] page Column Text
+- [x] page User Toggles
 - [ ] page general options
 - [ ] page inline commentaries
 - [ ] page word click/lookup options
@@ -253,15 +279,14 @@
 - [ ] splash screen messages
 - [ ] start with rc_rvam_. You can also comment the above line (rc_rvam_use_language)
 - [ ] statistics 
-- [ ] status bar
-- [ ] statusbar
+- [x] status bar
 - [ ] strongs
 - [ ] tab 'Credits'
 - [ ] tab 'Files'
 - [ ] tab disabled modules
 - [ ] this form is used to define a custom search range
 - [ ] this is the About dialog
-- [ ] this is the Verse list part of the Bible view. Click on 'List' in a Bible view
+- [x] this is the Verse list part of the Bible view. Click on 'List' in a Bible view
 - [ ] this is the area in the File->Preferences dialog under 'Bible texts tab'
 - [ ] this is the clipboard viewer window
 - [ ] this is the description of the default set of cross-references of the user
@@ -273,16 +298,16 @@
 - [ ] to display, just copy 'Jn 1:1' (select this text here and press Copy)
 - [ ] to match the correct language. Be carefult, the value of the rc_rva_use_language must
 - [ ] toolbar buttons
-- [ ] toolbar captions
+- [x] toolbar captions
 - [ ] tools menu
 - [ ] top area
-- [ ] tray icon only
+- [x] tray icon only
 - [ ] trying to display a topic but no book view exists
 - [ ] used in Book AND Bible search view Message dialog when user presses ESC to cancel a running search
 - [ ] verse list: popup menu on verse
 - [ ] verse reference toolbar
-- [ ] view toolbar
-- [ ] view toolbar: layout specific  (layout specific messages in section [Messages] start with rc_lyt_):
+- [x] view toolbar
+- [x] view toolbar: layout specific
 - [ ] welcome screen messages
 - [ ] when right-click on a module tab, first label
 - [ ] when you select to show inline cmts or lookup dcts and no modules are selected
@@ -290,4 +315,3 @@
 - [ ] Gloss Book
 - [ ] BibleSearch create message
 - [ ] BookSearch create message
-
