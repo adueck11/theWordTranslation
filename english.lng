@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1558-412
+version=7.0.0.1559-415
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -2888,6 +2888,7 @@ rc_bible_reload_changed='Updated changed unencrypted Bible: '
 rc_bible_encrypted_reload='Only encrypted Bibles in Bible view(s) so nothing reloaded.'#13'Please choose an unencrypted Bible for reloading.'
 rc_bible_view_title_ctrl='Ctrl'
 rc_statusbar_active='Active'
+rc_memory_usage='Memory usage %d%% and the threshold is %d%%'
 rc_error_opening_bible_file='There was an error opening the Bible file %s:'#13'%s'
 rc_msg_no_valid_bibles='No valid Bible modules found.'#13'The program will now exit'
 rc_msg_duplicate_bible_title='There are duplicate Bible Titles.'#13'While these duplicates exists items like Bible View Names, Global Strong''s, Morphology, etc. won''t work correctly.'#13#13'To fix from within theWord right click the original Bible Module with _DUPLICATE_TITLE_ and set it as "original".'#13#13'To manual fix go to the Cache folder (which can be found in Help> About> File Locations) look for BibleDuplicateTitles.txt which holds the duplicate filenames and paths.'#13'Please set the filename to something unique.'#13#13'If you can''t fix the Bible yourself by adjusting the Title then please contact the author. [Worst case scenario use ignore.duplicate.bible.title=1 in config.ini but only as a last resort.]'#13#13'This dialog will appear on startup until this is resolved. It is important to fix this!'

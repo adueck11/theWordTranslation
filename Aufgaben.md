@@ -11,6 +11,8 @@
 - [ ] Vereinheitlichen: 
 	- Popup / Pop-Up
 	- Skin / Oberfläche
+	- ''theWord'' statt ''The Word''
+	- z.B. statt Bsp, zB
 - [ ] Fehler: 
 	- Zeile 1001: Einstellungen zur Bibelansicht -> User Toggles: nur Englisch zeigt in Überschrift den Bibelnamen an, Deutsch nicht 
 	- ab Zeile 1021: Überschrift "lblBGloss.Caption" auskommentiert - nicht aktiv
@@ -84,7 +86,7 @@ chkDescr.Caption='Beschreibungen anzeigen'
 - [x] TMainReaderForm
 - [ ] Add Titles dialog
 - [ ] Appears in the 'Module Properties' dialog, on the second tab for Reading Plans
-- [ ] Bible search statistics
+- [x] Bible search statistics
 - [x] Bible search view
 - [ ] Biblical Languages Database
 - [x] Book search view: Press F2
@@ -100,15 +102,12 @@ chkDescr.Caption='Beschreibungen anzeigen'
 - [ ] From a Book view, click the 'Green book icon' (the options menu), and go to Options->Reader's margins
 - [x] Gloss Options
 - [x] Help menu
-- [ ] IMPORTANT NOTICE: the 3 tabs (Fast, Detailed, Options) have shortcuts keys. Be careful
-- [ ] If this language file is for one of these languages, then you don't need to translate
 - [ ] In a book view displaying a user module, right-click and select Insert->Insert manager
-- [ ] Just copy paste and delete completely the [TDataMod] section
 - [x] Main menu bar
 - [ ] Main window. Top level menus, etc
 - [x] Page: Lemma (section Lemma Options)
 - [x] Page: Lemma (section Lemma Transliteration)
-- [ ] Proofing tab
+- [x] Proofing tab
 - [ ] TfrmSelectBibles messages
 - [ ] The [Notice] section contains the raw content of an rtf file. 
 - [ ] The following 3 sections contains full html documents. They appear in the welcome 
@@ -120,13 +119,13 @@ chkDescr.Caption='Beschreibungen anzeigen'
 - [ ] This is the Bible view, the window that displays Bible texts
 - [ ] Tip that appears when hovering over the >> on the toolbars (when they don't fit)
 - [ ] Verse list
-- [ ] View Layout tab
+- [x] View Layout tab
 - [x] View menu
 - [ ] WordStudy Book messages
 - [ ] [Common modules folder]\Misc\default.layouts.twm file
 - [ ] actions
 - [ ] add xref dialog
-- [ ] advanced tab
+- [x] advanced tab
 - [ ] auto update messages
 - [x] bible formatting toolbar
 - [ ] bible tabs messages
@@ -153,7 +152,7 @@ chkDescr.Caption='Beschreibungen anzeigen'
 - [ ] define range dialog message (for searches)
 - [ ] detect all vrefs action messages
 - [ ] devotion specific
-- [ ] file associations tab
+- [x] file associations tab
 - [ ] final menu items
 - [ ] fmBibleview - Bible view specific
 - [ ] fmBookview - book view specific 
@@ -294,7 +293,7 @@ chkDescr.Caption='Beschreibungen anzeigen'
 - [ ] this pops up from within page 3 of the 'frmNewReadingPlan' when the user clicks on the 
 - [ ] this pops up from within page 3 of the 'frmNewReadingPlan' when the user clicks on the 
 - [ ] this will give Philemon less priority than Philippians, when
-- [ ] to display, in a Bible search view, click 'Detailed' tab and click
+- [x] to display, in a Bible search view, click 'Detailed' tab and click
 - [ ] to display, just copy 'Jn 1:1' (select this text here and press Copy)
 - [ ] to match the correct language. Be carefult, the value of the rc_rva_use_language must
 - [ ] toolbar buttons
