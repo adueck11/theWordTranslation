@@ -1,3 +1,84 @@
 # Deutsche Sprachdatei für theWord 
 
 Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www.theword.net/) zu verbessern! 
+
+# Bereiche 
+
+- [ ] Books
+- [ ] Messages
+- [ ] Notice
+- [ ] Search.Patterns
+- [ ] TDataModPopupVerses
+- [x] TFmBibleSearch
+- [x] TFrmChooseDevotionals
+- [ ] TFrmCustomWelcome
+- [x] TFrmDevCalendar
+- [x] TFrmDonate
+- [ ] TFrmExportTopics
+- [ ] TFrmInstallModules
+- [x] TFrmNewReadingPlan
+- [x] TFrmRPPreview
+- [x] TFrmStartup
+- [x] TFrmWelcome
+- [ ] TMainReaderForm - in Arbeit
+- [ ] TRvaFindDialog
+- [x] TTips2
+- [x] TfmBibleTexts
+- [ ] TfmBibleView - in Arbeit
+- [x] TfmBookSearchOptions
+- [ ] TfmBookSearch - in Arbeit
+- [ ] TfmBookView
+- [x] TfmLockedModuleInfo
+- [x] TfmMapView
+- [x] TfmReadingPlanProperties
+- [x] TfmVerseList
+- [x] TfrmAddVerse
+- [x] TfrmAddXref
+- [x] TfrmAutoUpdate
+- [ ] TfrmBookMargins
+- [ ] TfrmBookTopicGoto
+- [x] TfrmBookmarks
+- [x] TfrmClipViewOptions
+- [x] TfrmClipboardViewer
+- [x] TfrmCopyVerses
+- [x] TfrmCustomizeBookTabs
+- [x] TfrmDROptions
+- [x] TfrmDailyReading
+- [x] TfrmDefineRanges
+- [x] TfrmDelXRef
+- [ ] TfrmDownloadFiles
+- [ ] TfrmDownloadModulesRepositories
+- [ ] TfrmDownloadModules
+- [x] TfrmHtmlViewer
+- [x] TfrmHyperlink
+- [x] TfrmLibrary
+- [x] TfrmLockedModulesWarn
+- [x] TfrmManageXrefsFiles
+- [x] TfrmMapView
+- [x] TfrmMigrateV2Notes
+- [x] TfrmModuleProperties
+- [x] TfrmMultiPassages
+- [x] TfrmNewComment
+- [x] TfrmNewDctEntry
+- [ ] TfrmNewDownloadRepository
+- [x] TfrmNewFolder
+- [x] TfrmNewModule
+- [x] TfrmNewXRefSet
+- [x] TfrmOptions
+- [x] TfrmOrganizeXRefs
+- [x] TfrmPageSetup
+- [x] TfrmPrintPreview
+- [x] TfrmSelectBibles
+- [ ] TfrmSnippets
+- [x] TfrmSplash
+- [x] TfrmStrongMorphAdvanced
+- [x] TfrmUnlockModules
+- [x] TfrmUpdateSubject
+- [x] TfrmViewXRefs
+- [x] TfrmWait
+- [ ] TrvaReplaceDialog
+- [ ] _main_
+- [ ] welcome-basic-description
+- [ ] welcome-begginner-description
+- [ ] welcome-default-description
+- [ ] welcome-tW6-description
