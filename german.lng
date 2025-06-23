@@ -3,7 +3,7 @@
 name=Deutsch (DE)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1559-416
+version=7.0.0.1560-419
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -576,6 +576,16 @@ actParaBorder.Caption='Paragraph Borders and Background...'
 actParaList.Caption='Bullets and Numbering...'
 cmdSnippets.Caption='Insert'
 cmdSnippetManager.Caption='Insert Manager...'
+#popup menu when clicking the Booksearch menu
+lblModulesToSearch.Caption='Which modules do you want to search?'
+cmdSWCurMod.Caption='Current module'
+cmdSWUserSet.Caption='Select modules to search (Save Book search set)...'
+cmdSWAllMods.Caption='All modules'
+cmdSWCurModsOfBKV.Caption='All modules of active Book view'
+cmdSWSavedSet.Caption='All modules of this Book search saved set'
+cmdSWSavedSet.Hint='Set these in Select/Save Book search set'
+cmdSWSavedLayout.Caption='All modules of this Book view set'
+cmdSWSavedLayout.Hint='Set these in Bookview, Define module sets'
 
 #BookView TopicID Goto 
 [TfrmBookTopicGoto]
@@ -1804,7 +1814,7 @@ btnDefaultHighlights.Caption='Standard-Hervorhebungsfarben'
 btnDefaultHighlights.Hint='Standard-Highlight-Farben für diesen Hell/Dunkel-Modus.'
 lblHighDPI.Caption='Hohe DPI-Einstellung:'
 lblHighDPI.Hint='Stellen Sie hier die hohe DPI-Einstellung für theWord ein und starten Sie dann theWord neu.'
-cmbHighDPI.Strings='Nicht berücksichtigen','Systemeinstellungen','Monitoreinstellungen','Monitoreinstellungen v2','GDI skaliert'
+cmbHighDPI.Items.Strings='Nicht berücksichtigen','Systemeinstellungen','Monitoreinstellungen','Monitoreinstellungen v2','GDI skaliert'
 cmbHighDPI.Hint='Nach Änderung dieser Einstellung muss theWord neu gestartet werden, damit die Änderungen angewendet werden.'
 
 
@@ -2881,6 +2891,7 @@ rc_error_opening_bible_file='Beim Öffnen des Bibelmoduls %s ist ein Fehler aufg
 rc_msg_no_valid_bibles='Keine gültigen Bibelmodule gefunden.'#13'Das Programm wird nun beendet.'
 rc_msg_requires_newer_ver='Das Modul ''%s'' benötigt eine neuere Version des Programms, um zuverlässig zu funktionieren.'#13#13'Bitte diese Datei verschieben/löschen, damit diese Meldung nicht weiter erscheint. Alternativ unter ''www.theword.gr'' auf die aktuellste Version updaten.'
 rc_statusbar_active='Active'
+rc_memory_usage='Memory usage %d%% (%.2f GB / %d MB) and the threshold is %d%% of Max %.2f GB'
 rc_error_opening_bible_file='There was an error opening the Bible file %s:'#13'%s'
 rc_msg_no_valid_bibles='No valid Bible modules found.'#13'The program will now exit'
 rc_msg_duplicate_bible_title='There are duplicate Bible Titles.'#13'While these duplicates exists items like Bible View Names, Global Strong''s, Morphology, etc. won''t work correctly.'#13#13'To fix from within theWord right click the original Bible Module with _DUPLICATE_TITLE_ and set it as "original".'#13#13'To manual fix go to the Cache folder (which can be found in Help> About> File Locations) look for BibleDuplicateTitles.txt which holds the duplicate filenames and paths.'#13'Please set the filename to something unique.'#13#13'If you can''t fix the Bible yourself by adjusting the Title then please contact the author. [Worst case scenario use ignore.duplicate.bible.title=1 in config.ini but only as a last resort.]'#13#13'This dialog will appear on startup until this is resolved. It is important to fix this!'
@@ -3107,6 +3118,9 @@ rc_Bibles='Bibles'
 rc_Devotionals='Devotionals'
 rc_Indigenous_Bibles='Indigenous Bibles'
 rc_Graphics='Graphics'
+
+#Gloss Book
+rc_adding_topics='Adding topic %d of %d. Please wait...'
 
 #TfrmSelectBibles messages
 rc_selectbibles_prompt_save_set='Would you like to save the changes made to the set [%s]?'
