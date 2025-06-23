@@ -5,17 +5,17 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 # Bereiche 
 
 - [ ] Books
-- [ ] Messages
+- [x] Messages
 - [ ] Notice
 - [ ] Search.Patterns
 - [ ] TDataModPopupVerses
 - [x] TFmBibleSearch
 - [x] TFrmChooseDevotionals
-- [ ] TFrmCustomWelcome
+- [x] TFrmCustomWelcome
 - [x] TFrmDevCalendar
 - [x] TFrmDonate
 - [ ] TFrmExportTopics
-- [ ] TFrmInstallModules
+- [x] TFrmInstallModules
 - [x] TFrmNewReadingPlan
 - [x] TFrmRPPreview
 - [x] TFrmStartup
@@ -35,7 +35,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmAddVerse
 - [x] TfrmAddXref
 - [x] TfrmAutoUpdate
-- [ ] TfrmBookMargins
+- [x] TfrmBookMargins
 - [ ] TfrmBookTopicGoto
 - [x] TfrmBookmarks
 - [x] TfrmClipViewOptions
@@ -46,9 +46,9 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmDailyReading
 - [x] TfrmDefineRanges
 - [x] TfrmDelXRef
-- [ ] TfrmDownloadFiles
-- [ ] TfrmDownloadModulesRepositories
-- [ ] TfrmDownloadModules
+- [x] TfrmDownloadFiles
+- [x] TfrmDownloadModulesRepositories
+- [x] TfrmDownloadModules
 - [x] TfrmHtmlViewer
 - [x] TfrmHyperlink
 - [x] TfrmLibrary
@@ -60,7 +60,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmMultiPassages
 - [x] TfrmNewComment
 - [x] TfrmNewDctEntry
-- [ ] TfrmNewDownloadRepository
+- [x] TfrmNewDownloadRepository
 - [x] TfrmNewFolder
 - [x] TfrmNewModule
 - [x] TfrmNewXRefSet
