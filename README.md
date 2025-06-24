@@ -5,7 +5,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 # Bereiche 
 
 - [ ] Books
-- [x] Messages
+- [ ] Messages - in Arbeit
 - [ ] Notice
 - [ ] Search.Patterns
 - [ ] TDataModPopupVerses
