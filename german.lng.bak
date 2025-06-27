@@ -3,7 +3,7 @@
 name=Deutsch (DE)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1563-427
+version=7.0.0.1560-419
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -2899,7 +2899,7 @@ rc_bible_reload_changed='Geänderte unverschlüsselte Bibel aktualisiert: '
 rc_bible_encrypted_reload='Nur verschlüsselte Bibeln in Bibelansicht(en), also nichts neu ngeladen.'#13'Bitte wählen Sie eine unverschlüsselte Bibel zum erneuten Laden.'
 rc_bible_view_title_ctrl='Strg'
 rc_statusbar_active='Aktiv'
-rc_memory_usage='Speicherverbrauch %.2f GB / %d MB und der Schwellenwert beträgt is %.2f GB / %d MB of Max %.2f GB / %d MB'
+rc_memory_usage='Speicherverbrauch %d%% (%.2f GB / %d MB) und der Schwellenwert beträgt %d%% von max. %.2f GB'
 rc_error_opening_bible_file='Beim Öffnen des Bibelmoduls %s ist ein Fehler aufgetreten:'#13'%s'
 rc_msg_no_valid_bibles='Keine gültigen Bibelmodule gefunden.'#13'Das Programm wird nun beendet.'
 rc_msg_duplicate_bible_title='Es existieren doppelte Bibelmodule.'#13'Solange diese Duplikate existieren, werden Elemente wie Bibelansicht, Strongnummern, morphologische Schlüssel, etc. nicht korrekt funktionieren.'#13#13'Um das zu beheben, klicken Sie in theWord mit der rechten Maustaste auf das ursprüngliche Bibelmodul mit _DUPLICATE_TITLE_ und setzen Sie es als "Original". '#13#13'Zur manuellen Korrektur gehen Sie in den Cache-Ordner (den Sie unter Hilfe > Über > Dateispeicherorte finden) und suchen Sie nach BibleDuplicateTitles.txt, die die doppelten Dateinamen und Pfade enthält.'#13'Bitte setzen Sie den Dateinamen auf etwas Eindeutiges.‘#13#13'Wenn Sie die Bibel nicht selbst reparieren können, indem Sie den Titel anpassen, kontaktieren Sie bitte den Autor. [Im äußersten Fall verwenden Sie ignore.duplicate.bible.title=1 in der config.ini, aber nur als letzten Ausweg.'#13#13'Dieser Dialog wird beim Start erscheinen, bis das Problem behoben ist. Es ist wichtig, dies zu beheben!'
