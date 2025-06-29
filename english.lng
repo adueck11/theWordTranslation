@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1563-427
+version=7.0.0.1565-429
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -212,15 +212,15 @@ lblBVfont.Hint='The bookview font is automatically modified unlike the Greek and
 BuildBVplus.Hint='This size will modify just this modules book view internal font size.'
 lblGRfont.Caption='Greek:'
 BuildGRplus.Hint='This size will modify just this modules Greek internal font size.'
-lblGRfont.Hint='This is the Greek font that theWord should look for. The recommended Greek build font is Gentium but may be Accordance or something else that the module builder chose.'
+lblGRfont.Hint='This is the Greek font that theWord should look for. The recommended Greek build font is Gentium but may be Accordance or another font that the module builder chose.'
 lblHEBFont.Caption='Hebrew:'
 BuildHEBplus.Hint='This size will modify just this modules Hebrew internal font size.'
-lblHEBFont.Hint='This is the Hebrew font that theWord should look for. The recommended Hebrew build font is Cardo but may be Accordance or something else that the module builder chose.'
+lblHEBFont.Hint='This is the Hebrew font that theWord should look for. The recommended Hebrew build font is Cardo but may be Accordance or another fon that the module builder chose.'
 BuildGRplus.Hint='Increase # or Decrease -# the Greek font size in this resource. Adjusts against default size.'
 BuildHEBplus.Hint='Increase # or Decrease -# the Hebrew font size in this resource. Adjusts against default size.'
 groupActions.Caption='Actions'
 lblAction.Caption='Select an &action to perform and click ''Execute'''
-cmbActions.Items.Strings='Prepare module for distribution...','Detect all verse references... (hold ALT to overwrite existing ones, CTRL+SHIFT for using current commentary entry for partial refs)','Convert module content to rtf...','Delete all user formatting from non-user module...','Make permanent all user formatting from non-user module...','Recreate the search index for subjects...','Recreate the search and reference index for content...'
+cmbActions.Items.Strings='Prepare module for distribution...','Detect all verse references... (hold ALT to overwrite existing ones, CTRL+SHIFT for using current commentary entry for partial refs)','Convert module content to rtf...','Delete all user formatting from non-user module...','Make permanent all user formatting from non-user module...','Recreate the search index for subjects...','Recreate the search and reference indexe for content...'
 cmbAction.Hint='These are advanced actions that you can execute on a module. Please, backup your module before executing any such action.'
 cmdExecuteAction.Caption='Execute selected action...'
 tabReadingPlan.Caption='Reading Plan'
