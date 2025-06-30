@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1565-429
+version=7.0.0.1565-431
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -3132,6 +3132,13 @@ rc_Bibles='Bibles'
 rc_Devotionals='Devotionals'
 rc_Indigenous_Bibles='Indigenous Bibles'
 rc_Graphics='Graphics'
+rc_Language_Files='Language Files'
+rc_Spelling_Dictionaries='Spelling Dictionaries'
+rc_Core='Core'
+rc_Ancient_Language_Databases='Ancient Language Databases'
+rc_Skins='Skins'
+rc_Backgrounds='Backgrounds'
+rc_Gloss='Glosses'
 
 #Gloss Book
 rc_adding_topics='Adding topic %d of %d. Please wait...'
