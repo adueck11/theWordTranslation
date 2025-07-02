@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1565-431
+version=7.0.0.1566-432
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -544,7 +544,7 @@ lblHitTopic.Caption='[topic]'
 cmdTodayReadings.Caption='Today''s Reading'
 actBookProperties.Caption='Module properties...'
 actDeleteModule.Caption='Delete module...'
-actOriginalModule.Caption='Set id as Original Module...'
+actOriginalModule.Caption='Set Book as "Original"...'
 cmdDevotionalChoose.Caption='Follow devotional readings on a calendar basis'
 cmdDevotionalChoose.Hint='Select if you wish to follow on a calendar basis the assigned devotional reading of this book.'
 edtVol.Hint='Search for a Book module (SHIFT+F2)'
