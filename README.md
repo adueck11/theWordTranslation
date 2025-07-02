@@ -2,8 +2,33 @@
 
 Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www.theword.net/) zu verbessern! 
 
-# Bereiche 
+# Allgemeines
+- Sprache in theWord aktualisieren (auch bei geöffneten Dialogfenstern): CTRL+SHIFT+L 
+- 
 
+# Aufgaben
+- [x] Entsprechung der Zeilen prüfen - Vergleich mit english.lng
+- [x] Namen der Variablen abgleichen - Vergleich mit english.lng
+- [ ] Einheitliche Schreibweise für Tasten: 
+	- Strg, STRG, Shift, SHIFT, Umschalt, Enter
+	- Deutsch oder Englisch? 
+	- Großbuchstaben? 
+- [ ] Vereinheitlichen: 
+	- Popup / Pop-Up
+	- ''theWord'' statt ''The Word''
+	- z.B. statt Bsp, zB
+- [ ] Fehler: 
+	- Zeile 1001: Einstellungen zur Bibelansicht -> User Toggles: nur Englisch zeigt in Überschrift den Bibelnamen an, Deutsch nicht 
+	- ab Zeile 1021: Überschrift "lblBGloss.Caption" auskommentiert - nicht aktiv
+	- Zeilen 1099 + 1100 noch notwendig? Keine Punkte im Menü sichtbar - actImportNotes.Caption und actImportNotes.Hint
+- [ ] Im Bibelleseplan sind viele Texte nicht in der Sprachdatei zu finden
+- [ ] Anführungszeichen '' durch " ersetzen 
+
+# Englisch oder Deutsch?
+- Identifier oder Kennung? 
+- Skin der Oberfläche? 
+
+# Bereiche in der Datei german.lng
 - [ ] Books
 - [ ] Messages - in Arbeit
 - [ ] Notice
