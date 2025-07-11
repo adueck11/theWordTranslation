@@ -17,12 +17,14 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 	- Popup / Pop-Up
 	- ''theWord'' statt ''The Word''
 	- z.B. statt Bsp, zB
+	- Querverweis, Hyperlink, Hypertext ...
 - [ ] Fehler: 
 	- Zeile 1001: Einstellungen zur Bibelansicht -> User Toggles: nur Englisch zeigt in Überschrift den Bibelnamen an, Deutsch nicht 
 	- ab Zeile 1021: Überschrift "lblBGloss.Caption" auskommentiert - nicht aktiv
 	- Zeilen 1099 + 1100 noch notwendig? Keine Punkte im Menü sichtbar - actImportNotes.Caption und actImportNotes.Hint
 - [ ] Im Bibelleseplan sind viele Texte nicht in der Sprachdatei zu finden
 - [ ] Anführungszeichen '' durch " ersetzen 
+- [ ] Zeile 1398: Funktion von "Base Bible" unklar ...
 
 # Englisch oder Deutsch?
 - Identifier oder Kennung? 
