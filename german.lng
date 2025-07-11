@@ -3,7 +3,7 @@
 name=Deutsch (DE)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1566-432
+version=7.0.0.1568-442
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -576,16 +576,6 @@ actParaBorder.Caption='Paragraph Borders and Background...'
 actParaList.Caption='Bullets and Numbering...'
 cmdSnippets.Caption='Insert'
 cmdSnippetManager.Caption='Insert Manager...'
-#popup menu when clicking the Booksearch menu
-lblModulesToSearch.Caption='Which modules do you want to search?'
-cmdSWCurMod.Caption='Current module'
-cmdSWUserSet.Caption='Select modules to search (Save Book search set)...'
-cmdSWAllMods.Caption='All modules'
-cmdSWCurModsOfBKV.Caption='All modules of active Book view'
-cmdSWSavedSet.Caption='All modules of this Book search saved set'
-cmdSWSavedSet.Hint='Set these in Select/Save Book search set'
-cmdSWSavedLayout.Caption='All modules of this Book view set'
-cmdSWSavedLayout.Hint='Set these in Bookview, Define module sets'
 
 #BookView TopicID Goto 
 [TfrmBookTopicGoto]
@@ -1463,16 +1453,6 @@ actrToggle.Caption='"r" Umschalter'
 actvToggle.Caption='"v" Umschalter'
 actyToggle.Caption='"y" Umschalter'
 actzToggle.Caption='"z" Umschalter'
-#popup menu when clicking the Booksearch menu
-lblModulesToSearch.Caption='In welchen Modulen soll gesucht werden?'
-cmdSWCurMod.Caption='Aktuelles Modul'
-cmdSWUserSet.Caption='Module für Suche speichern (Set speichern)...'
-cmdSWAllMods.Caption='Alle Module'
-cmdSWCurModsOfBKV.Caption='Alle Module der aktiven Buchansicht'
-cmdSWSavedSet.Caption='Alle Module dieses Sets'
-cmdSWSavedSet.Hint='Set these in Select/Save Book search set'
-cmdSWSavedLayout.Caption='Alle Module dieses Buchansichtsets'
-cmdSWSavedLayout.Hint='Set these in Bookview, Define module sets'
 
 #Book search view: Press F2
 [TfmBookSearch]
@@ -1725,8 +1705,12 @@ chkPageFont.Caption='Anzeigen'
 chkPageFont.Hint='Diese Seitenzahlen ein-/ausblenden, wenn sie mit der standardisierten Formatierung von ''The Word'' übereinstimmen.'
 cmdStudySkinText.Caption='Skin-Farbe'
 cmdStudySkinText.Hint='Skin-Farbe des Textes'
+chkBookIdxonStartup.Caption='Book Indexing on Startup'
+chkBookIdxonStartup.Hint='Most users will want to leave this on so their resources are indexed and ready to search. However, users that switch out a lot of modules may want to turn this off.'
 chkBckBookIndexing.Caption='Indizierung fücr Buchsuche nur im Hintergrund ausführen'
 chkBckBookIndexing.Hint='Dies schaltet die Indizierung in der Buchsuche aus und führt sie nur im Hintergrund aus. Beachten Sie, dass dies die Suchergebnisse beeinflussen kann.'
+cmdResetIdxErrList.Caption='Reset Index Error List'
+cmdResetIdxErrList.Hint='This resets the list of modules that had an error during indexing. It should come into affect during the next startup.'
 
 #Proofing tab
 tabProofing.Caption='Überprüfungen'
@@ -2776,6 +2760,19 @@ rc_verse_ref_text='Bibelstelle (F4)'
 rc_no_verses_in_bible='Dieser Bibeltext enthält den angegebenen Vers leider nicht'
 rc_search_quick='Bibelsuche (F3)'
 
+#popup menu when clicking the Booksearch menu in BibleView or BookView
+rc_lblModulesToSearch='Which modules do you want to search?'
+rc_cmdSWCurMod='Current module'
+rc_cmdSWUserSet='Select modules to search (Save Book search set)...'
+rc_cmdSWAllMods='All modules'
+rc_cmdSWCurModsOfBKV='All modules of active Book view'
+rc_cmdSWSavedSet='All modules of this Book search saved set'
+rc_cmdSWSavedSet_Hint='Set these in Select/Save Book search set'
+rc_cmdSWSavedLayout='All modules of this Book view set'
+rc_cmdSWSavedLayout_Hint='Set these in Bookview, Define module sets'
+rc_no_saved_sets='No Book search saved set'
+rc_no_book_view_set='No Book View set'
+
 #search books view
 rc_booksearch_export_topics='Exportiere Themen...'
 rc_booksearch_search_locked='"%s" läuft gerade. Bitte warten Sie bis zum Abschluss.'
@@ -3438,6 +3435,9 @@ rc_skin_reload_failed='Skin reload failed'
 rc_skin_reload_not_supported='Delphi styles don''t have files to reload'
 rc_skin_reload_not_needed='No skin or default skin doesn''t need reloading'
 rc_skin_no_load='Your selected skin could not load try a different skin in the View > Skins Menu. Please select another skin otherwise menus'' text could be wrong.'
+
+#message when more than one instance
+rc_multi_instance_same_folder='theWord is already running from this folder.'
 
 #messages for when theWord shutsdown using frmStartup
 rc_shutdown_lblStatus='Bitte warten - theWord wird geschlossen.'

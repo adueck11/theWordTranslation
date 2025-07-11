@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1566-432
+version=7.0.0.1568-442
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -254,7 +254,7 @@ txtEditorialComments.Hint='Comments about editorial practices: whether spelling 
 lblStatus.Caption='Status:'
 txtStatus.Hint='Current status of text, e.g. ''This text still needs proofreading'''
 lblCheckAuthor.Caption='Check author name'
-lblReqID.Caption='Request official identifier'
+lblReqID.Caption='Generate new identifier'
 lblCheckCategories.Caption='Check category'
 lblCheckKeywords.Caption='Check keywords'
 
@@ -576,16 +576,6 @@ actParaBorder.Caption='Paragraph Borders and Background...'
 actParaList.Caption='Bullets and Numbering...'
 cmdSnippets.Caption='Insert'
 cmdSnippetManager.Caption='Insert Manager...'
-#popup menu when clicking the Booksearch menu
-lblModulesToSearch.Caption='Which modules do you want to search?'
-cmdSWCurMod.Caption='Current module'
-cmdSWUserSet.Caption='Select modules to search (Save Book search set)...'
-cmdSWAllMods.Caption='All modules'
-cmdSWCurModsOfBKV.Caption='All modules of active Book view'
-cmdSWSavedSet.Caption='All modules of this Book search saved set'
-cmdSWSavedSet.Hint='Set these in Select/Save Book search set'
-cmdSWSavedLayout.Caption='All modules of this Book view set'
-cmdSWSavedLayout.Hint='Set these in Bookview, Define module sets'
 
 #BookView TopicID Goto
 [TfrmBookTopicGoto]
@@ -1463,16 +1453,6 @@ actrToggle.Caption='"r" Toggle'
 actvToggle.Caption='"v" Toggle'
 actyToggle.Caption='"y" Toggle'
 actzToggle.Caption='"z" Toggle'
-#popup menu when clicking the Booksearch menu
-lblModulesToSearch.Caption='Which modules do you want to search?'
-cmdSWCurMod.Caption='Current module'
-cmdSWUserSet.Caption='Select modules to search (Save Book search set)...'
-cmdSWAllMods.Caption='All modules'
-cmdSWCurModsOfBKV.Caption='All modules of active Book view'
-cmdSWSavedSet.Caption='All modules of this Book search saved set'
-cmdSWSavedSet.Hint='Set these in Select/Save Book search set'
-cmdSWSavedLayout.Caption='All modules of this Book view set'
-cmdSWSavedLayout.Hint='Set these in Bookview, Define module sets'
 
 #Book search view: Press F2
 [TfmBookSearch]
@@ -1725,8 +1705,12 @@ chkPageFont.Caption='Show'
 chkPageFont.Hint='Show/Hide this page numbers if they match theWord standardized formatting.'
 cmdStudySkinText.Caption='Skin Color'
 cmdStudySkinText.Hint='Skin Color of the Text'
+chkBookIdxonStartup.Caption='Book Indexing on Startup'
+chkBookIdxonStartup.Hint='Most users will want to leave this on so their resources are indexed and ready to search. However, users that switch out a lot of modules may want to turn this off.'
 chkBckBookIndexing.Caption='Background Book Search Indexing Only'
 chkBckBookIndexing.Hint='This turns off indexing in the book search and leaves it up to background indexing only. Note it can affect search results.'
+cmdResetIdxErrList.Caption='Reset Index Error List'
+cmdResetIdxErrList.Hint='This resets the list of modules that had an error during indexing. It should come into affect during the next startup.'
 
 #Proofing tab
 tabProofing.Caption='Proofing'
@@ -2776,6 +2760,19 @@ rc_verse_ref_text='Verse reference (F4)'
 rc_no_verses_in_bible='This edition of the Bible does not contain the specified verses'
 rc_search_quick='Search the Bible (F3)'
 
+#popup menu when clicking the Booksearch menu in BibleView or BookView
+rc_lblModulesToSearch='Which modules do you want to search?'
+rc_cmdSWCurMod='Current module'
+rc_cmdSWUserSet='Select modules to search (Save Book search set)...'
+rc_cmdSWAllMods='All modules'
+rc_cmdSWCurModsOfBKV='All modules of active Book view'
+rc_cmdSWSavedSet='All modules of this Book search saved set'
+rc_cmdSWSavedSet_Hint='Set these in Select/Save Book search set'
+rc_cmdSWSavedLayout='All modules of this Book view set'
+rc_cmdSWSavedLayout_Hint='Set these in Bookview, Define module sets'
+rc_no_saved_sets='No Book search saved set'
+rc_no_book_view_set='No Book View set'
+
 #search books view
 rc_booksearch_export_topics='Export topics...'
 rc_booksearch_search_locked='"%s" is already running please wait until it is done.'
@@ -3352,7 +3349,7 @@ rc_lyt_fmttoolbar_close_error='Restoring layout - format toolbar error - exiting
 rc_biblesearch_create='A "Bible Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
 
 #BookSearch create message
-rc_biblesearch_create='A "Book Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
+rc_booksearch_create='A "Book Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
 
 #WordStudy Book messages
 rc_wordstudy_rightclick='Word-Study on "%s"'
@@ -3438,6 +3435,9 @@ rc_skin_reload_failed='Skin reload failed'
 rc_skin_reload_not_supported='Delphi styles don''t have files to reload'
 rc_skin_reload_not_needed='No skin or default skin doesn''t need reloading'
 rc_skin_no_load='Your selected skin could not load try a different skin in the View > Skins Menu. Please select another skin otherwise menus'' text could be wrong.'
+
+#message when more than one instance
+rc_multi_instance_same_folder='theWord is already running from this folder.'
 
 #messages for when theWord shutsdown using frmStartup
 rc_shutdown_lblStatus='theWord is shutting down, please wait'
