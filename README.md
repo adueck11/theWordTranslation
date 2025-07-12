@@ -22,39 +22,35 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 	- Zeile 1001: Einstellungen zur Bibelansicht -> User Toggles: nur Englisch zeigt in Überschrift den Bibelnamen an, Deutsch nicht 
 	- ab Zeile 1021: Überschrift "lblBGloss.Caption" auskommentiert - nicht aktiv
 	- Zeilen 1099 + 1100 noch notwendig? Keine Punkte im Menü sichtbar - actImportNotes.Caption und actImportNotes.Hint
-- [ ] Im Bibelleseplan sind viele Texte nicht in der Sprachdatei zu finden
 - [ ] Anführungszeichen '' durch " ersetzen 
-- [ ] Zeile 1398: Funktion von "Base Bible" unklar ...
+- [ ] Zeile 1398+2745: Funktion von "Base Bible" unklar ...
 
 # Englisch oder Deutsch?
 - Identifier oder Kennung? 
 - Skin der Oberfläche? 
 
 # Bereiche in der Datei german.lng
-- [ ] Books
-- [ ] Messages - in Arbeit
-- [ ] Notice
-- [ ] Search.Patterns
-- [ ] TDataModPopupVerses
+- [x] Messages
+- [x] TDataModPopupVerses
 - [x] TFmBibleSearch
 - [x] TFrmChooseDevotionals
 - [x] TFrmCustomWelcome
 - [x] TFrmDevCalendar
 - [x] TFrmDonate
-- [ ] TFrmExportTopics
+- [x] TFrmExportTopics
 - [x] TFrmInstallModules
 - [x] TFrmNewReadingPlan
 - [x] TFrmRPPreview
 - [x] TFrmStartup
 - [x] TFrmWelcome
-- [ ] TMainReaderForm - in Arbeit
+- [x] TMainReaderForm
 - [ ] TRvaFindDialog
 - [x] TTips2
 - [x] TfmBibleTexts
-- [ ] TfmBibleView - in Arbeit
+- [ ] TfmBibleView - in Arbeit 
 - [x] TfmBookSearchOptions
-- [ ] TfmBookSearch - in Arbeit
-- [ ] TfmBookView
+- [x] TfmBookSearch
+- [x] TfmBookView
 - [x] TfmLockedModuleInfo
 - [x] TfmMapView
 - [x] TfmReadingPlanProperties
@@ -63,7 +59,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmAddXref
 - [x] TfrmAutoUpdate
 - [x] TfrmBookMargins
-- [ ] TfrmBookTopicGoto
+- [x] TfrmBookTopicGoto
 - [x] TfrmBookmarks
 - [x] TfrmClipViewOptions
 - [x] TfrmClipboardViewer
@@ -103,7 +99,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmUpdateSubject
 - [x] TfrmViewXRefs
 - [x] TfrmWait
-- [ ] TrvaReplaceDialog
+- [x] TrvaReplaceDialog
 - [ ] _main_
 - [ ] welcome-basic-description
 - [ ] welcome-begginner-description

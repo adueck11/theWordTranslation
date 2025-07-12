@@ -3,7 +3,7 @@
 name=Deutsch (DE)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1568-442
+version=7.0.0.1568-444
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -580,8 +580,8 @@ cmdSnippetManager.Caption='Einfüge-Manager...'
 #BookView TopicID Goto 
 [TfrmBookTopicGoto]
 #use rc_frmBookTopicGotofrmBookTopicGoto='Go To Topic ID'
-#use rc_lblTopicIDOn='You are on Topic ID: %d'
-lblGotoTopicID.Caption='Go to Topic ID:'
+#use rc_lblTopicIDOn='Sie sind in Themen-ID: %d'
+lblGotoTopicID.Caption='Gehe zu Themen-ID in %s'
 #use rc_lblMaxTopicID.Caption'Max Topic ID: %d'
 btnOK.Caption='OK'
 btnCancel.Caption='Abbrechen'
@@ -1708,7 +1708,7 @@ cmdStudySkinText.Hint='Skin-Farbe des Textes'
 chkBookIdxonStartup.Caption='Buchindizierung beim Start'
 chkBookIdxonStartup.Hint='Die meisten Benutzer werden diese Option aktiviert lassen wollen, damit ihre Module indiziert und für die Suche verfügbar sind. Benutzer mit vielen Modulen sollten diese Option jedoch deaktivieren.'
 chkBckBookIndexing.Caption='Indizierung fücr Buchsuche nur im Hintergrund ausführen'
-chkBckBookIndexing.Hint='Dies schaltet die Indizierung in der Buchsuche aus und führt sie nur im Hintergrund aus. Beachten Sie, dass dies die Suchergebnisse beeinflussen kann.'
+chkBckBookIndexing.Hint='Dies schaltet die Indizierung in der Buchsuche aus und führt sie nur im Hintergrund aus. Beachten Sie, dass dies die Suchergebnisse beeinflussen kann. Es wird empfohlen, diese Option auszuschalten, damit Sie die Hintergrundindizierung aufheben können, wenn Sie ein Buch durchsuchen.'
 cmdResetIdxErrList.Caption='Index-Fehlerliste zurücksetzen'
 cmdResetIdxErrList.Hint='Dies setzt die Liste der Module zurück, bei denen während der Indizierung ein Fehler aufgetreten ist. Dies sollte beim nächsten Start in Kraft treten.'
 
@@ -2596,29 +2596,29 @@ mnuPasteToListMulti.Caption='Zur Versliste hinzufügen'
 
 #Find dialog in Book view
 [TRvaFindDialog]
-Caption='Find'
-lblFindWhat.Caption='Find wha&t:'
-chkWholeWord.Caption='Match &whole word only'
-chkMatchCase.Caption='Match &case'
-grpDirection.Caption='Direction'
-optUp.Caption='&Up'
-optDown.Caption='&Down'
-cmdFind.Caption='&Find'
-cmdCancel.Caption='Cancel'
+Caption='Suchen'
+lblFindWhat.Caption='&Was suchen:'
+chkWholeWord.Caption='&Nur ganze Wörter finden'
+chkMatchCase.Caption='&Groß-/Kleinschreibung beachten'
+grpDirection.Caption='Richtung'
+optUp.Caption='&Auf'
+optDown.Caption='A&b'
+cmdFind.Caption='&Suche'
+cmdCancel.Caption='Abbrechen'
 
 [TrvaReplaceDialog]
-Caption='Find & Replace'
-lblFindWhat.Caption='Find wha&t:'
-lblReplace.Caption='R&eplace with'
-chkWholeWord.Caption='Match &whole word only'
-chkMatchCase.Caption='Match &case'
-grpDirection.Caption='Direction'
-optUp.Caption='&Up'
-optDown.Caption='&Down'
-cmdFind.Caption='&Find'
-cmdReplace.Caption='&Replace'
-cmdReplaceAll.Caption='Replace &All'
-cmdCancel.Caption='Cancel'
+Caption='Suchen & Ersetzen'
+lblFindWhat.Caption='&Was suchen:'
+lblReplace.Caption='&Ersetzen mit'
+chkWholeWord.Caption='&Nur ganze Wörter finden'
+chkMatchCase.Caption='&Groß-/Kleinschreibung beachten'
+grpDirection.Caption='Richtung'
+optUp.Caption='&Auf'
+optDown.Caption='A&b'
+cmdFind.Caption='&Suchen'
+cmdReplace.Caption='&Ersetzen'
+cmdReplaceAll.Caption='Alle erse&tzen'
+cmdCancel.Caption='Abbrechen'
 
 #Below are generic messages that are being used to build dialogs, popups, etc
 #in most cases, there is a comment that may help you to understand where
@@ -2761,17 +2761,17 @@ rc_no_verses_in_bible='Dieser Bibeltext enthält den angegebenen Vers leider nic
 rc_search_quick='Bibelsuche (F3)'
 
 #popup menu when clicking the Booksearch menu in BibleView or BookView
-rc_lblModulesToSearch='Which modules do you want to search?'
-rc_cmdSWCurMod='Current module'
-rc_cmdSWUserSet='Select modules to search (Save Book search set)...'
-rc_cmdSWAllMods='All modules'
-rc_cmdSWCurModsOfBKV='All modules of active Book view'
-rc_cmdSWSavedSet='All modules of this Book search saved set'
-rc_cmdSWSavedSet_Hint='Set these in Select/Save Book search set'
-rc_cmdSWSavedLayout='All modules of this Book view set'
-rc_cmdSWSavedLayout_Hint='Set these in Bookview, Define module sets'
-rc_no_saved_sets='No Book search saved set'
-rc_no_book_view_set='No Book View set'
+rc_lblModulesToSearch='Welche Module möchten Sie durchsuchen?'
+rc_cmdSWCurMod='Aktuelles Modul'
+rc_cmdSWUserSet='Wählen Sie die zu durchsuchenden Module aus (Buchset speichern)...'
+rc_cmdSWAllMods='Alle Module'
+rc_cmdSWCurModsOfBKV='Alle Module der aktiven Buchansicht'
+rc_cmdSWSavedSet='Alle Module dieser Buchsuche sind gespeichert'
+rc_cmdSWSavedSet_Hint='Stellen Sie diese unter Buchsuche auswählen/speichern ein'
+rc_cmdSWSavedLayout='Alle Module dieses Buchansicht-Sets'
+rc_cmdSWSavedLayout_Hint='Stellen Sie diese in der Buchansicht ein, definieren Sie Modul-Sets'
+rc_no_saved_sets='Keine Buchsuchen-Sets bislang gespeichert'
+rc_no_book_view_set='Kein Buchansichten-Sets'
 
 #search books view
 rc_booksearch_export_topics='Exportiere Themen...'
@@ -2815,15 +2815,15 @@ rc_booksearch_options_bible_refs='Bibelstellen'
 
 
 #Book view Goto Topic ID
-rc_frmBookTopicGoto='Go To Topic ID in %s'
-rc_lblTopicIDOn='You are on Topic ID: %d'
-rc_lblMinMaxTopicID='Min Topic ID: %d | Max Topic ID: %d'
-rc_topicID_not_exist='Sorry this Topic ID: %d does not exist in %s'
+rc_frmBookTopicGoto='Gehe zu Themen-ID in %s'
+rc_lblTopicIDOn='Sie sind in Themen-ID: %d'
+rc_lblMinMaxTopicID='Min. Themen-ID: %d | Max. Themen-ID: %d'
+rc_topicID_not_exist='Leider existiert Themen-ID "%d" nicht in %s'
 
 #search context menu
 rc_mnu_search_select_all='Alles auswäh&len'
 rc_mnu_copy_to_list='[%s] zu aktueller Versliste hinzufügen...'
-rc_mnu_paste_to_editor='Paste [%s] to editor'
+rc_mnu_paste_to_editor='[%s] in den Editor einfügen'
 
 #bookmarks
 rc_msg_bm_exists='Es existiert bereits ein Lesezeichen zu ''%s'''#13'Soll wirklich ein weiteres hinzugefügt werden?'
@@ -3111,13 +3111,13 @@ rc_bookview_tip_path='Pfad'
 rc_bookview_tip_description='Beschreibung'
 rc_msg_duplicate_book_id='Es gibt doppelte Buch-IDs.'#13'Solange diese Duplikate vorhanden sind, funktionieren Elemente wie Modulsets, Strongnummern, Morphologie usw. möglicherweise nicht korrekt.'#13#13'Zur Behebung in theWord klicken Sie mit der rechten Maustaste auf das ursprüngliche Buchmodul mit _DUPLICATE_ID_ und setzen Sie es auf "Original". '#13#13'Zur manuellen Korrektur gehen Sie in den Cache-Ordner (den Sie unter Hilfe > Über > Dateispeicherorte finden) und suchen Sie nach BookDuplicate.txt, die die doppelten Dateinamen und Pfade enthält, und setzen Sie die Modul-IDs auf etwas Eindeutiges.'#13#13'Dieser Dialog erscheint beim Start, bis das Problem behoben ist. Es ist wichtig, dies zu beheben!'
 #devotion specific
-rc_bookview_dev_noexist='No devotional reading exists for %s.'#13'Dates with devotional readings are shown with bold numbers.'
+rc_bookview_dev_noexist='Für %s ist keine Andachtslesung vorhanden.'#13'Termine mit Andachtslesungen werden mit fetten Zahlen angezeigt.'
 #when right-click on a module tab, first label
 rc_bookview_optionsfor='Optionen für [%s]'
-rc_bookview_deletemod_confirm='You are about to delete the following module:'#13'    [%s]'#13#13'WARNING! You cannot undo this action.'#13'The associated file will be permanently deleted from your disk.'#13#13'Continue?'
-rc_bookview_deletemod_failed='Failed to delete the module''s associated file:'#13'    %s'#13#13'This may happen if the file is open by another application,'#13'or you are running another instance of theWord.'#13#13'You will need to delete this file manually, or else the module will be'#13'available again the next time you start theWord.'
-rc_bookview_setorigmodid_confirm='You are about to set the id of the following module as original:'#13'    [%s]'#13'with the path:'#13'  [%s]'#13#13'WARNING! You cannot undo this action.'#13'The associated module will be set as the original and all others with the same id as duplicates.'#13#13'Continue?'
-rc_bookview_setorigmodid_failed='Failed to set the module''s associated id as original:'#13'    %s'#13#13'This may happen if the file is open by another application,'#13'or you are running another instance of theWord.'#13#13'You will need to shut down other instances of theWord, or else the module will be'#13'seen as a duplicate again.'
+rc_bookview_deletemod_confirm='Sie sind dabei, das folgende Modul zu löschen:'#13' [%s]'#13#13'WARNUNG! Sie können diese Aktion nicht rückgängig machen.'#13'Die zugehörige Datei wird dauerhaft von Ihrer Festplatte gelöscht.'#13#13'Weiter?'
+rc_bookview_deletemod_failed='Die zugehörige Datei des Moduls konnte nicht gelöscht werden:'#13' %s'#13#13'Dies kann passieren, wenn die Datei von einer anderen Anwendung geöffnet ist'#13'oder Sie eine andere Instanz von theWord ausführen.'#13#13'Sie müssen diese Datei manuell löschen, sonst wird das Modul beim nächsten Start von theWord wieder verfügbar sein.'
+rc_bookview_setorigmodid_confirm='Sie sind dabei, die ID des folgenden Moduls als Original zu setzen:'#13' [%s]'#13'mit dem Pfad:'#13' [%s]'#13#13'WARNUNG! Sie können diese Aktion nicht rückgängig machen.'#13'Das zugehörige Modul wird als Original und alle anderen mit der gleichen ID als Duplikate gesetzt.'#13#13'Weiter?'
+rc_bookview_setorigmodid_failed='Die zugehörige ID des Moduls konnte nicht auf das Original gesetzt werden: '#13' %s'#13#13'Dies kann passieren, wenn die Datei von einer anderen Anwendung geöffnet ist oder Sie eine andere Instanz von theWord ausführen.'#13#13'Sie müssen andere Instanzen von theWord beenden, sonst wird das Modul wieder als Duplikat gesehen.'
 #default tab layouts descriptions. Also use in 'Add Titles...' dialog as grouping entries in the list of modules
 rc_All_modules='Alle Module'
 rc_Dictionaries='Wörterbücher'
@@ -3138,17 +3138,17 @@ rc_Backgrounds='Hintergrundbilder'
 rc_Gloss='Glossa'
 
 #Gloss Book
-rc_adding_topics='Adding topic %d of %d. Please wait...'
+rc_adding_topics='Thema %d von %d wird hinzugefügt. Bitte warten...'
 
 #TfrmSelectBibles messages
-rc_selectbibles_prompt_save_set='Would you like to save the changes made to the set [%s]?'
-rc_selectbibles_prompt_save_empty_set='Sorry the set [%s] cannot be saved since it is empty.'#13'The set [%s] will remain unchanged.'
-rc_group_lng_any='Any language'
-rc_group_lng_none='No language set'
-rc_selectbibles_no_matching_bibles='Sorry your group settings resulted in no Bibles added. Please adjust your settings before clicking apply again.'
+rc_selectbibles_prompt_save_set='Möchten Sie die Änderungen am Set [%s] speichern?'
+rc_selectbibles_prompt_save_empty_set='Leider kann das Set [%s] nicht gespeichert werden, da es leer ist.'#13'Das Set [%s] bleibt unverändert.'
+rc_group_lng_any='Jede Sprache'
+rc_group_lng_none='Keine Sprache festgelegt'
+rc_selectbibles_no_matching_bibles='Leider haben Ihre Gruppeneinstellungen dazu geführt, dass keine Bibeln hinzugefügt wurden. Bitte passen Sie Ihre Einstellungen an, bevor Sie erneut auf Anwenden klicken.'
 
 #Biblical Languages Database
-rc_blngs_requiresnewer='The Biblical Language Database ''%s'' requires a newer version of the program to work properly.'#13#13'Please, remove/delete this file in order to avoid seeing this message again.'#13'You may update to the latest version by visiting ''www.theword.net''.'
+rc_blngs_requiresnewer='Die Biblische Sprachdatenbank "%s" benötigt eine neuere Version des Programms, um ordnungsgemäß zu funktionieren.'#13#13'Bitte entfernen/löschen Sie diese Datei, um zu vermeiden, dass diese Meldung erneut erscheint.'#13'Sie können auf die neueste Version aktualisieren, indem Sie "www.theword.net" besuchen.'
 
 #frmBookmarks messages
 rc_bkms_warn='Der ''Name'' eines Bookmarks sollte nur aus englischen Zeichen, Nummern und Unterstrichen bestehen, und mit einem Buchstaben beginnen.'#13#13'Bitte korrigieren, um fortzufahren.'
@@ -3165,14 +3165,14 @@ rc_custtabs_dcts='Wörterbücher'
 rc_custtabs_cmts='Kommentare'
 rc_custtabs_bks='Bücher'
 rc_custtabs_maps='Karten'
-rc_custtabs_plans='Reading Plans'
-rc_custtabs_modinsets='Appears in sets: '
-rc_custtabs_placeholder='Module place holder (please ignore)'
-rc_custtabs_nocategory='No-Category'
-rc_custtabs_nokeyword='No-Keyword'
-rc_custtabs_nopublisher='No-Publisher'
-rc_custtabs_noauthor='No-Author'
-rc_custtabs_nolanguage='No-Language'
+rc_custtabs_plans='Bibellesepläne'
+rc_custtabs_modinsets='Enthalten in Sets: '
+rc_custtabs_placeholder='Modulplatzhalter (bitte ignorieren)'
+rc_custtabs_nocategory='Ohne-Kategorie'
+rc_custtabs_nokeyword='Ohne-Schlüsselwort'
+rc_custtabs_nopublisher='Ohne-Herausgeber'
+rc_custtabs_noauthor='Ohne-Autor'
+rc_custtabs_nolanguage='Ohne-Language'
 
 #frmHyperlink messages
 rc_hyper_defbible='[Verstext des aktuellen ''Standard'' Bibelmoduls verwenden]'
@@ -3231,8 +3231,8 @@ rc_mp_detectvrefs_current='Automatische Detektion der Versreferenzen in Thema %d
 rc_mp_detectvrefs_perc='Automatische Detektion der Versreferenzen: %d%%'
 rc_mp_detectvrefs_err='Bei der automatischen Detektion der Versreferenzen trat ein Fehler auf. Es wurden keine Änderungen gemacht.'
 #strongs
-rc_mp_detectstrongs_start='Initializing auto-detection operation...'
-rc_mp_detectstrongs_perc='Auto detecting Strong''s/lemmas: %d%%'
+rc_mp_detectstrongs_start='Initialisierung des automatischen Erkennungsvorgangs...'
+rc_mp_detectstrongs_perc='Automatische Erkennung von Strongnummern/Lemmas: %d%%'
 #compact module action messages
 rc_mp_compacting='Modul komprimieren...'
 rc_mp_compacting_err='Komprimierung des Moduls schlug fehl:'
@@ -3251,7 +3251,7 @@ rc_mp_enc_user_notallowed='Dieser Vorgang kann nur an unverschlüsselten Eigenen
 rc_mp_nonuseronly='Dieser Vorgang kann nur an Eigenen Modulen ausgeführt werden.'
 rc_mp_nonenc_nonuser='Dieser Vorgang kann nur an unverschlüsselten, nicht-Eigenen Modulen ausgeführt werden.'
 rc_mp_notallowed='Diese Aktion ist für dieses Modul nicht zulässig.'
-rc_mp_cmtsonly='This action cannot be executed for commentaries.'
+rc_mp_cmtsonly='Diese Aktion kann bei Kommentaren nicht durchgeführt werden.'
 
 #frmNewComment messages
 rc_newcmt_addconfirm='Kommentar zu ''%s'' hinzufügen/ändern?'
@@ -3304,10 +3304,10 @@ rc_sel_one_text='Bitte mindestens einen Bibeltext auswählen.'
 rc_clip_gotoverse='Stelle aufschlagen'
 rc_clip_pastetolist='zur Liste'
 rc_clip_init_notice='The Word - Bibelsoftware'#13#13'Dieser Hinweis kommt von der Software ''The Word'': Dieses gerade auf dem Bildschirm erschienene Fenster zeigt Bibelverse an, deren Referenzen gerade in die Zwischenablage kopiert wurden.'#13#13'Dies ist eine Funktion in The Word, genannt ''Versmonitor''. Ziel ist, die Zwischenablage zu monitoren, und ein Popup zu erzeugen das die Stelle(n) anzeigt deren Versrefenzen (oder Text der Versreferenzen enthält) gerade kopiert wurden.'#13#13'Für weitere Informationen zu dieser Funktion bitte das Manual von The Word untersuchen. Zum Deaktivieren ins Menü Datei -> Einstellungen -> Versmonitor gehen.'#13#13'Dies ist eine einmalige Inforamtion, und wird nicht nochmals erscheinen.'
-rc_clip_offsetvref='Mouse wheel scroll to offset'
-rc_hlclrs_light_color='Light Highlight Color'
-rc_hlclrs_dark_color='Dark Highlight Color'
-rc_hlclrs_sample_text='Sample Text'
+rc_clip_offsetvref='Mausrad scrollen zum Verschieben'
+rc_hlclrs_light_color='Helle Hervorhebungsfarbe'
+rc_hlclrs_dark_color='Dunkle Hervorhebungsfarbe'
+rc_hlclrs_sample_text='Beispieltext'
 
 #splash screen messages
 rc_splash_build_index='Index wird erstellt für'
@@ -3319,10 +3319,10 @@ rc_copy_verse_to='Bis [Klick für Versauswahl] ...'
 rc_copy_verse_verses='Verse'
 rc_copy_verse_from_with='Von: [%s]'
 rc_copy_verse_to_with='Bis: [%s]'
-rc_copy_verse_sets_save_name='You must supply a unique valid name'#13' - of three characters or more -'#13'before you can save the current settings.'
-rc_copy_verse_sets_overwrite='The set ''%s'' already exists.'#13#13'Are you sure you want to overwrite and update?'
-rc_copy_verse_sets_notexists='The set ''%s'' does not exist.'
-rc_copy_verse_sets_confirmdelete='Are you certain you wish to delete set ''%s''?'
+rc_copy_verse_sets_save_name='Sie müssen einen eindeutigen, gültigen Namen mit mindestens drei Zeichen eingeben, bevor Sie die aktuellen Einstellungen speichern können.'
+rc_copy_verse_sets_overwrite='Das Set "%s" existiert bereits.'#13#13'Sind Sie sicher, dass Sie es überschreiben und aktualisieren wollen?'
+rc_copy_verse_sets_notexists='Das Set "%s" existiert nicht.'
+rc_copy_verse_sets_confirmdelete='Sind Sie sicher, dass Sie das Set "%s" löschen wollen?'
 
 #define range dialog message (for searches)
 #be ware that the messages of the 'copy verse dialog' (the ones above) are also used in this dialog
@@ -3340,13 +3340,13 @@ rc_lyt_user_layout='Benutzerlayout %d'
 rc_lyt_as='als: '
 rc_lyt_confirm_delete='Soll das Layout ''%s''wirklich gelöscht werden?'
 rc_lyt_no_empty='Es kann kein leerer Name für das Layout verwendet werden. Bitte etwas eingeben...'
-rc_lyt_update='Would you like to save current arrangement in layout ''%s''?'
-rc_lyt_loading='Loading layout: %d%%'
-rc_lyt_saving='Saving layout: %d%%'
-rc_lyt_fmttoolbar_close_error='Restoring layout - format toolbar error - exiting. Please restart theWord'
+rc_lyt_update='Möchten Sie die aktuelle Anordnung im Layout "%s" speichern?'
+rc_lyt_loading='Lode Layout: %d%%'
+rc_lyt_saving='Speichere Layout: %d%%'
+rc_lyt_fmttoolbar_close_error='Layout wiederherstellen - Fehler in der Symbolleiste - Beenden. Bitte starten Sie theWord neu'
 
 #BibleSearch create message
-rc_biblesearch_create='A "Bible Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
+rc_biblesearch_create='Für diese Funktion wird eine "Bibel-Such-Ansicht" benötigt.'#13'Bitte teilen Sie theWord mit, wo es im nächsten Popup platziert werden soll.'
 
 #BookSearch create message
 rc_biblesearch_create='A "Book Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
@@ -3417,27 +3417,27 @@ rc_wctx_cc_screenlimits='Schwimmende Fenster innerhalb Bildschirm halten'
 
 #skin related message
 rc_skin_border='Use skinned window border'
-rc_skin_editor='Skin Editor: *.skn Files'
-rc_skin_editor_hint='After editing a skin please shift + click the skin again to reload it.'
-rc_skin_inspector='Skin Inspector'
-rc_skin_inspector_hint='Hover the mouse cursor over items in theWord and use this information in the Skin Editor. Press ESC to end.'
-rc_skin_inspector_active='Skin Inspector active - Press ESC to exit'
+rc_skin_editor='Skin Editor: *.skn-Dateien'
+rc_skin_editor_hint='Nach der Bearbeitung eines Skins klicken Sie bitte mit Umschalt + auf den Skin, um ihn neu zu laden.'
+rc_skin_inspector='Skin-Inspektor'
+rc_skin_inspector_hint='Bewegen Sie den Mauszeiger über die Elemente in theWord und verwenden Sie diese Informationen im Skin-Editor. Drücken Sie ESC zum Beenden.'
+rc_skin_inspector_active='Skin Inspektor ist aktiv - ESC zum Beenden'
 rc_skin_inspector_name='Name: '
-rc_skin_inspector_type='Type: '
-rc_skin_hint='(Pause over an item to see the skin)'
-rc_skin_none='[No skin]'
-rc_skin_tw3default='theWord default theme'
+rc_skin_inspector_type='Typ: '
+rc_skin_hint='(Maus über einem Pbjekt halten, um den Skin zu sehen)'
+rc_skin_none='[Kein Skin]'
+rc_skin_tw3default='theWord Standard-Oberfläche'
 rc_internalskins_hint='Skins'
-rc_style_hint='Delphi Styles (no preview)'
-rc_fileskin_hint='*.skn Files'
-rc_skin_reloaded='Skin reloaded'
-rc_skin_reload_failed='Skin reload failed'
-rc_skin_reload_not_supported='Delphi styles don''t have files to reload'
-rc_skin_reload_not_needed='No skin or default skin doesn''t need reloading'
-rc_skin_no_load='Your selected skin could not load try a different skin in the View > Skins Menu. Please select another skin otherwise menus'' text could be wrong.'
+rc_style_hint='Delphi Styles (ohne Vorschau)'
+rc_fileskin_hint='*.skn-Dateien'
+rc_skin_reloaded='Skin neu geladem'
+rc_skin_reload_failed='Neuladen des Skins fehlgeschlagen'
+rc_skin_reload_not_supported='Delphi-Stile haben keine Dateien zum Nachladen'
+rc_skin_reload_not_needed='Kein Skin vorhanden bzw. Standard-Skin muss nicht neu geladen werden'
+rc_skin_no_load='Ihr ausgewähltes Skin konnte nicht geladen werden. Versuchen Sie ein anderes Skin im Menü Ansicht > Oberfläche. Bitte wählen Sie ein anderes Skin aus, sonst könnte der Text im Menü falsch sein.'
 
 #message when more than one instance
-rc_multi_instance_same_folder='theWord is already running from this folder.'
+rc_multi_instance_same_folder='theWord wird bereits von diesem Ordner aus ausgeführt.'
 
 #messages for when theWord shutsdown using frmStartup
 rc_shutdown_lblStatus='Bitte warten - theWord wird geschlossen.'
@@ -3513,43 +3513,43 @@ rc_html_loaderr='Informationen konnten nicht geladen werden.'
 rc_dlr_delconfirm='Sind Sie sicher, dass Sie das Modulverzeicnnis löschen möchten? %s'
 
 #message from spelling dictionaries module
-rc_spell_loading='Loading spelling dictionary %d/%d for language "%s"...'
-rc_spell_more_dictionaries='To add more spelling dictionaries select the "Add Titles..." menu from within theWord. A list of available spelling dictionaries is available under the "Spelling Dictionaries" type there.'
+rc_spell_loading='Laden des Rechtschreibwörterbuchs %d/%d für Sprache "%s"...'
+rc_spell_more_dictionaries='Um weitere Rechtschreibwörterbücher hinzuzufügen, wählen Sie im Menü "Module hinzufügen..." in theWord. Eine Liste der verfügbaren Rechtschreibwörterbücher ist dort unter dem Typ "Rechtschreibwörterbücher" verfügbar.'
 #messages from frmDownloadFiles
-rc_dlf_downloading='Downloading file %d of %d ...'
-rc_dlf_err='An error occured while downloading "%s"'#13'What would you like to do?'
-rc_dlf_cancel='Are you sure you want to cancel downloads?'
+rc_dlf_downloading='Herunterladen der Datei %d von %d ...'
+rc_dlf_err='Beim Herunterladen von "%s" ist ein Fehler aufgetreten'#13'Was möchten Sie tun?'
+rc_dlf_cancel='Sind Sie sicher, dass Sie die Downloads abbrechen wollen?'
 
 #messages from frmInstallModules (Files->Install modules)
-rc_instmod_inuse='File [%s] is already in use by theWord.'#13#10'You don''t need to install it.'
-rc_instmod_unknowntype='File [%s] is not a known file type or archive.'
-rc_instmod_nomodsinarch='The archive [%s] does not seem to contain any modules.'
-rc_instmod_noaffspellfile='The archive [%s] seems to contain a spelling dictionary, yet an important (.aff) file is missing.'
-rc_instmod_nomodsinarch_more='There were more archive files that did not contain any modules.'#13'The "Files to install" list contains all identified modules.'
+rc_instmod_inuse='Die Datei [%s] wird bereits von theWord verwendet.'#13#10'Sie brauchen sie nicht zu installieren.'
+rc_instmod_unknowntype='Datei [%s] ist kein bekannter Dateityp oder Archiv.'
+rc_instmod_nomodsinarch='Das Archiv [%s] scheint keine Module zu enthalten.'
+rc_instmod_noaffspellfile='Das Archiv [%s] scheint ein Rechtschreibwörterbuch zu enthalten, aber eine wichtige Datei (.aff) fehlt.'
+rc_instmod_nomodsinarch_more='Es gab mehrere Archivdateien, die keine Module enthielten.'#13'Die Liste "Zu installierende Dateien" enthält alle identifizierten Module.'
 rc_instmod_lblfiles='%d Module erkannt, %d für Installation ausgewählt'
-rc_instmod_tmpdirfail='Failed to create temporary directory for extracting archive files.'
-rc_instmod_extracting='Extracting [%s]...'
-rc_instmod_extractfail='Failed to extract file [%s] from archive.'#13'Installation of module failed.'
-rc_instmod_extractretry='Extract of file [%s] failed. Retry?'
-rc_instmod_targetexists='Target file [%s] already exists and a [%s%s] file will be made.'#13'Replace file?'
-rc_instmod_targetexists_warning=#13#13'Notice: If you have applied any highlighting in this title, it will be lost.'
-rc_instmod_targetexists_skineditor='Skin Editor [%] already exists and a [%s%s] file will be made.'#13'Replace file?'
-rc_instmod_targetexists_theword='theWord main program [%s] already exists and a [%s%s] file will be made.'#13'Replace file?'
-rc_instmod_copyfailed='Copying of file [%s] failed. Module installation failed.'
-rc_instmod_copyfailednfp='Copying of file [%s] failed. Module/Archive installation failed/incomplete.'
-rc_instmod_instsuccess='%d new module(s)/package(s) have been installed.'#13'They will be available the next time you restart theWord.'
-rc_instmod_instsuccess_more=#13#13'Please make sure that no other instance of theWord is running'#13'when you restart theWord, or else the new module(s) will not be available.'
-rc_instmod_askrestart=#13#13'Would you like to restart theWord now?'
-rc_instmod_passmsgtitle='Archive is password protected'
-rc_instmod_passmsg='Please enter password for archive:'
-rc_instmod_enterurl='Please, enter the URL to download the module from:'
-rc_instmod_invalidurl='Failed to download file. Please check the URL you entered.'
+rc_instmod_tmpdirfail='Temporäres Verzeichnis zum Extrahieren der Archivdateien konnte nicht erstellt werden.'
+rc_instmod_extracting='Extrahiere [%s]...'
+rc_instmod_extractfail='Die Datei [%s] konnte nicht aus dem Archiv entpackt werden.'#13'Die Installation des Moduls ist fehlgeschlagen.'
+rc_instmod_extractretry='Entpacken der Datei [%s] fehlgeschlagen. Wiederholen?'
+rc_instmod_targetexists='Die Zieldatei [%s] existiert bereits und es wird eine [%s%s]-Datei erstellt.'#13'Datei ersetzen?'
+rc_instmod_targetexists_warning=#13#13'Hinweis: Wenn Sie in diesem Modul Hervorhebungen vorgenommen haben, gehen diese verloren.'
+rc_instmod_targetexists_skineditor='Skin Editor [%] existiert bereits und es wird eine [%s%s] Datei erstellt.'#13'Datei ersetzen?'
+rc_instmod_targetexists_theword='theWord-Hauptprogramm [%s] existiert bereits und es wird eine [%s%s]-Datei erstellt.'#13'Datei ersetzen?'
+rc_instmod_copyfailed='Kopieren der Datei [%s] fehlgeschlagen. Modulinstallation fehlgeschlagen.'
+rc_instmod_copyfailednfp='Kopieren der Datei [%s] fehlgeschlagen. Modul-/Archivinstallation fehlgeschlagen/unvollständig.'
+rc_instmod_instsuccess='%d neue(s) Modul(e)/Paket(e) wurde(n) installiert.'#13'Sie werden beim nächsten Neustart von theWord verfügbar sein.'
+rc_instmod_instsuccess_more=#13#13'Bitte stellen Sie sicher, dass keine andere Instanz von theWord läuft'#13'wenn Sie theWord neu starten, sonst werden die neuen Module nicht verfügbar sein.'
+rc_instmod_askrestart=#13#13'Möchten Sie theWord jetzt neu starten?'
+rc_instmod_passmsgtitle='Das Archiv ist passwortgeschützt'
+rc_instmod_passmsg='Bitte geben Sie das Passwort für das Archiv ein:'
+rc_instmod_enterurl='Bitte geben Sie die URL ein, von der Sie das Modul herunterladen möchten:'
+rc_instmod_invalidurl='Datei konnte nicht heruntergeladen werden. Bitte überprüfen Sie die eingegebene URL.'
 #following values are for the Open dialog filter (Browse button)
-rc_instmod_browsefilter_allsupported='All supported files'
-rc_instmod_filter_twmods='theWord modules'
-rc_instmod_filter_allarch='All Archives'
-rc_instmod_filter_nsisinstaller='exe installers'
-rc_instmod_browsefilter_all='All files'
+rc_instmod_browsefilter_allsupported='Alle unterstützten Dateien'
+rc_instmod_filter_twmods='theWord Module'
+rc_instmod_filter_allarch='Alle Archive'
+rc_instmod_filter_nsisinstaller='exe-Installationsprogramme'
+rc_instmod_browsefilter_all='Alle Dateien'
 
 #messages from frmNewReadingPlan (File->New Bible Reading Plan...)
 rc_rdp_nopassages='Die von Ihnen gewählte Bibelübersetzung enthält die angegebenen Abschnitte nicht.'#13#10'Bitte wählen Sie eine andere Übersetzung oder legen Sie gar keine Übersetzung fest.'
@@ -3611,7 +3611,7 @@ rc_dr_no_dev='Für heute sind keine Andachten geplant.'
 rc_dr_missed_day_warning='Ausgehend von Ihrem Plan scheinen Sie mindestens eine Lektüre verpasst zu haben. Gehen Sie auf die Seite ''Statistiken und Aktionen'' Ihres Leseplans und wählen Sie die Funktion ''Nachholen'', um Ihre Lektüre erneut zu synchronisieren.' 
 
 #message for frmOptions form
-rc_background_texture_tip='You may want to combine the background texture you selected with an appropriate background color for optimal results.'#13#13'The default textures that come with theWord appear gray, but, in reality, they are semi-transparent so you can combine them with any background color for better results.'
+rc_background_texture_tip='Für ein optimales Ergebnis sollten Sie die gewählte Hintergrundtextur mit einer geeigneten Hintergrundfarbe kombinieren.'#13#13'Die Standardtexturen, die mit theWord geliefert werden, erscheinen grau, sind aber in Wirklichkeit halbtransparent, so dass Sie sie für ein besseres Ergebnis mit einer beliebigen Hintergrundfarbe kombinieren können.'
 
 #status bar
 rc_stbar_cmt='Kom: %s'
@@ -3659,6 +3659,7 @@ rc_SMsgDlgWarning='Warnung'
 rc_SMsgDlgError='Fehler'    
 rc_SMsgDlgInformation='Information'
 rc_SMsgDlgConfirm='Bestätigung'
+
 
 #don't change this if your language does not require to do so. Not very well tested
 chapter.verse.separator=':'
