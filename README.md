@@ -44,10 +44,10 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TFrmStartup
 - [x] TFrmWelcome
 - [x] TMainReaderForm
-- [ ] TRvaFindDialog
+- [x] TRvaFindDialog
 - [x] TTips2
 - [x] TfmBibleTexts
-- [ ] TfmBibleView - in Arbeit 
+- [x] TfmBibleView 
 - [x] TfmBookSearchOptions
 - [x] TfmBookSearch
 - [x] TfmBookView
@@ -92,7 +92,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmPageSetup
 - [x] TfrmPrintPreview
 - [x] TfrmSelectBibles
-- [ ] TfrmSnippets
+- [x] TfrmSnippets
 - [x] TfrmSplash
 - [x] TfrmStrongMorphAdvanced
 - [x] TfrmUnlockModules
@@ -100,7 +100,7 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 - [x] TfrmViewXRefs
 - [x] TfrmWait
 - [x] TrvaReplaceDialog
-- [ ] _main_
+- [x] _main_
 - [ ] welcome-basic-description
 - [ ] welcome-begginner-description
 - [ ] welcome-default-description

@@ -3,7 +3,7 @@
 name=English (EN)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1568-442
+version=7.0.0.1569-447
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -1708,7 +1708,7 @@ cmdStudySkinText.Hint='Skin Color of the Text'
 chkBookIdxonStartup.Caption='Book Indexing on Startup'
 chkBookIdxonStartup.Hint='Most users will want to leave this on so their resources are indexed and ready to search. However, users that switch out a lot of modules may want to turn this off.'
 chkBckBookIndexing.Caption='Background Book Search Indexing Only'
-chkBckBookIndexing.Hint='This turns off indexing in the book search and leaves it up to background indexing only. Note it can affect search results.'
+chkBckBookIndexing.Hint='This turns off indexing in the book search and leaves it up to background indexing only. Note it can affect search results. Recommended leaving off so then you can override background indexing if you search a book.'
 cmdResetIdxErrList.Caption='Reset Index Error List'
 cmdResetIdxErrList.Hint='This resets the list of modules that had an error during indexing. It should come into affect during the next startup.'
 
@@ -3181,6 +3181,8 @@ rc_hyper_bookmarks_none='[None]'
 rc_hyper_bookmarks_next='[Next bookmark]'
 rc_hyper_notextwarn='You have not entered any text in the ''Text'' field.'#13'Please, correct.'
 rc_hyper_noidwarn='The module you have selected to link to (Target) does not have an assigned identifier.'#13#13'This means, that the filename of this module will be used to identify this module. This is a bit risky since changing the filename of the target module will cause the link to break.'#13#13'All official modules do have a unique identifier assigned. If this is a user module of yours, you can assign a module identifier by going to the ''Module Properties'' dialog and click on the ''Request official identifier'' link.'#13#13'You can read more about this warning at ''www.theword.net/identifier'''#13#13'(this warning is only displayed once each time you run the program)'
+rc_hyper_tw7_required='Due to the Unicode in this hyperlink this module now requires theWord7 and is not backwards compatible to theWord6.'#13'Do you wish to continue?'
+rc_hyper_tw7_void='Hyperlink will be voided then.'
 
 #frmMigrateV2Notes messages
 rc_v2notes_browsefilter='"theWord 2" Personal notes (user.edb)|*.edb|All files (*.*)|*.*'

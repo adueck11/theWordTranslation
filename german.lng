@@ -3,7 +3,7 @@
 name=Deutsch (DE)
 credits=Costas Stergiou (support@thewordbooks.com)
 langid=1033
-version=7.0.0.1568-444
+version=7.0.0.1569-447
 #font=Consolas
 
 #Tools->Bible view options->Strong's and Morph->click on the link at the bottom: set separate ...
@@ -175,7 +175,7 @@ groupGeneral.Caption='Allgemein'
 chkUser.Caption='Eigenes Modul (kann editiert werden)'
 chkUser.Hint='Ein ''Eigenes Modul'' ist ein Modul, dessen Inhalt verändert werden kann. Diese Option abwählen, um zu verhindern, dass der Inhalt versehentlich geändert wird. Verschlüsselte Module können niemals ''Eigene Module'' sein.'
 chkAutosizeImages.Caption='Automatische Größenänderung von Bildern zulassen'
-chkAutosizeImages.Hint='Option aktivieren, wenn das Modul Bilder enthält, die sehr groß sind. Dies ermöglicht dem Endbenutzer, die Schaltfläche "Automatische Größenanpassung" in der Buchansicht zu aktivieren, die die Bilder automatisch an den verfügbaren Platz in der Ansicht anpasst.'#13#13'Beachten Sie, dass diese Option auch auf der Ebene der einzelnen Bilder gesetzt werden kann. Die Option pro Bild hat Vorrang vor dieser Option, die für alle Bilder gilt, für die die spezifische Option NICHT gesetzt ist.'#13#13'Diese Option ist nur für Nicht-Benutzermodule verfügbar.
+chkAutosizeImages.Hint='Option aktivieren, wenn das Modul Bilder enthält, die sehr groß sind. Dies ermöglicht dem Endbenutzer, die Schaltfläche "Automatische Größenanpassung" in der Buchansicht zu aktivieren, die die Bilder automatisch an den verfügbaren Platz in der Ansicht anpasst.'#13#13'Beachten Sie, dass diese Option auch auf der Ebene der einzelnen Bilder gesetzt werden kann. Die Option pro Bild hat Vorrang vor dieser Option, die für alle Bilder gilt, für die die spezifische Option NICHT gesetzt ist.'#13#13'Diese Option ist nur für Nicht-Benutzermodule verfügbar.'
 chkStrongs.Caption='Enthält Definitionen für Strongnummern'
 chkMorph.Caption='Enthält morphologische Schlüssel'
 chkVRefs.Caption='Für angezeigte Themen automatisch die Versreferenzen erkennen'
@@ -558,7 +558,7 @@ cmdAutoResizeWidth.Caption='Breite anpassen'
 cmdAutoResizeHeight.Caption='Höhe anpassen'
 #image button that appears on images specific
 cmdImgView.Hint='Bildeigenschaften/-aktionen'
-cmdImageView.Caption='Im Bildbetrachter anzeigen
+cmdImageView.Caption='Im Bildbetrachter anzeigen'
 cmdImageOriginalSize.Caption='Originalgröße'
 cmdImageFitToPage.Caption='An Seite anpassen'
 cmdAutosizeImage.Caption='Erlaube automatische Größenanpassung'
@@ -3181,6 +3181,8 @@ rc_hyper_bookmarks_none='[Keine]'
 rc_hyper_bookmarks_next='[Nächstes Lesezeichen]'
 rc_hyper_notextwarn='Es wurde kein Text in das ''Text'' Feld eingegeben.'#13'Bitte korrigieren.'
 rc_hyper_noidwarn='Das Modul, das mit dem Ziel verlinkt werden soll, hat keinen zugewiesenen Identifier.'#13#13'Das bedeutet, dass der Dateiname dieses Moduls zur Identifikation verwendet wird, ist jedoch riskant da eine Änderung des Dateinamens dazu führt, dass der Link verloren geht.'#13#13'Alle offiziellen Module haben einen eindeutigen Identifier zugewiesen. Wenn es sich um ein Eigenes Modul handelt, kann über den ''Moduleigenschaften''-Dialog und Klick auf ''Offiziellen Identifier anfordern'' einer angefordert und zugewisen werden.'#13#13'Mehr zu dieser Fehlermeldung ist unter ''www.theword.gr/identifier'' gefunden werden.'#13#13'(diese Warnung erscheint nur einmal pro Programmaufruf)'
+rc_hyper_tw7_required='Aufgrund von Unicode in diesem Hyperlink benötigt dieses Modul jetzt theWord7 und ist nicht rückwärtskompatibel zu theWord6.'#13'Möchten Sie fortfahren?'
+rc_hyper_tw7_void='Der Hyperlink wird dann ungültig sein.'
 
 #frmMigrateV2Notes messages
 rc_v2notes_browsefilter='"theWord 2" Persönliche Notizen (user.edb)|*.edb|Alle Dateien (*.*)|*.*'
@@ -3349,7 +3351,7 @@ rc_lyt_fmttoolbar_close_error='Layout wiederherstellen - Fehler in der Symbollei
 rc_biblesearch_create='Für diese Funktion wird eine "Bibel-Such-Ansicht" benötigt.'#13'Bitte teilen Sie theWord mit, wo es im nächsten Popup platziert werden soll.'
 
 #BookSearch create message
-rc_biblesearch_create='A "Book Search View" is needed for this function.'#13'Please tell theWord where to place it using the next popup.'
+rc_booksearch_create='Für diese Funktion wird eine "Buch-Suchansicht" benötigt.'#13'Bitte teilen Sie theWord mit, wo es im nächsten Popup platziert werden soll.'
 
 #WordStudy Book messages
 rc_wordstudy_rightclick='Wortstudium zu "%s"'
@@ -3632,15 +3634,15 @@ rc_default_paragraphs_alt='Standard-Absätze 2'
 rc_english_headings='Englische Überschriften'
 
 #welcome screen messages
-rc_welcome_cancel='Are you sure you don''t want to select your initial layout?'#13'(The ''Welcome Screen'' can be accessed at any time from the menu ''Help''->''Welcome screen'')'
-rc_welcome_info='The new layout has been applied!'#13'TIP:'#13'You can select from more pre-defined layouts from the menu ''View''->''Layouts'' or you can create and save your own layouts. You may open new views at any time from the ''Window'' menu or close them using the ''X'' button on the top-right corner of each view.'#13'The ''Welcome Screen'' can be accessed at any time from the menu ''Help''->''Welcome screen'''
-rc_welcome_preview='You can drag this dialog from the top to move it out of the screen temporarily in order to preview the actual arrangement of the views!'
+rc_welcome_cancel='Sind Sie sicher, dass Sie Ihr Ausgangslayout nicht auswählen möchten?'#13'(Der "Willkommensbildschirm" kann jederzeit über das Menü "Hilfe" -> "Willkommensbildschirm" aufgerufen werden)'
+rc_welcome_info='Das neue Layout wurde übernommen!'#13'Tipp:'#13'Sie können aus mehreren vordefinierten Layouts aus dem Menü "Ansicht" -> "Layouts" auswählen oder eigene Layouts erstellen und speichern. Sie können jederzeit über das Menü "Fenster" neue Ansichten öffnen oder sie über die Schaltfläche "X" in der oberen rechten Ecke jeder Ansicht schließen.'#13'Der "Willkommensbildschirm" kann jederzeit über das Menü "Hilfe" -> "Willkommensbildschirm" aufgerufen werden.'
+rc_welcome_preview='Sie können dieses Dialogfeld von oben nach unten ziehen, um es vorübergehend aus dem Bildschirm zu verschieben, damit Sie eine Vorschau auf die tatsächliche Anordnung der Ansichten erhalten!'
 
 #frmSnippet messages
-rc_snip_descr='Description'
-rc_snip_value='Insert Value'
-rc_snip_maxsnips='You currently have the maximum number of snippets (50).'#13#13'A snippet must be deleted before adding another.'
-rc_snip_del_conf='Are you sure you wish to delete ''%s''?'
+rc_snip_descr='Beschreibung'
+rc_snip_value='Wert einfügen'
+rc_snip_maxsnips='Sie haben die maximale Anzahl von Snippets erreicht (50).'#13#13'Ein Snippet muss gelöscht werden, bevor ein neues hinzugefügt werden kann.'
+rc_snip_del_conf='Sind Sie sicher, dass Sie "%s" löschen wollen?'
 
 #generic message box button captions
 rc_SMsgDlgYes='&Ja'
