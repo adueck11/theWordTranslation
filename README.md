@@ -13,11 +13,9 @@ Hilf mit, die deutsche Übersetzung für die Bibelsoftware [theWord](https://www
 	- Strg, STRG, Shift, SHIFT, Umschalt, Enter
 	- Deutsch oder Englisch? 
 	- Großbuchstaben? 
-- [ ] Vereinheitlichen: 
-	- Popup / Pop-Up
-	- ''theWord'' statt ''The Word''
+- [x] Vereinheitlichen: 
+	- Popup statt Pop-Up
 	- z.B. statt Bsp, zB
-	- Querverweis, Hyperlink, Hypertext ...
 - [ ] Fehler: 
 	- Zeile 1001: Einstellungen zur Bibelansicht -> User Toggles: nur Englisch zeigt in Überschrift den Bibelnamen an, Deutsch nicht 
 	- ab Zeile 1021: Überschrift "lblBGloss.Caption" auskommentiert - nicht aktiv
